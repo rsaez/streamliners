@@ -1,0 +1,66 @@
+<%= form_for(@child) do |f| %>
+  <% if @child.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@child.errors.count, "error") %> prohibited this child from being saved:</h2>
+
+      <ul>
+      <% @child.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+  </div>
+  <div class="field">
+    <%= f.label :school %>
+    <%= f.text_field :school %><br>
+  </div>
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.select :gender, options_for_select(%w[Male Female]) %><br>
+  </div>
+  <div class="field">
+    <%= f.label :DOB %>
+    <%= f.date_select :DOB %><br>
+  </div>
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.number_field :age %><br>
+  </div>
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %><br>
+  </div>
+  <div class="field">
+    <%= f.label :Child_examined_No_parent_present %>
+    <%= f.check_box :no_parent_present %><br>
+    
+  </div>
+  <div class="field">
+    <%= f.label :Parental_permission_given %>
+    <%= f.check_box :parental_permission_given %><br>
+  </div>
+  <div class="field">
+    <%= f.label :allergies %>
+    <%= f.check_box :allergies %><br>
+  </div>
+  <div class="field" style="margin:0;padding:0">
+    <%= f.label :allergies_info %>
+    <%= f.text_area :allergies_info %><br>
+  </div>
+  <div class="field" style="margin:0;padding:0">
+    <%= f.label :immunization_review %>
+    <%= f.text_area :immunization_review %><br>
+  </div>
+  <div class="field">
+    <%= f.label :relevant_information %>
+    <%= f.text_area :relevant_information %><br>
+  </div>
+  <div  class: "btn btn-large btn-primary">
+    <%= f.submit %>
+  </div>
+<% end %>

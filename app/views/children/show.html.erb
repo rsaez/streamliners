@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @child.name %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @child.school %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @child.gender %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @child.DOB %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @child.age %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @child.address %>
+</p>
+
+<p>
+  <strong>No parent present:</strong>
+  <%= @child.no_parent_present %>
+</p>
+
+<p>
+  <strong>Parental permission given:</strong>
+  <%= @child.parental_permission_given %>
+</p>
+
+<p>
+  <strong>Allergies:</strong>
+  <%= @child.allergies %>
+</p>
+
+<p>
+  <strong>Allergies info:</strong>
+  <%= @child.allergies_info %>
+</p>
+
+<p>
+  <strong>Immunization review:</strong>
+  <%= @child.immunization_review %>
+</p>
+
+<p>
+  <strong>Relevant information:</strong>
+  <%= @child.relevant_information %>
+</p>
+
+<%= link_to 'Edit', edit_child_path(@child) %> |
+<%= link_to 'Back', children_path %>

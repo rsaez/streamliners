@@ -1,0 +1,31 @@
+<h1>Child Directory</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>School</td>
+      <td>DOB</td>
+      <td>Gender</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @children.each do |child| %>
+      <tr>
+        <td><%= child.name %></td>
+        <td><%= child.school %></td>
+        <td><%= child.DOB %></td>
+        <td><%= child.gender %></td>
+        <td><%= link_to 'Show', child , class: "btn btn-default btn-lg"%>
+        <td><%= link_to 'Edit', edit_child_path(child), class: "btn btn-default btn-lg" %>
+        <td><%= link_to 'Delete', child, class: "btn btn-default btn-lg",method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Fill Health-Form', '#', class: "btn btn-success" %><td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Create Record for New Child', new_child_path %>

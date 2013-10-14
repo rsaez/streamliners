@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  school: MyString
+  gender: MyString
+  DOB: 2013-10-14
+  age: 1
+  address: MyString
+  no_parent_present: false
+  parental_permission_given: false
+  allergies: false
+  allergies_info: MyText
+  immunization_review: MyText
+  relevant_information: MyText
+
+two:
+  name: MyString
+  school: MyString
+  gender: MyString
+  DOB: 2013-10-14
+  age: 1
+  address: MyString
+  no_parent_present: false
+  parental_permission_given: false
+  allergies: false
+  allergies_info: MyText
+  immunization_review: MyText
+  relevant_information: MyText
