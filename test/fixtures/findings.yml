@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  diagnosis_treatment: MyText
+  faculty_signature: MyString
+  faculty_sig_date: 2013-10-15
+
+two:
+  diagnosis_treatment: MyText
+  faculty_signature: MyString
+  faculty_sig_date: 2013-10-15

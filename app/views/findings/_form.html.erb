@@ -1,0 +1,29 @@
+<%= form_for(@finding) do |f| %>
+  <% if @finding.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@finding.errors.count, "error") %> prohibited this finding from being saved:</h2>
+
+      <ul>
+      <% @finding.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :diagnosis_treatment %><br>
+    <%= f.text_area :diagnosis_treatment %>
+  </div>
+  <div class="field">
+    <%= f.label :faculty_signature %><br>
+    <%= f.text_field :faculty_signature %>
+  </div>
+  <div class="field">
+    <%= f.label :faculty_sig_date %><br>
+    <%= f.date_select :faculty_sig_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

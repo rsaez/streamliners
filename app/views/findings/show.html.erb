@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Diagnosis treatment:</strong>
+  <%= @finding.diagnosis_treatment %>
+</p>
+
+<p>
+  <strong>Faculty signature:</strong>
+  <%= @finding.faculty_signature %>
+</p>
+
+<p>
+  <strong>Faculty sig date:</strong>
+  <%= @finding.faculty_sig_date %>
+</p>
+
+<%= link_to 'Edit', edit_finding_path(@finding) %> |
+<%= link_to 'Back', findings_path %>

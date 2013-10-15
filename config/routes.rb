@@ -1,4 +1,6 @@
 Streamliners::Application.routes.draw do
+  resources :findings
+
   #get "health_record/new"
   resources :children
   resources :health_records

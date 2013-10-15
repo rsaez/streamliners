@@ -1,0 +1,31 @@
+<h4>FINDINGS, TREATMENTS AND RECOMMENDATIONS</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>ABNORMAL FINDINGS/DIAGNOSIS & TREATMENT</th>
+      <th>Faculty Signature</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @findings.each do |finding| %>
+      <tr>
+        <td><%= finding.diagnosis_treatment %></td>
+        <td><%= finding.faculty_signature %></td>
+        <td><%= finding.faculty_sig_date %></td>
+        <td><%= link_to 'Show', finding %></td>
+        <td><%= link_to 'Edit', edit_finding_path(finding) %></td>
+        <td><%= link_to 'Destroy', finding, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Finding', new_finding_path %>
