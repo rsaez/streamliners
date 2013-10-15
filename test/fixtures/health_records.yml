@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: MyString
+  datetime: MyString
+  relevant_information: MyText
+  age: MyString
+  height: 1
+  weight: 1
+  blood_pressure: MyString
+  hemoglobin: MyString
+  hearing_test: MyString
+  hearing_result_left: MyString
+  hearing_result_right: MyString
+  hearing_rescreening: MyString
+  hearing_comments: MyText
+  vision_test: MyString
+  vision_acuity_right: MyString
+  vision_acuity_left: MyString
+  vision_rescreening: MyString
+  vision_color: MyString
+  vision_comments: MyText
+  physical_therapy: MyText
+
+two:
+  date: MyString
+  datetime: MyString
+  relevant_information: MyText
+  age: MyString
+  height: 1
+  weight: 1
+  blood_pressure: MyString
+  hemoglobin: MyString
+  hearing_test: MyString
+  hearing_result_left: MyString
+  hearing_result_right: MyString
+  hearing_rescreening: MyString
+  hearing_comments: MyText
+  vision_test: MyString
+  vision_acuity_right: MyString
+  vision_acuity_left: MyString
+  vision_rescreening: MyString
+  vision_color: MyString
+  vision_comments: MyText
+  physical_therapy: MyText
