@@ -1,0 +1,70 @@
+class CreatePhysicalExams < ActiveRecord::Migration
+  def change
+    create_table :physical_exams do |t|
+      t.string :general_appearance
+      
+            t.string :posture
+     
+      
+      t.string :speech
+      
+      
+      t.string :head
+      
+      
+      t.string :skin
+      
+      
+      t.string :eyes_external_aspects
+      
+      
+      t.string :eyes_optic_fundiscopic
+      
+      
+      t.string :eyes_cover_test
+      
+      
+      t.string :ears_external
+      
+      
+      t.string :ears_tympanic
+      
+      
+      t.string :nose
+      t.string :string
+      t.string :teeth
+      t.string:heart
+      t.string :lungs
+      t.string :abdomen
+      
+      
+      t.string :bones
+      
+      
+      t.string :scoliosis_gross_motor
+      
+      
+      t.string :scoliosis_fine_motor
+      
+      
+      t.string :scoliosis_comm_skill
+      
+      
+      t.string :scoliosis_cognitive
+      
+      
+      t.string :scoliosis_self_help
+      
+      
+      t.string :scoliosis_social_skills
+      
+            t.string :glandis
+      t.string :muscular_coord
+      
+      
+      t.string :other
+
+      t.timestamps
+    end
+  end
+end
