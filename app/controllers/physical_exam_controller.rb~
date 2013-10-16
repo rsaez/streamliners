@@ -1,0 +1,26 @@
+class PhysicalExamController < ApplicationController
+  
+
+class PhysicalExaminationController < ApplicationController
+  def new
+    @physical_exam = PhysicalExam.new 
+  end
+  
+  def show
+  end
+  
+  def create
+    @physical_exam = PhysicalExam.new(physical_exam_params)
+
+    
+      if @physical_exam.save
+        redirect_to @physical_exam       
+     end
+  end
+  
+
+  def physical_exam_params
+      params.require(:physical_examination).permit(:general_appearance, :posture, :speech, :head, :skin,:eyes_external_aspects,:eyes_optic_fundiscopic,:eyes_cover_test ,:ears_external, :ears_tympanic, :nose, :teeth, :heart, :lungs,:abdomen,:bones,:scoliosis_gross_motor,:scoliosis_fine_motor,:scoliosis_comm_skill,:scoliosis_cognitive,:scoliosis_self_help,:scoliosis_social_skills,:glandis,:muscular_coord,:other)
+  end
+
+end
