@@ -1,7 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Diagnosis treatment:</strong>
+	<table cellspacing="10">		
+  		<thead>
+		  	<tr>
+  				<th> Diagnosis </th>
+  				<th> Treatment </th>  
+  			</tr>
+  		</thead> 
+  	</table>
   <%= @finding.diagnosis_treatment %>
 </p>
 
@@ -11,7 +18,7 @@
 </p>
 
 <p>
-  <strong>Faculty sig date:</strong>
+  <strong>Date:</strong>
   <%= @finding.faculty_sig_date %>
 </p>
 

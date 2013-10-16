@@ -25,7 +25,6 @@ class FindingsController < ApplicationController
   # POST /findings.json
   def create
     @finding = Finding.new(finding_params)
-
     respond_to do |format|
       if @finding.save
         format.html { redirect_to @finding, notice: 'Finding was successfully created.' }
