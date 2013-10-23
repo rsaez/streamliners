@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131015173225) do
+ActiveRecord::Schema.define(version: 20131023211506) do
 
   create_table "children", force: true do |t|
     t.string   "name"
@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(version: 20131015173225) do
     t.string   "date"
     t.string   "datetime"
     t.text     "relevant_information"
-    t.string   "age"
     t.integer  "height"
     t.integer  "weight"
     t.string   "blood_pressure"
@@ -61,6 +60,32 @@ ActiveRecord::Schema.define(version: 20131015173225) do
     t.text     "physical_therapy"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "vision_acuity_both"
+    t.string   "hearing_result_right_2"
+    t.string   "hearing_result_left_3"
+    t.string   "hearing_result_right_3"
+    t.string   "hearing_result_left_2"
+    t.integer  "well_child_exam"
+    t.integer  "no_parent"
+    t.integer  "systolic1"
+    t.integer  "diastolic1"
+    t.integer  "systolic2"
+    t.integer  "diastolic2"
+    t.integer  "systolic3"
+    t.integer  "diastolic3"
+    t.integer  "bmi"
+    t.integer  "blood_sugar"
+    t.string   "vision_acuity_right_2"
+    t.string   "vision_acuity_left_2"
+    t.string   "vision_acuity_both_2"
+    t.string   "vision_acuity_right_3"
+    t.string   "vision_acuity_left_3"
+    t.string   "vision_acuity_both_3"
+    t.integer  "too_young"
+    t.integer  "too_young_bloodsugar"
+    t.integer  "too_young_hemoglobin"
+    t.integer  "too_young_audiometry"
+    t.integer  "too_young_vision"
   end
 
   create_table "physical_exams", force: true do |t|
