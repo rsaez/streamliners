@@ -16,6 +16,10 @@
         <div class="container">
         	<%= link_to "Migrant Workers Health Program E-Form", '#', id: "logo" %>
           <nav>
+              <ul class="nav pull-right">
+              <% if signed_in? %>
+                 <%= link_to "Sign out", signout_path,class:"btn btn-primary" ,method: "delete" %>
+              <% end %>
           </nav>
         </div>
       </div>
