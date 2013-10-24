@@ -1,4 +1,9 @@
 Streamliners::Application.routes.draw do
+  #get "users/new"
+  #get "users/create"
+  #get "users/show"
+  #get "users/index"
+  resources :users
   resources :findings
 
   #get "health_record/new"
