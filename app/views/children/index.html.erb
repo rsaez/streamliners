@@ -20,7 +20,14 @@
         <td><%= link_to 'Show', child , class: "btn btn-default btn-lg"%>
         <td><%= link_to 'Edit', edit_child_path(child), class: "btn btn-default btn-lg" %>
         <td><%= link_to 'Delete', child, class: "btn btn-default btn-lg",method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Fill Health-Form', '#', class: "btn btn-success" %><td>
+        <% if child.health_record.empty? %>
+          
+         
+        <td><%= link_to 'Fill Health-Form', new_health_record_path(:child_id => child.id), class: "btn btn-success" %><td>
+         <% else %>
+           <% last_record = child.health_record.last %>
+	 <td><%= link_to 'Fill Health-Form', edit_health_record_path(last_record), class: "btn btn-success" %><td>
+         <% end %>
       </tr>
     <% end %>
   </tbody>
