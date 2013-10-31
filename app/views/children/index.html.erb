@@ -26,8 +26,15 @@
         <td><%= link_to 'Fill Health-Form', new_health_record_path(:child_id => child.id), class: "btn btn-success" %><td>
          <% else %>
            <% last_record = child.health_record.last %>
-	 <td><%= link_to 'Fill Health-Form', edit_health_record_path(last_record), class: "btn btn-success" %><td>
-         <% end %>
+
+	 <td><%= link_to 'Fill Health-Form', edit_health_record_path(last_record), class: "btn btn-success" %><td><% end %>
+ <% if child.physical_exam.empty? %>        
+<td><%= link_to 'Fill Physical-Exam', new_physical_exam_path(:child_id => child.id), class: "btn btn-success" %><td>
+         <% else %>
+           <% last_record = child.physical_exam.last %>
+	 <td><%= link_to 'Fill Physical-Exam', edit_physical_exam_path(last_record), class: "btn btn-success" %><td>
+ 
+<% end %>
       </tr>
     <% end %>
   </tbody>

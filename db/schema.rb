@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131024052229) do
+ActiveRecord::Schema.define(version: 20131031061419) do
 
   create_table "children", force: true do |t|
     t.string   "name"
@@ -142,6 +142,7 @@ ActiveRecord::Schema.define(version: 20131024052229) do
     t.text     "other_c"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "child_id"
   end
 
   create_table "users", force: true do |t|
