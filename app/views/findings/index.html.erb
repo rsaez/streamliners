@@ -15,7 +15,24 @@
   <tbody>
     <% @findings.each do |finding| %>
       <tr>
-        <td><%= finding.diagnosis_treatment %></td>
+        <td>
+        	<table cellspacing="10">		
+  				<thead>
+				  	<tr>
+		  				<th> Diagnosis </th>
+		  				<th> Treatment </th>  
+		  			</tr>
+  				</thead> 
+		  		<tbody>	
+					<% finding.diagnosis_treatment.each do |d| %>
+				    	<tr>	
+					  		<td> <%= d[1]["0"] %> </td>
+					  		<td> <%= d[1]["1"] %> </td>
+					    </tr>
+				 	<% end %>
+				 </tbody>
+  			</table>
+        </td>
         <td><%= finding.faculty_signature %></td>
         <td><%= finding.faculty_sig_date %></td>
         <td><%= link_to 'Show', finding %></td>

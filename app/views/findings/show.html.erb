@@ -8,8 +8,15 @@
   				<th> Treatment </th>  
   			</tr>
   		</thead> 
+  		<tbody>	
+			<% @finding.diagnosis_treatment.each do |d| %>
+		    	<tr>	
+			  		<td> <%= d[1]["0"] %> </td>
+			  		<td> <%= d[1]["1"] %> </td>
+			    </tr>
+		 	<% end %>
+		 </tbody>
   	</table>
-  <%= @finding.diagnosis_treatment %>
 </p>
 
 <p>

@@ -14,6 +14,7 @@ class FindingsController < ApplicationController
 
   # GET /findings/new
   def new
+  
     @finding = Finding.new
   end
 
@@ -25,8 +26,11 @@ class FindingsController < ApplicationController
   # POST /findings.json
   def create
     @finding = Finding.new(finding_params)
+    puts "Look here"
+    puts params["finding"]["diagnosis_treatment"].inspect
     respond_to do |format|
-      if @finding.save
+      if @finding.save          
+        @finding.update_attributes(:diagnosis_treatment => params["finding"]["diagnosis_treatment"])
         format.html { redirect_to @finding, notice: 'Finding was successfully created.' }
         format.json { render action: 'show', status: :created, location: @finding }
       else
@@ -39,6 +43,7 @@ class FindingsController < ApplicationController
   # PATCH/PUT /findings/1
   # PATCH/PUT /findings/1.json
   def update
+    
     respond_to do |format|
       if @finding.update(finding_params)
         format.html { redirect_to @finding, notice: 'Finding was successfully updated.' }

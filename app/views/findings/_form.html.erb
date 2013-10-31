@@ -14,7 +14,6 @@
   <div class="field">
   		 <table>
   		 	<thead>
-    <%#= f.label :diagnosis_treatment %><br>
     <tr>
     <th align="center">
     	Diagnostic
@@ -22,28 +21,28 @@
     <th align="center">Treatment</th>
     </tr>
     </thead>
- 
         <tbody>
-        	<%= fields_for :diagnosis_treatment, @finding.diagnosis_treatment do |diagnosis_treatment_fields| %>
+        	<%= f.fields_for :diagnosis_treatment do |d| %>
 	    	<tr>	
-	  			<td><%= diagnosis_treatment_fields.text_area :diagnosis_treatment[0][0] %></td>
-	  			<td> <%= diagnosis_treatment_fields.text_area :diagnosis_treatment[0][1] %></td>
+	  			<td> <%= d.text_area "0[0]" %> </td>
+	  			<td> <%= d.text_area "0[1]"  %> </td>
 	    	</tr>
 	    	<tr>
-	    		<td><%= diagnosis_treatment_fields.text_area :diagnosis_treatment[1][0] %></td>
-	    		<td><%= diagnosis_treatment_fields.text_area :diagnosis_treatment[1][1] %></td>
+	    		<td><%= d.text_area "1[0]"  %></td>
+	    		<td><%= d.text_area "1[1]"  %></td>
 	    	</tr>
 	    	<tr>
-	    		<td><%= diagnosis_treatment_fields.text_area :diagnosis_treatment[2][0] %></td>
-	    		<td><%= diagnosis_treatment_fields.text_area :diagnosis_treatment[2][1] %></td>
+	    		<td><%= d.text_area "2[0]"  %></td>
+	    		<td><%= d.text_area "2[1]"  %></td>
 	    	</tr>
 	    	<tr>	
-	    		<td><%= diagnosis_treatment_fields.text_area :diagnosis_treatment[3][0] %></td>
-	    		<td><%= diagnosis_treatment_fields.text_area :diagnosis_treatment[3][1] %></td>
+	    		<td><%= d.text_area "3[0]"  %></td>
+	    		<td><%= d.text_area "3[1]" %></td>
 	        </tr>
+	        <% end %>
 	    </tbody>
    </table>
-  <% end %>
+
   </div>
   <div class="field">
     <%= f.label :faculty_signature %><br>
@@ -53,7 +52,9 @@
     <%= f.label :faculty_sig_date %><br>
     <%= f.date_select :faculty_sig_date %>
   </div>
+
   <div class="actions">
     <%= f.submit "Submit" %>
+    <% puts params.inspect %>
   </div>
 <% end %>
