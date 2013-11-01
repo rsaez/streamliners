@@ -4,7 +4,6 @@ Streamliners::Application.routes.draw do
   #get "users/show"
   #get "users/index"
   resources :users
-  resources :findings
   resources :sessions, only: [:new, :create, :destroy]
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
@@ -14,6 +13,7 @@ Streamliners::Application.routes.draw do
   resources :children
   resources :health_records
   resources :physical_exams
+  resources :findings
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

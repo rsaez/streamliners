@@ -1,5 +1,66 @@
 <h1>Findings, Treatments and Recommendations</h1>
+<%= params%>
 
-<%= render 'form' %>
+<%= form_for(@finding) do |f| %>
+  <% if @finding.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@finding.errors.count, "error") %> prohibited this finding from being saved:</h2>
 
-<%= link_to 'Back', findings_path %>
+      <ul>
+      <% @finding.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+  		 <table>
+  		 	<thead>
+    <tr>
+    <th align="center">
+    	Diagnostic
+    </th>
+    <th align="center">Treatment</th>
+    </tr>
+    </thead>
+        <tbody>
+        	<%= f.fields_for :diagnosis_treatment do |d| %>
+	    	<tr>	
+	  			<td> <%= d.text_area "0[0]" %> </td>
+	  			<td> <%= d.text_area "0[1]"  %> </td>
+	    	</tr>
+	    	<tr>
+	    		<td><%= d.text_area "1[0]"  %></td>
+	    		<td><%= d.text_area "1[1]"  %></td>
+	    	</tr>
+	    	<tr>
+	    		<td><%= d.text_area "2[0]"  %></td>
+	    		<td><%= d.text_area "2[1]"  %></td>
+	    	</tr>
+	    	<tr>	
+	    		<td><%= d.text_area "3[0]"  %></td>
+	    		<td><%= d.text_area "3[1]" %></td>
+	        </tr>
+	        <% end %>
+	    </tbody>
+   </table>
+
+  </div>
+  <div class="field">
+    <%= f.label :faculty_signature %><br>
+    <%= f.text_field :faculty_signature %>
+  </div>
+  <div class="field">
+    <%= f.label :faculty_sig_date %><br>
+    <%= f.date_select :faculty_sig_date %>
+  </div>
+
+  <%= f.hidden_field :child_id, value: params[:child_id]%>
+    <div  class: "btn btn-large btn-primary">
+    <%= f.submit %>
+  </div>
+<% end %>
+</br>
+</br>
+</br>

@@ -1,33 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-	<table cellspacing="10">		
-  		<thead>
-		  	<tr>
-  				<th> Diagnosis </th>
-  				<th> Treatment </th>  
-  			</tr>
-  		</thead> 
-  		<tbody>	
-			<% @finding.diagnosis_treatment.each do |d| %>
-		    	<tr>	
-			  		<td> <%= d[1]["0"] %> </td>
-			  		<td> <%= d[1]["1"] %> </td>
-			    </tr>
-		 	<% end %>
-		 </tbody>
-  	</table>
+  <strong>Record succesfully saved</strong>
 </p>
-
-<p>
-  <strong>Faculty signature:</strong>
-  <%= @finding.faculty_signature %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @finding.faculty_sig_date %>
-</p>
-
-<%= link_to 'Edit', edit_finding_path(@finding) %> |
-<%= link_to 'Back', findings_path %>

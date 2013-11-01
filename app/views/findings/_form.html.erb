@@ -1,60 +1,10 @@
-<%= form_for(@finding) do |f| %>
-  <% if @finding.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@finding.errors.count, "error") %> prohibited this finding from being saved:</h2>
-
-      <ul>
-      <% @finding.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  <%= form_for(@finding) do |f| %>
   <div class="field">
-  		 <table>
-  		 	<thead>
-    <tr>
-    <th align="center">
-    	Diagnostic
-    </th>
-    <th align="center">Treatment</th>
-    </tr>
-    </thead>
-        <tbody>
-        	<%= f.fields_for :diagnosis_treatment do |d| %>
-	    	<tr>	
-	  			<td> <%= d.text_area "0[0]" %> </td>
-	  			<td> <%= d.text_area "0[1]"  %> </td>
-	    	</tr>
-	    	<tr>
-	    		<td><%= d.text_area "1[0]"  %></td>
-	    		<td><%= d.text_area "1[1]"  %></td>
-	    	</tr>
-	    	<tr>
-	    		<td><%= d.text_area "2[0]"  %></td>
-	    		<td><%= d.text_area "2[1]"  %></td>
-	    	</tr>
-	    	<tr>	
-	    		<td><%= d.text_area "3[0]"  %></td>
-	    		<td><%= d.text_area "3[1]" %></td>
-	        </tr>
-	        <% end %>
-	    </tbody>
-   </table>
-
+    <%= f.label :relevant_information %>
+    <%= f.text_field :relevant_information %><br>
   </div>
-  <div class="field">
-    <%= f.label :faculty_signature %><br>
-    <%= f.text_field :faculty_signature %>
+  
+  <div  class: "btn btn-large btn-primary">
+    <%= f.submit %>
   </div>
-  <div class="field">
-    <%= f.label :faculty_sig_date %><br>
-    <%= f.date_select :faculty_sig_date %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Submit" %>
-    <% puts params.inspect %>
-  </div>
-<% end %>
+ <% end %>
