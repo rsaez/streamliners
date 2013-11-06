@@ -5,6 +5,12 @@ class ChildrenController < ApplicationController
   # GET /children.json
   def index
     @children = Child.all
+    if !params[:search].nil?
+      @result = Child.search(params[:search])
+    end
+    if @result.nil? && params[:search].nil?
+      @result = Child.all
+    end	    
   end
 
   # GET /children/1
