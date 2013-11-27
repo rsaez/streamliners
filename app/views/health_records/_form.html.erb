@@ -1,5 +1,6 @@
 <%= form_for(@health_record) do |f| %>
-
+  
+  <%= render 'shared/error_messages' %>
   <div class="field">
     <%= f.label :relevant_information %>
     <%= f.text_area :relevant_information, :cols => "10", :rows => "5" %><br>
@@ -23,6 +24,8 @@
   <div class="field">
     <%= f.label :"Haemoglobin (mm/dilution)" %>
     <%= f.text_field :hemoglobin %><br>
+    <% if @health_record.errors[:hemoglobin]%>
+    <% end %>
   </div>
   <div class="field">
     <%= f.label :hearing_test %>
