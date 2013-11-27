@@ -29,6 +29,8 @@ class HealthRecordsController < ApplicationController
       if @health_record.save
         flash[:success] = "Record saved successfully"
         redirect_to children_path
+      else
+        render 'new'
      end
   end
   
