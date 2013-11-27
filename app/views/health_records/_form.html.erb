@@ -1,11 +1,80 @@
+<%= form_for(@health_record) do |f| %>
 
-  <%= form_for(@health_record) do |f| %>
   <div class="field">
     <%= f.label :relevant_information %>
-    <%= f.text_field :relevant_information %><br>
+    <%= f.text_area :relevant_information, :cols => "10", :rows => "5" %><br>
   </div>
-  
-  <div  class: "btn btn-large btn-primary">
+    <div class="field">
+    <%= f.label :"Height (ft)" %>
+    <%= f.text_field :height_feet %>
+    <%= f.label :"Height (in)" %>
+    <%= f.text_field :height_inches %>
+  </div>
+  <div class="field">
+    <%= f.label :"Weight (in pounds) " %>
+    <%= f.text_field :weight %><br>
+  </div>
+  <div class="field">
+    <%= f.label :"Blood pressure (Systolic)"  %>
+    <%= f.text_field :systolic1 %><br>
+    <%= f.label :"Blood pressure (Diastolic)"  %>
+    <%= f.text_field :diastolic1 %><br>
+  </div>
+  <div class="field">
+    <%= f.label :"Haemoglobin (mm/dilution)" %>
+    <%= f.text_field :hemoglobin %><br>
+  </div>
+  <div class="field">
+    <%= f.label :hearing_test %>
+    <%= f.text_field :hearing_test %><br>
+  </div>
+  <div class="field">
+    <%= f.label :hearing_result_right %>
+    <%= f.text_field :hearing_result_right %><br>
+  </div>
+  <div class="field">
+    <%= f.label :hearing_result_left %>
+    <%= f.text_field :hearing_result_left %><br>
+  </div>
+  <div class="field">
+    <%= f.label :hearing_rescreening %>
+    <%= f.text_field :hearing_rescreening %><br>
+  </div>
+  <div class="field">
+    <%= f.label :hearing_comments %>
+    <%= f.text_field :hearing_comments %><br>
+  </div>
+  <div class="field">
+    <%= f.label :vision_test %>
+    <%= f.text_field :vision_test %><br>
+  </div>
+  <div class="field">
+    <%= f.label :vision_acuity_left %>
+    <%= f.text_field :vision_acuity_left %><br>
+  </div>
+   <div class="field">
+    <%= f.label :vision_acuity_right %>
+    <%= f.text_field :vision_acuity_right %><br>
+  </div>
+  <div class="field">
+    <%= f.label :vision_rescreening %>
+    <%= f.text_field :vision_rescreening %><br>
+  </div>
+  <div class="field">
+    <%= f.label :vision_color %>
+    <%= f.text_field :vision_color %><br>
+  </div>
+  <div class="field">
+    <%= f.label :vision_comments %>
+    <%= f.text_field :vision_comments %><br>
+  </div>
+    <% if @health_record.child_id.nil?%>
+      <%= f.hidden_field :child_id, value: params[:child_id]%>
+    <% else %>
+      <%= f.hidden_field :child_id, value: @health_record.child_id%>
+    <% end %>
+    <div  class: "btn btn-large btn-primary">
     <%= f.submit %>
   </div>
- <% end %>
+
+<% end %>

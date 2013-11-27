@@ -37,7 +37,8 @@
          <% else %>
            <% last_record = child.health_record.last %>
 
-	 <td><%= link_to 'Health-Form', edit_health_record_path(last_record), class: "btn btn-success" %></td><% end %>
+	 <td><%= link_to 'Health-Form', edit_health_record_path(last_record), class: "btn btn-success" %></td>
+	 <% end %>
  
 
       <% if child.physical_exam.empty? %>        
