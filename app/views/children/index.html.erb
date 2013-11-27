@@ -30,12 +30,12 @@
         <td><%= link_to 'Show', child , class: "btn btn-default btn-lg"%>
         <td><%= link_to 'Edit', edit_child_path(child), class: "btn btn-default btn-lg" %>
         <td><%= link_to 'Delete', child, class: "btn btn-default btn-lg",method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% if child.health_record.empty? %>
+        <% if child.health_records.empty? %>
           
          
         <td><%= link_to 'Health-Form', new_health_record_path(:child_id => child.id), class: "btn btn-success" %></td>
          <% else %>
-           <% last_record = child.health_record.last %>
+           <% last_record = child.health_records.last %>
 
 	 <td><%= link_to 'Health-Form', edit_health_record_path(last_record), class: "btn btn-success" %></td>
 	 <% end %>

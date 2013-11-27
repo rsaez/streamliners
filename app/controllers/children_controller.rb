@@ -26,12 +26,12 @@ class ChildrenController < ApplicationController
   # GET /children/1/edit
   def edit
   end
-
+  
   # POST /children
   # POST /children.json
   def create
     @child = Child.new(child_params)
-
+    @child.age = age(@child)
     respond_to do |format|
       if @child.save
         format.html { redirect_to @child, notice: 'Child was successfully created.' }
@@ -65,6 +65,11 @@ class ChildrenController < ApplicationController
       format.html { redirect_to children_url }
       format.json { head :no_content }
     end
+  end
+  
+  def age(child)
+    now = Time.now.utc.to_date
+    return now.year - child.DOB.year
   end
 
   private

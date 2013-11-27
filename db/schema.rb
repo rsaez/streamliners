@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131126231631) do
+ActiveRecord::Schema.define(version: 20131127004007) do
 
   create_table "children", force: true do |t|
     t.string   "name"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20131126231631) do
     t.integer  "height"
     t.integer  "weight"
     t.string   "blood_pressure"
-    t.string   "hemoglobin"
+    t.float    "hemoglobin",             limit: 255
     t.string   "hearing_test"
     t.string   "hearing_result_left"
     t.string   "hearing_result_right"
