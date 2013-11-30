@@ -25,24 +25,24 @@
     </tr>
     </thead>
         <tbody>
-        	<%= f.fields_for :diagnosis_treatment do |d| %>
+  
 	    	<tr>	
-	  			<td> <%= d.text_area "0[0]" %> </td>
-	  			<td> <%= d.text_area "0[1]"  %> </td>
+	  			<td> <%= f.text_area :finding_a %> </td>
+	  			<td> <%= f.text_area :treatment_a  %> </td>
 	    	</tr>
 	    	<tr>
-	    		<td><%= d.text_area "1[0]"  %></td>
-	    		<td><%= d.text_area "1[1]"  %></td>
+	    		<td> <%= f.text_area :finding_b %> </td>
+	  			<td> <%= f.text_area :treatment_b  %> </td>
 	    	</tr>
 	    	<tr>
-	    		<td><%= d.text_area "2[0]"  %></td>
-	    		<td><%= d.text_area "2[1]"  %></td>
+	    		<td> <%= f.text_area :finding_c %> </td>
+	  			<td> <%= f.text_area :treatment_c  %> </td>
 	    	</tr>
 	    	<tr>	
-	    		<td><%= d.text_area "3[0]"  %></td>
-	    		<td><%= d.text_area "3[1]" %></td>
+	    		<td> <%= f.text_area :finding_d %> </td>
+	  			<td> <%= f.text_area :treatment_d  %> </td>
 	        </tr>
-	        <% end %>
+
 	    </tbody>
    </table>
 
