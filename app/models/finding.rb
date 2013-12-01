@@ -1,5 +1,5 @@
 class Finding < ActiveRecord::Base
-  validates :faculty_signature, presence: true
+  validates :general_statement, :faculty_signature, :signature,  presence: true
   belongs_to :children
   
 end
