@@ -1,7 +1,11 @@
 <h1>Manage Access For Users</h1>
 <% @user.each do |x| %>
-<%= x.user_name %>
-<%= x.role %>
+<%= form_for(x) do |f| %>
+  <%= f.label :user_name%>
+  <%= f.text_field :user_name, :read_only => true%>
+  <%= f.select :role,options_for_select(%w[admin new experienced],x.role)%>
+  <%= f.submit%>
+<%end%>
 <br>
 <% end %>
 

@@ -20,8 +20,15 @@ class UsersController < ApplicationController
   def index
     @user = User.all
   end
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "User update successfully"
+      redirect_to users_path
+    end
+  end
   
   def user_params
-    params.require(:user).permit(:user_name,:password,:password_confirmation)
+    params.require(:user).permit(:role,:user_name,:password,:password_confirmation)
   end
 end
