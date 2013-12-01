@@ -18,7 +18,10 @@
           <nav>
               <ul class="nav pull-right">
               <% if signed_in? %>
-                 <%= link_to "Sign out", signout_path,class:"btn btn-primary" ,method: "delete" %>
+                 <%= link_to "Sign out", signout_path,class:"btn btn-primary" ,method: "delete" %> 
+                 <% if current_user.role=='admin' %>
+                   <%= link_to "Manage Users",users_path,class:"btn btn-primary" %>
+                 <% end %>
               <% end %>
           </nav>
         </div>
