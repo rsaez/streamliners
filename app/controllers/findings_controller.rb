@@ -1,14 +1,23 @@
 class FindingsController < ApplicationController
 
   def new
+    if !signed_in?
+      redirect_to root_path
+    end
     @finding = Finding.new
   end
 
   def show
+    if !signed_in?
+      redirect_to root_path
+    end
      @finding = Finding.find(params[:id])
   end
 
   def edit
+    if !signed_in?
+      redirect_to root_path
+    end
     @finding = Finding.find(params[:id])
   end
 

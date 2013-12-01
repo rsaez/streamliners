@@ -2,13 +2,23 @@ class PhysicalExamsController < ApplicationController
   
 
   def new
+    if !signed_in?
+      redirect_to root_path
+    end
     @physical_exam = PhysicalExam.new 
   end
   
   def show
+    if !signed_in?
+      redirect_to root_path
+    end
     @physical_exam = PhysicalExam.find(params[:id])
   end
+ 
   def edit
+    if !signed_in?
+      redirect_to root_path
+    end
     @physical_exam = PhysicalExam.find(params[:id])
   end
   

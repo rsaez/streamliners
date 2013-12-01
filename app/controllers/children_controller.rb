@@ -4,6 +4,9 @@ class ChildrenController < ApplicationController
   # GET /children
   # GET /children.json
   def index
+    if !signed_in?
+      redirect_to root_path
+    end
     @children = Child.all
     if !params[:search].nil?
       @result = Child.search(params[:search])
@@ -16,15 +19,24 @@ class ChildrenController < ApplicationController
   # GET /children/1
   # GET /children/1.json
   def show
+    if !signed_in?
+      redirect_to root_path
+    end
   end
 
   # GET /children/new
   def new
+    if !signed_in?
+      redirect_to root_path
+    end  
     @child = Child.new
   end
 
   # GET /children/1/edit
   def edit
+    if !signed_in?
+      redirect_to root_path
+    end
   end
   
   # POST /children
