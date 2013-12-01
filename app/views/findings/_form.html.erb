@@ -83,9 +83,25 @@
      <%= f.hidden_field :child_id, value: params[:child_id]%>
   <% else %>
      <%= f.hidden_field :child_id, value: @finding.child_id%>
-  <% end %>  
-  <div  class: "btn btn-large btn-primary">
-    <%= f.submit "Submit" %>
-  </div>
+  <% end %>
+  
+  <table>
+  	<tbody>
+  		<tr>
+  			<td>
+  				<div  >
+    				<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+  				</div>
+  			</td>
+  			<td>  				
+  				<div>
+  					<%= link_to 'Back', :back, class: "btn btn-large btn-default" %>
+  				</div>
+  			</td>
+  				
+  			</td>
+  		</tr>
+  	</tbody>  
+  </table>
 
  <% end %>
