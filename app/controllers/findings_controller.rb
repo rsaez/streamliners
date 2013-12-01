@@ -28,14 +28,16 @@ class FindingsController < ApplicationController
     
          
       if @finding.save
-        @finding.update_attributes(:diagnosis_treatment => params["finding"]["diagnosis_treatment"])
+    
         flash[:success] = "Record saved successfully"
         redirect_to children_path
-     end
+      else
+        render 'new'
+      end
   end
 
     
     def finding_params
-      params.require(:finding).permit(:child_id, :diagnosis_treatment, :faculty_signature, :faculty_sig_date, :finding_a, :finding_b, :finding_c, :finding_d, :treatment_a, :treatment_b, :treatment_c, :treatment_d )
+      params.require(:finding).permit(:child_id, :diagnosis_treatment, :faculty_signature, :faculty_sig_date, :finding_a, :finding_b, :finding_c, :finding_d, :treatment_a, :treatment_b, :treatment_c, :treatment_d, :general_statement, :signature, :sig_date)
     end
 end
