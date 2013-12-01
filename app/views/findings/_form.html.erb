@@ -12,61 +12,72 @@
     </div>
   <% end %>
 
+  <table class = "table table-bordered">
+  	<tbody>
+  		<tr>
+		  <div class="field">
+		    <td> <%= f.label :general_statement %></td>
+		    <td><%= f.text_area :general_statement , :style => "width:98%;" %></td>
+		  </div>	
+		</tr>
+		<tr>
+		  <div class="field">
+    		<td><%= f.label :signature %></td>
+    		<td><%= f.text_field :signature %></td>
+  		  </div>	
+		</tr>
+		<tr>
+		  <div class="field">
+    		<td><%= f.label "Date" %></td>
+    		<td><%= f.date_select :sig_date %></td>
+  		  </div>	
+		</tr>
+	</tbody>
+  </table>
 	
-  <div class="field" >
-    <%= f.label :general_statement %><br/>
-    <%= f.text_area :general_statement %>
-  </div>	
-	
-  <div class="field">
-    <%= f.label :signature %><br>
-    <%= f.text_field :signature %>
-  </div>
-  <div class="field">
-    <%= f.label "Date" %><br>
-    <%= f.date_select :sig_date %>
-  </div>
   	
   <div class="field">
-  		 <table>
-  		 	<thead>
-    <tr>
-    <th align="center">
-    	<h3>Diagnostic</h3>
-    </th>
-    <th align="center"><h3>Treatment</h3></th>
-    </tr>
-    </thead>
+   <table class = "table table-bordered">
+       <thead>
+         <tr>
+            <th >
+    	    	<h3 align = "center">Diagnostic</h3>
+            </th>
+    		<th >
+    			<h3 align = "center">Treatment</h3>
+    		</th>
+         </tr>
+       </thead>
         <tbody>
 	    	<tr>	
-	  			<td> <%= f.text_area :finding_a %> </td>
-	  			<td> <%= f.text_area :treatment_a  %> </td>
+	  			<td> <%= f.text_area :finding_a%> </td>
+	  			<td> <%= f.text_area :treatment_a , :style => "width:98%;"  %> </td>
 	    	</tr>
 	    	<tr>
 	    		<td> <%= f.text_area :finding_b %> </td>
-	  			<td> <%= f.text_area :treatment_b  %> </td>
+	  			<td> <%= f.text_area :treatment_b  , :style => "width:98%;" %> </td>
 	    	</tr>
 	    	<tr>
 	    		<td> <%= f.text_area :finding_c %> </td>
-	  			<td> <%= f.text_area :treatment_c  %> </td>
+	  			<td> <%= f.text_area :treatment_c , :style => "width:98%;"  %> </td>
 	    	</tr>
 	    	<tr>	
 	    		<td> <%= f.text_area :finding_d %> </td>
-	  			<td> <%= f.text_area :treatment_d  %> </td>
+	  			<td> <%= f.text_area :treatment_d , :style => "width:98%;"  %> </td>
 	        </tr>
-
+	    	<tr>	
+	    		<td> <%= f.label :faculty_signature %> </td>
+	  			<td> <%= f.text_field :faculty_signature %></td>
+	        </tr>
+	    	<tr>	
+	    		<td> <%= f.label "Date"%> </td>
+	  			<td>    <%= f.date_select :faculty_sig_date %></td>
+	        </tr>			
 	    </tbody>
    </table>
 
   </div>
-  <div class="field">
-    <%= f.label :faculty_signature %><br>
-    <%= f.text_field :faculty_signature %>
-  </div>
-  <div class="field">
-    <%= f.label "Date"%><br>
-    <%= f.date_select :faculty_sig_date %>
-  </div>
+
 
   <% if @finding.child_id.nil?%>
      <%= f.hidden_field :child_id, value: params[:child_id]%>
