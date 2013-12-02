@@ -47,7 +47,8 @@
          <% else %>
            <% last_record = child.physical_exam.last %>
 	     <td><%= link_to 'Physical-Form', edit_physical_exam_path(last_record), class: "btn btn-success" %></td><% end %>
-
+    
+  <% if  current_user.role != "new" %>
     <% if child.finding.empty? %>
           
          
@@ -59,6 +60,7 @@
 
       </tr>
     <% end %>
+  <% end %>
   </tbody>
 </table>
 
