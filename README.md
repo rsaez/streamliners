@@ -30,7 +30,11 @@ This app is deployed at (https://streamliners.herokuapp.com)
 
 ### Collaborators
 -Rodolfo D Saez
+
 -Abhishek Sinha
+
 -Ganesh Parameswaran
+
 -Ninshant Shah
+
 -Harshit Gupta
