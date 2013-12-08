@@ -1,5 +1,5 @@
 # STREAMLINERS
-============
+=====
 
 Mission: Streamline patient forms for medical programs.
 
@@ -23,28 +23,7 @@ This is assuming you have no version of ruby or rails installed in your system. 
  
 5. Type "gem install rails"
  
-For more detailed info about installing Development Kit (for multiple versions), go here https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
-
-### Running with the Web Frontend
-If you want to run both the server and the [web frontend](https://github.com/Tanner/Mental-Health-Liberia-PEF-Client), there are a few more steps required.
-
-1. Clone the [web frontend repository](https://github.com/Tanner/Mental-Health-Liberia-PEF-Client) to a convienent location.
-2. Follow the instructions for the web frontend to build a the static site.
-3. In the `public/` directory in the server app, make a symbolic link to the web frontend directory, i.e. `ln -s front-end-path dist`.
-4. Once that is done, start the server and go to `0.0.0.0:3000/dist/` to view the client app and submit forms.
+For more detailed info about installing Development Kit (for multiple versions), go here (https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
 
 ### Deployment
-Information about deployment can be found in [DEPLOYMENT.md](DEPLOYMENT.md).
-
-## API
-Information about the read/write API can be found in [API.md](API.md).
-
-## Users
-Information about user creation/modification/management can be found in [USERS.md](USERS.md).
-
-### Group Members
-* Ryan Ashcraft
-* Tanner Smith
-* John Dugan
-* Alex Satterly
-* Melaena Roberts
+This app is deployed at (streamliners.heroku.com)
