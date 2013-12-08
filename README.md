@@ -1,7 +1,7 @@
 # STREAMLINERS
 =====
 
-Mission: Streamline patient forms for medical programs.
+Mission: Streamline patient forms for Migrant Worker Health Program.
 
 # Migrant Worker Health Program
 This program sends volunteers to set up a field clinic to South Georgia to treat migrant workers and their families.
@@ -26,4 +26,11 @@ This is assuming you have no version of ruby or rails installed in your system. 
 For more detailed info about installing Development Kit (for multiple versions), go here (https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
 
 ### Deployment
-This app is deployed at (streamliners.heroku.com)
+This app is deployed at (https://streamliners.herokuapp.com)
+
+### Collaborators
+-Rodolfo D Saez
+-Abhishek Sinha
+-Ganesh Parameswaran
+-Ninshant Shah
+-Harshit Gupta
