@@ -1,0 +1,13 @@
+<%= form_for(@child) do |f| %>
+  <div class="field">
+    <%= f.label :relevant_information, "Relevant Information(optional)" %>
+    <%= f.text_area :relevant_information %><br>
+  </div>
+  <div class="field">
+    <%= f.label :absences, (absences) %>
+    <%= f.text_area :absences %><br>
+  </div>
+  <div  class: "btn btn-large btn-primary">
+    <%= f.submit %>
+  </div>
+<% end %>

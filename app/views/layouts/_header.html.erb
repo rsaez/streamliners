@@ -1,0 +1,16 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+    	<%= link_to "Migrant Farm Workers Health Program", '/children', id: "logo" %>
+      <nav>
+          <ul class="nav pull-right">
+          <% if signed_in? %>
+             <%= link_to "Sign out", signout_path,class:"btn btn-primary" ,method: "delete" %> 
+             <% if current_user.role=='admin' %>
+               <%= link_to "Manage Users",users_path,class:"btn btn-primary" %>
+             <% end %>
+          <% end %>
+      </nav>
+    </div>
+  </div>
+</header>

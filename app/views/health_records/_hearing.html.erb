@@ -1,0 +1,22 @@
+<%= form_for(@health_record) do |f| %>
+	<div class="field">
+    <%= f.label :hearing_test %>
+    <%= f.text_field :hearing_test %><br>
+  </div>
+  <div class="field">
+    <%= f.label :hearing_result_right %>
+    <%= f.text_field :hearing_result_right %><br>
+  </div>
+  <div class="field">
+    <%= f.label :hearing_result_left %>
+    <%= f.text_field :hearing_result_left %><br>
+  </div>
+  <div class="field">
+    <%= f.label :hearing_rescreening %>
+    <%= f.text_field :hearing_rescreening %><br>
+  </div>
+  <div class="field">
+    <%= f.label :hearing_comments %>
+    <%= f.text_field :hearing_comments %><br>
+  </div>
+<% end %>

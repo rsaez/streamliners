@@ -4,6 +4,18 @@ $grayMediumLight: #eaeaea;
 
 /* universal */
 
+
+label {
+  width:7em;
+  float:left;
+  text-align:right;
+  margin-right: 0.5em;
+  display:block;
+}
+
+field {
+}
+
 html {
   overflow-y: scroll;
 }

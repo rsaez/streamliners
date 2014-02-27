@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131201070135) do
+ActiveRecord::Schema.define(version: 20140227114626) do
 
   create_table "children", force: true do |t|
     t.string   "name"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 20131201070135) do
     t.text     "relevant_information"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "location"
+    t.integer  "age_years"
+    t.integer  "age_month"
+    t.integer  "age_total_months"
+    t.boolean  "immunization_utd"
+    t.integer  "absences"
+    t.boolean  "dtap"
+    t.boolean  "hib"
+    t.boolean  "pneumovax"
+    t.boolean  "hepa"
+    t.boolean  "influenza"
+    t.boolean  "mmr"
   end
 
   create_table "findings", force: true do |t|

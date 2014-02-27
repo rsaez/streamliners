@@ -2,7 +2,7 @@
   
   <%= render 'shared/error_messages' %>
   <div class="field">
-    <%= f.label :relevant_information %>
+    <%= f.label :relevant_information, "Relevant Information" %>
     <%= f.text_area :relevant_information, :cols => "10", :rows => "5" %><br>
   </div>
     <div class="field">
@@ -35,50 +35,10 @@
     <%= f.label :"BMI" %>
     <%= f.text_field :bmi %><br>
   </div>
-  <div class="field">
-    <%= f.label :hearing_test %>
-    <%= f.text_field :hearing_test %><br>
-  </div>
-  <div class="field">
-    <%= f.label :hearing_result_right %>
-    <%= f.text_field :hearing_result_right %><br>
-  </div>
-  <div class="field">
-    <%= f.label :hearing_result_left %>
-    <%= f.text_field :hearing_result_left %><br>
-  </div>
-  <div class="field">
-    <%= f.label :hearing_rescreening %>
-    <%= f.text_field :hearing_rescreening %><br>
-  </div>
-  <div class="field">
-    <%= f.label :hearing_comments %>
-    <%= f.text_field :hearing_comments %><br>
-  </div>
-  <div class="field">
-    <%= f.label :vision_test %>
-    <%= f.text_field :vision_test %><br>
-  </div>
-  <div class="field">
-    <%= f.label :vision_acuity_left %>
-    <%= f.text_field :vision_acuity_left %><br>
-  </div>
-   <div class="field">
-    <%= f.label :vision_acuity_right %>
-    <%= f.text_field :vision_acuity_right %><br>
-  </div>
-  <div class="field">
-    <%= f.label :vision_rescreening %>
-    <%= f.text_field :vision_rescreening %><br>
-  </div>
-  <div class="field">
-    <%= f.label :vision_color %>
-    <%= f.text_field :vision_color %><br>
-  </div>
-  <div class="field">
-    <%= f.label :vision_comments %>
-    <%= f.text_field :vision_comments %><br>
-  </div>
+  <%= render 'hearing' %>
+  <%= render 'vision' %>
+  
+  
     <% if @health_record.child_id.nil?%>
       <%= f.hidden_field :child_id, value: params[:child_id]%>
     <% else %>

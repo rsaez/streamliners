@@ -3,12 +3,13 @@ Streamliners::Application.routes.draw do
   #get "users/create"
   #get "users/show"
   #get "users/index"
+  root 'sessions#new'
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
-  root 'sessions#new'
+  
   #get "health_record/new"
   resources :children
   resources :health_records

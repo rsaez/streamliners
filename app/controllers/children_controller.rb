@@ -81,7 +81,7 @@ class ChildrenController < ApplicationController
   
   def age(child)
     now = Time.now.utc.to_date
-    return now.year - child.DOB.year
+    #return now.year - child.DOB.advance(years)
   end
 
   private

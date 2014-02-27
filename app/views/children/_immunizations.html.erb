@@ -1,0 +1,38 @@
+<%= form_for(@child) do |f| %>
+  <hr>
+  <p>
+    Immunizations
+  </p>
+  <div class="field">
+      <%= f.label :immunization_utd, "UTD" %>
+      <%= f.check_box :immunization_utd %><br>
+    </div>
+    <div class="field">
+      <%= f.label :dtap, "DTaP" %>
+      <%= f.check_box :dtap %><br>
+    </div>
+    <div class="field">
+      <%= f.label :hib, "Hib" %>
+      <%= f.check_box :hib %><br>
+    </div>
+    <div class="field">
+      <%= f.label :pneumovax, "Pneumovax" %>
+      <%= f.check_box :pneumovax %><br>
+    </div>
+    <div class="field">
+      <%= f.label :hepa "HepA"%>
+      <%= f.check_box :hepa %><br>
+    </div>
+    <div class="field">
+      <%= f.label :influenza, "Influenza" %>
+      <%= f.check_box :influenza %><br>
+    </div>
+    <div class="field">
+      <%= f.label :mmr, "MMR" %>
+      <%= f.check_box :mmr %><br>
+    </div>
+    <div class="field">
+      <%= f.label :immunization_review, "Immunization Needed" %>
+      <%= f.text_area :immunization_review %><br>
+    </div>
+<% end %>
