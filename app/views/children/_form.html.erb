@@ -11,31 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name, "Name" %>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :gender, "Gender" %>
-    <%= f.select :gender, options_for_select(%w[Male Female]) %><br>
-  </div>
-  <div class="field">
-    <%= f.label :DOB, "DOB" %>
-    <%= f.date_select :DOB, (1920..2014).to_a %><br>
-  </div>
-  <div class="field">
-    <%= f.label :location, "Location" %>
-    <%= f.text_field :location %><br>
-  </div>
-  <div class="field">
-    <%= f.label :Child_examined_No_parent_present, "Child Examened; No Parent Present" %>
-    <%= f.check_box :no_parent_present %><br>
-  </div>
-  <div class="field">
-    <%= f.label :Parental_permission_given, "Parental Permission Given" %>
-    <%= f.check_box :parental_permission_given %><br>
-  </div>
+  <table>
+    <tr>
+      <th>  <%= f.label :name, "Name" %>  </th>
+      <td>  <%= f.text_field :name %>     </td>
+    </tr>
+    <tr>
+      <th>  <%= f.label :gender, "Gender" %>  </th>
+      <td>  <%= f.select :gender, options_for_select(%w[Male Female]) %>  </td>
+    </tr>
+    <tr>
+      <th>  <%= f.label :DOB, "DOB" %>  </th>
+      <td>  <div class="dob"><%= f.date_select :DOB, :start_year => Time.now.year, :end_year=>1920, 
+      :selected => Time.now.year %></div>  </td>
+    </tr>
+    <tr>
+      <th>  <%= f.label :location, "Location" %>   </th>
+      <td>  <%= f.text_field :location %>  </td>
+    </tr>
+    <tr>
+      <th>  <%= f.check_box :no_parent_present %>  </th>
+      <td>  <%= f.label :Child_examined_No_parent_present, "Child Examened; No Parent Present" %>  </td>
+      <th>  <%= f.check_box :parental_permission_given %>  </th>
+      <td>  <%= f.label :Parental_permission_given, "Parental Permission Given" %>  </td>
+    </tr>
+  </table>
+  
   <%= render 'allergies' %>
   <%= render 'immunizations' %>
   <%= render 'relevant' %>
 <% end %>
+  
+  <div class="field">
