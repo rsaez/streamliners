@@ -1,0 +1,38 @@
+<%= simple_form_for(@child) do |f| %>
+  
+  <% if @child.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@child.errors.count, "error") %> prohibited this child from being saved:</h2>
+      <ul>
+      <% @child.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.error_messages %>
+  <%= f.input :name %>
+  <%= f.association :gender %>
+  <%= f.input :DOB %>
+  <%= f.input :location %>
+  <%= f.input :no_parent_present %>
+  <%= f.input :parental_permission_given %>
+  <%= f.input :allergies %>
+  <%= f.input :allergies_info %>
+  <p>
+    Immunizations
+  </p>
+  <%= f.input :immunization_utd %>
+  <%= f.input :dtap %>
+  <%= f.input :hib %>
+  <%= f.input :pneumovax %>
+  <%= f.input :hepa %>
+  <%= f.input :influenza %>
+  <%= f.input :mmr %>
+  <%= f.input :immunization_review %>
+  <%= f.input :relevant_information %>
+  <%= f.input :absences %>
+  <%= f.button :submit %>
+
+<% end %>

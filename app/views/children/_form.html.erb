@@ -11,35 +11,90 @@
     </div>
   <% end %>
 
-  <table>
-    <tr>
-      <th>  <%= f.label :name, "Name" %>  </th>
-      <td>  <%= f.text_field :name %>     </td>
-    </tr>
-    <tr>
-      <th>  <%= f.label :gender, "Gender" %>  </th>
-      <td>  <%= f.select :gender, options_for_select(%w[Male Female]) %>  </td>
-    </tr>
-    <tr>
-      <th>  <%= f.label :DOB, "DOB" %>  </th>
-      <td>  <div class="dob"><%= f.date_select :DOB, :start_year => Time.now.year, :end_year=>1920, 
-      :selected => Time.now.year %></div>  </td>
-    </tr>
-    <tr>
-      <th>  <%= f.label :location, "Location" %>   </th>
-      <td>  <%= f.text_field :location %>  </td>
-    </tr>
-    <tr>
-      <th>  <%= f.check_box :no_parent_present %>  </th>
-      <td>  <%= f.label :Child_examined_No_parent_present, "Child Examened; No Parent Present" %>  </td>
-      <th>  <%= f.check_box :parental_permission_given %>  </th>
-      <td>  <%= f.label :Parental_permission_given, "Parental Permission Given" %>  </td>
-    </tr>
-  </table>
+  <p>
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :gender, "Gender" %>
+    <%= f.select :gender, options_for_select(%w[Male Female]) %>
+  </p>
+  <p>
+    <%= f.label :DOB, "DOB" %>
+    <div class="dob">
+      <%= f.date_select :DOB, :start_year => Time.now.year, :end_year=>1920, 
+        :selected => Time.now.year %>
+    </div>
+  </p>
+
+  <p>
+    <%= f.label :location, "Location" %>
+    <%= f.text_field :location %>
+  </p>  
+
+  <p>
+    <%= f.check_box :no_parent_present %>
+    <%= f.label :Child_examined_No_parent_present, "Child Examened; No Parent Present" %>
+  </p>
+
+  <p>
+    <%= f.check_box :parental_permission_given %>
+    <%= f.label :Parental_permission_given, "Parental Permission Given" %>
+  </p>
   
-  <%= render 'allergies' %>
-  <%= render 'immunizations' %>
-  <%= render 'relevant' %>
+  <br />
+  <p>
+    <%= f.label :allergies, "Allergies" %>
+    <%= f.check_box :allergies %>
+
+    <%= f.label :allergies_info, " Allergies Information" %>
+    <%= f.text_area :allergies_info %>
+  </p>
+
+  <p>
+    Immunizations
+  </p>
+  
+  <p>
+    <%= f.label :immunization_utd, "UTD" %>
+    <%= f.check_box :immunization_utd %>
+  
+    <%= f.label :dtap, "DTaP" %>
+    <%= f.check_box :dtap %>
+  
+    <%= f.label :hib, "Hib" %>
+    <%= f.check_box :hib %>
+
+    <%= f.label :pneumovax, "Pneumovax" %>
+    <%= f.check_box :pneumovax %>
+  
+    <%= f.label :hepa, "HepA"%>
+    <%= f.check_box :hepa %>
+
+    <%= f.label :influenza, "Influenza" %>
+    <%= f.check_box :influenza %>
+
+    <%= f.label :mmr, "MMR" %>
+    <%= f.check_box :mmr %>
+  </p>
+
+  <p>
+    <%= f.label :immunization_review, "Immunization Needed" %>
+    <%= f.text_area :immunization_review %>
+  </p>
+  
+  <p>
+    <%= f.label :relevant_information, "Relevant Information(optional)" %>
+    <%= f.text_area :relevant_information %>
+  </p>
+
+  <p>
+    <%= f.label :absences, "Absences" %>
+    <%= f.text_area :absences %>
+  </p>
+
+  <div  class: "btn btn-large btn-primary">
+    <%= f.submit %>
+  </div>
 <% end %>
-  
-  <div class="field">
