@@ -6,43 +6,46 @@
 </p>
 
 <p>
-  <strong>School:</strong>
-  <%= @child.school %>
-</p>
-
-<p>
   <strong>Gender:</strong>
   <%= @child.gender %>
 </p>
 
 <p>
-  <strong>Dob:</strong>
-  <%= @child.DOB %>
+  <strong>DOB:</strong>
+  <%= @child.dob %>
 </p>
 
 <p>
-  <strong>Age:</strong>
-  <%= @child.age %>
+  <strong>Age: </strong>
+  <%= @child.age_years %>
+  <strong> years, </strong>
+  <%= @child.age_months %>
+  <strong> months</strong>
 </p>
 
 <p>
-  <strong>Address:</strong>
-  <%= @child.address %>
+  <strong>Age total months(yrs):</strong>
+  <%= @child.age_total_months %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @child.location %>
 </p>
 
 <p>
   <strong>No parent present:</strong>
-  <%= @child.no_parent_present %>
+  <%= check_box_tag "", 1 , @child.no_parent_present ? true : false %>
 </p>
 
 <p>
   <strong>Parental permission given:</strong>
-  <%= @child.parental_permission_given %>
+  <%= check_box_tag "", 1 , @child.parental_permission_given ? true : false %>
 </p>
 
 <p>
   <strong>Allergies:</strong>
-  <%= @child.allergies %>
+  <%= check_box_tag "", 1 , @child.allergies ? true : false %>
 </p>
 
 <p>
@@ -51,14 +54,58 @@
 </p>
 
 <p>
-  <strong>Immunization review:</strong>
+  <strong>Immunizations Needed</strong>
+</p>
+
+<p>
+  <strong>UTD</strong>
+  <%= check_box_tag "", 1 , @child.immunization_utd ? true : false %>
+</p>
+
+<p>
+  <strong>DTaP</strong>
+  <%= check_box_tag "", 1 , @child.dtap ? true : false %>
+</p>
+
+<p>
+  <strong>Hib</strong>
+  <%= check_box_tag "", 1 , @child.hib ? true : false %>
+</p>
+
+<p>
+  <strong>Pneumovax</strong>
+  <%= check_box_tag "", 1 , @child.pneumovax ? true : false %>
+</p>
+
+<p>
+  <strong>HepA</strong>
+  <%= check_box_tag "", 1 , @child.hepa ? true : false %>
+</p>
+
+<p>
+  <strong>Influenza</strong>
+  <%= check_box_tag "", 1 , @child.influenza ? true : false %>
+</p>
+
+<p>
+  <strong>MMR</strong>
+  <%= check_box_tag "", 1 , @child.mmr ? true : false %>
+</p>
+
+<p>
+  <strong>Immunizations Needed: </strong>
   <%= @child.immunization_review %>
 </p>
 
 <p>
-  <strong>Relevant information:</strong>
+  <strong>Relevant information: </strong>
   <%= @child.relevant_information %>
 </p>
 
+<p>
+  <strong>Absences: </strong>
+  <%= @child.absences %>
+</p>
+
 <%= link_to 'Edit', edit_child_path(@child) %> |
-<%= link_to 'Back', children_path %>
+<%= link_to 'Directory', children_path %>

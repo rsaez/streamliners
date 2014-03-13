@@ -18,7 +18,7 @@ class ChildrenControllerTest < ActionController::TestCase
 
   test "should create child" do
     assert_difference('Child.count') do
-      post :create, child: { DOB: @child.DOB, address: @child.address, age: @child.age, allergies: @child.allergies, allergies_info: @child.allergies_info, gender: @child.gender, immunization_review: @child.immunization_review, name: @child.name, no_parent_present: @child.no_parent_present, parental_permission_given: @child.parental_permission_given, relevant_information: @child.relevant_information, school: @child.school }
+      post :create, child: { dob: @child.dob, location: @child.location, allergies: @child.allergies, allergies_info: @child.allergies_info, gender: @child.gender, immunization_review: @child.immunization_review, name: @child.name, no_parent_present: @child.no_parent_present, parental_permission_given: @child.parental_permission_given, relevant_information: @child.relevant_information }
     end
 
     assert_redirected_to child_path(assigns(:child))
@@ -35,7 +35,7 @@ class ChildrenControllerTest < ActionController::TestCase
   end
 
   test "should update child" do
-    patch :update, id: @child, child: { DOB: @child.DOB, address: @child.address, age: @child.age, allergies: @child.allergies, allergies_info: @child.allergies_info, gender: @child.gender, immunization_review: @child.immunization_review, name: @child.name, no_parent_present: @child.no_parent_present, parental_permission_given: @child.parental_permission_given, relevant_information: @child.relevant_information, school: @child.school }
+    patch :update, id: @child, child: { dob: @child.dob, location: @child.location, age_years: @child.age_years, allergies: @child.allergies, allergies_info: @child.allergies_info, gender: @child.gender, immunization_review: @child.immunization_review, name: @child.name, no_parent_present: @child.no_parent_present, parental_permission_given: @child.parental_permission_given, relevant_information: @child.relevant_information }
     assert_redirected_to child_path(assigns(:child))
   end
 

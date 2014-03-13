@@ -14,11 +14,11 @@
 <% end %> 
 
 <table class="table table-bordered">
-  <thead>
+  <thead class="directory">
     <tr>
-      <td>Name</td>
-      <td>School</td>
-      <td>DOB</td>
+      <td style="width: 110px">Name</td>
+      <td>Location</td>
+      <td style="width: 90px">DOB</td>
       <td>Gender</td>
       <td></td>
     </tr>
@@ -28,8 +28,8 @@
     <% @result.each do |child| %>
       <tr>
         <td><%= child.name %></td>
-        <td><%= child.school %></td>
-        <td><%= child.DOB %></td>
+        <td><%= child.location %></td>
+        <td><%= child.dob %></td>
         <td><%= child.gender %></td>
         <td><%= link_to 'Show', child , class: "btn btn-default btn-lg"%>
         <td><%= link_to 'Edit', edit_child_path(child), class: "btn btn-default btn-lg" %>

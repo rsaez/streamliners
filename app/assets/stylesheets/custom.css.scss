@@ -3,15 +3,57 @@
 
 $grayMediumLight: #eaeaea;
 
-/* universal */
+/* directory */
 
-dob {
-  width:100px;
-  padding: 100px;
+td{
+  
 }
 
+.directory{
+  
+  
+
+}
+
+
+/* form_for */
+
+.select_field{
+  width: auto;
+}
+
+.date_field{
+  width: auto;
+}
+
+.checkbox_field{
+  float: left;
+  display: block;
+  vertical-align: middle;
+  width: auto;
+  margin: 3px;
+  line-height: normal;
+  cursor: pointer;
+  float: left;
+  padding: 3px;
+}
+
+.checkbox_label_field{
+  width: auto;
+  float: left;
+  text-align: right;
+  display: block;
+  margin: 3px;
+  line-height: normal;
+  padding: 3px;
+
+}
+
+
+/* universal */
+
 label {
-  width:7em;
+  width:130px;
   float:left;
   text-align:right;
   margin-right: 0.5em;

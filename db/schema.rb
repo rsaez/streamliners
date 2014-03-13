@@ -11,15 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140227114626) do
+ActiveRecord::Schema.define(version: 20140313153259) do
 
   create_table "children", force: true do |t|
     t.string   "name"
-    t.string   "school"
     t.string   "gender"
-    t.date     "DOB"
-    t.integer  "age"
-    t.string   "address"
     t.boolean  "no_parent_present"
     t.boolean  "parental_permission_given"
     t.boolean  "allergies"
@@ -30,16 +26,17 @@ ActiveRecord::Schema.define(version: 20140227114626) do
     t.datetime "updated_at"
     t.string   "location"
     t.integer  "age_years"
-    t.integer  "age_month"
     t.integer  "age_total_months"
     t.boolean  "immunization_utd"
-    t.integer  "absences"
     t.boolean  "dtap"
     t.boolean  "hib"
     t.boolean  "pneumovax"
     t.boolean  "hepa"
     t.boolean  "influenza"
     t.boolean  "mmr"
+    t.date     "dob"
+    t.integer  "age_months"
+    t.text     "absences"
   end
 
   create_table "findings", force: true do |t|

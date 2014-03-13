@@ -2,11 +2,10 @@
 
 one:
   name: MyString
-  school: MyString
+  location: MyString
   gender: MyString
-  DOB: 2013-10-14
-  age: 1
-  address: MyString
+  dob: 2013-10-14
+  age_years: 1
   no_parent_present: false
   parental_permission_given: false
   allergies: false
@@ -16,11 +15,10 @@ one:
 
 two:
   name: MyString
-  school: MyString
+  location: MyString
   gender: MyString
-  DOB: 2013-10-14
-  age: 1
-  address: MyString
+  dob: 2013-10-14
+  age_years: 1
   no_parent_present: false
   parental_permission_given: false
   allergies: false

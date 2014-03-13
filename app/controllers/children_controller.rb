@@ -22,6 +22,10 @@ class ChildrenController < ApplicationController
     if !signed_in?
       redirect_to root_path
     end
+
+    @child.age_years = ageYears(@child)
+    @child.age_months = ageMonths(@child)
+    @child.age_total_months = ageTotalMonths(@child)
   end
 
   # GET /children/new
@@ -43,7 +47,7 @@ class ChildrenController < ApplicationController
   # POST /children.json
   def create
     @child = Child.new(child_params)
-    @child.age = age(@child)
+    
     respond_to do |format|
       if @child.save
         format.html { redirect_to @child, notice: 'Child was successfully created.' }
@@ -53,6 +57,10 @@ class ChildrenController < ApplicationController
         format.json { render json: @child.errors, status: :unprocessable_entity }
       end
     end
+
+    @child.age_years = ageYears(@child)
+    @child.age_months = ageMonths(@child)
+    @child.age_total_months = ageTotalMonths(@child)
   end
 
   # PATCH/PUT /children/1
@@ -79,10 +87,20 @@ class ChildrenController < ApplicationController
     end
   end
   
-  def age(child)
+  def ageYears(child)
     now = Time.now.utc.to_date
-    #return now.year - child.DOB.advance(years)
+    return now.year - child.dob.year
   end
+
+  def ageMonths(child)
+    return child.dob.month
+  end
+
+  def ageTotalMonths(child)
+    return ((child.age_years*12)+child.age_months)
+  end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -92,6 +110,6 @@ class ChildrenController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def child_params
-      params.require(:child).permit(:name, :school, :gender, :DOB, :age, :address, :no_parent_present, :parental_permission_given, :allergies, :allergies_info, :immunization_review, :relevant_information)
+      params.require(:child).permit(:name, :gender, :dob, :location, :age_years, :age_months, :age_total_months, :no_parent_present, :parental_permission_given, :allergies, :allergies_info, :immunization_utd, :dtap, :hib, :pneumovax, :hepa, :influenza, :mmr, :immunization_review, :relevant_information, :absences)
     end
 end
