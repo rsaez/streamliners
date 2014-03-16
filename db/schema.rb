@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140313153259) do
+ActiveRecord::Schema.define(version: 20140316160846) do
 
   create_table "children", force: true do |t|
     t.string   "name"
@@ -60,28 +60,18 @@ ActiveRecord::Schema.define(version: 20140313153259) do
   end
 
   create_table "health_records", force: true do |t|
-    t.string   "date"
-    t.string   "datetime"
     t.text     "relevant_information"
-    t.integer  "height"
-    t.integer  "weight"
     t.string   "blood_pressure"
-    t.float    "hemoglobin",             limit: 255
+    t.float    "hemoglobin",              limit: 255
     t.string   "hearing_test"
-    t.string   "hearing_result_left"
-    t.string   "hearing_result_right"
     t.string   "hearing_rescreening"
     t.text     "hearing_comments"
     t.string   "vision_test"
-    t.string   "vision_acuity_right"
-    t.string   "vision_acuity_left"
     t.string   "vision_rescreening"
     t.string   "vision_color"
     t.text     "vision_comments"
-    t.text     "physical_therapy"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "vision_acuity_both"
     t.string   "hearing_result_right_2"
     t.string   "hearing_result_left_3"
     t.string   "hearing_result_right_3"
@@ -94,7 +84,6 @@ ActiveRecord::Schema.define(version: 20140313153259) do
     t.integer  "diastolic2"
     t.integer  "systolic3"
     t.integer  "diastolic3"
-    t.integer  "bmi"
     t.integer  "blood_sugar"
     t.string   "vision_acuity_right_2"
     t.string   "vision_acuity_left_2"
@@ -110,6 +99,21 @@ ActiveRecord::Schema.define(version: 20140313153259) do
     t.integer  "child_id"
     t.integer  "height_feet"
     t.integer  "height_inches"
+    t.integer  "height_total_inches"
+    t.integer  "height_total_cm"
+    t.integer  "weight_lbs"
+    t.integer  "weight_oz"
+    t.integer  "bmi_result"
+    t.integer  "blood_glucose"
+    t.integer  "hearing_result_left_1"
+    t.integer  "hearing_result_right_1"
+    t.integer  "ear_form_decibel_test_1"
+    t.integer  "ear_form_decibel_test_2"
+    t.integer  "ear_form_decibel_test_3"
+    t.integer  "vision_acuity_left_1"
+    t.integer  "vision_acuity_right_1"
+    t.integer  "vision_acuity_both_1"
+    t.string   "wears_corrective_lenses"
   end
 
   create_table "physical_exams", force: true do |t|

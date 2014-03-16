@@ -23,10 +23,12 @@ class HealthRecord < ActiveRecord::Base
   def hemoglobin_validation
     errors.add(:hemoglobin,"is too high. Must be less than 18. Contact Authorities") if hemoglobin >= 18
     
-    if self.child.age >=2 && self.child.age <=5
-      errors.add(:hemoglobin,"Abnormal value for Hemoglobin. Contact Authorities.") if hemoglobin >= 18 || hemoglobin < 11.3
-    else
-      errors.add(:hemoglobin,"Abnormal value for Hemoglobin. Contact Authorities.") if hemoglobin >=18 || hemoglobin < 12  
+    if self.child.age_years != nil
+      if self.child.age_years >=2 && self.child.age_years <=5
+        errors.add(:hemoglobin,"Abnormal value for Hemoglobin. Contact Authorities.") if hemoglobin >= 18 || hemoglobin < 11.3
+      else
+        errors.add(:hemoglobin,"Abnormal value for Hemoglobin. Contact Authorities.") if hemoglobin >=18 || hemoglobin < 12  
+      end
     end
 
     if  self.child.gender == "Male"

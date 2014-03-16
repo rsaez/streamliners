@@ -9,72 +9,63 @@
   </thead>
 
   <tbody>
-      <tr>
-        <td>
-          <%= f.label :"Height (ft)" %>
-          <%= f.text_field :height_feet %>
-          <%= f.label :"Height (in)" %>
-          <%= f.text_field :height_inches %>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <%= f.label :"Weight (in pounds) " %>
-          <%= f.text_field :weight %><br>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <%= f.label :"Blood pressure (Systolic)"  %>
-          <%= f.text_field :systolic1 %><br>
-          <%= f.label :"Blood pressure (Diastolic)"  %>
-          <%= f.text_field :diastolic1 %><br>
-        </td>
-      </tr>
+    <tr>
+      <td>
+        <p>
+        <%= f.label :"Height (ft)" %>
+        <%= f.text_field :height_feet %>
+
+        <%= f.label :"Height (in)" %>
+        <%= f.text_field :height_inches %>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :"Weight (in pounds) " %>
+        <%= f.text_field :weight %><br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :"Blood pressure (Systolic)"  %>
+        <%= f.text_field :systolic1 %><br>
+        <%= f.label :"Blood pressure (Diastolic)"  %>
+        <%= f.text_field :diastolic1 %><br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :"Haemoglobin (mm/dilution)" %>
+        <%= f.text_field :hemoglobin %><br>
+        <% if @health_record.errors[:hemoglobin]%>
+        <% end %>
+       </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :"Blood Sugar" %>
+        <%= f.text_field :blood_sugar %><br> 
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :"BMI" %>
+        <%= f.text_field :bmi %><br>
+      </td>
+    </tr>
+    <%= render 'hearing' %>
+    <%= render 'vision' %>
   </tbody>
   </table>
-  <div class="field">
-    
-  </div>
-    <div class="field">
-    <%= f.label :"Height (ft)" %>
-    <%= f.text_field :height_feet %>
-    <%= f.label :"Height (in)" %>
-    <%= f.text_field :height_inches %>
-  </div>
-  <div class="field">
-    
-  </div>
-  <div class="field">
-    
-  </div>
-  <div class="field">
-    <%= f.label :"Haemoglobin (mm/dilution)" %>
-    <%= f.text_field :hemoglobin %><br>
-    <% if @health_record.errors[:hemoglobin]%>
-    <% end %>
-  </div>
-  <div class="field">
-    <%= f.label :"Blood Sugar" %>
-    <%= f.text_field :blood_sugar %><br>
-  </div>
-  <div class="field">
-    <%= f.label :"BMI" %>
-    <%= f.text_field :bmi %><br>
-  </div>
-  <%= render 'hearing' %>
-  <%= render 'vision' %>
-  
-  
-    <% if @health_record.child_id.nil?%>
-      <%= f.hidden_field :child_id, value: params[:child_id]%>
-    <% else %>
-      <%= f.hidden_field :child_id, value: @health_record.child_id%>
-    <% end %>
-    <div  class: "btn btn-large btn-primary">
+  <% if @health_record.child_id.nil?%>
+    <%= f.hidden_field :child_id, value: params[:child_id]%>
+  <% else %>
+    <%= f.hidden_field :child_id, value: @health_record.child_id%>
+  <% end %>
+  <div  class: "btn btn-large btn-primary">
     <%= f.submit %>
   </div>
-
 <% end %>
 <br />
 <%= link_to 'Back', @child %> |

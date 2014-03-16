@@ -1,26 +1,38 @@
 <%= form_for(@health_record) do |f| %>
-	<div class="field">
-    <%= f.label :vision_test %>
-    <%= f.text_field :vision_test %><br>
-  </div>
-  <div class="field">
-    <%= f.label :vision_acuity_left %>
-    <%= f.text_field :vision_acuity_left %><br>
-  </div>
-   <div class="field">
-    <%= f.label :vision_acuity_right %>
-    <%= f.text_field :vision_acuity_right %><br>
-  </div>
-  <div class="field">
-    <%= f.label :vision_rescreening %>
-    <%= f.text_field :vision_rescreening %><br>
-  </div>
-  <div class="field">
-    <%= f.label :vision_color %>
-    <%= f.text_field :vision_color %><br>
-  </div>
-  <div class="field">
-    <%= f.label :vision_comments %>
-    <%= f.text_field :vision_comments %><br>
-  </div>
+	<tr>
+    <td>
+      <%= f.label :vision_test %>
+      <%= f.text_field :vision_test %><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :vision_acuity_left %>
+      <%= f.text_field :vision_acuity_left %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :vision_acuity_right %>
+      <%= f.text_field :vision_acuity_right %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :vision_rescreening %>
+      <%= f.text_field :vision_rescreening %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :vision_color %>
+      <%= f.text_field :vision_color %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :vision_comments %>
+      <%= f.text_field :vision_comments %>
+    </td>
+  </tr>
 <% end %>

@@ -45,7 +45,7 @@ class HealthRecordsController < ApplicationController
   
 
   def health_record_params
-      params.require(:health_record).permit(:blood_sugar,:bmi,:systolic1,:diastolic1,:height_feet,:height_inches,:child_id, :relevant_information, :age, :height, :weight, :blood_pressure, :hemoglobin, :hearing_test, :hearing_result_left, :hearing_result_right, :hearing_rescreening, :hearing_comments, :vision_test,:vision_acuity_right,:vision_acuity_left,:vision_rescreening,:vision_color,:vision_comments)
+      params.require(:health_record).permit(:relevant_information,:blood_pressure,:hearing_test,:hearing_rescreening,       :blood_sugar,:bmi,:systolic1,:diastolic1,:height_feet,:height_inches,:child_id, , :age, :height, :weight,  :hemoglobin,  :hearing_result_left, :hearing_result_right, :hearing_rescreening, :hearing_comments, :vision_test,:vision_acuity_right,:vision_acuity_left,:vision_rescreening,:vision_color,:vision_comments)
   end
 
 end
