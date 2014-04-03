@@ -1,30 +1,98 @@
 <%= form_for(@health_record) do |f| %>
 	<tr>
-    <td>
-      <%= f.label :hearing_test %>
-      <%= f.text_field :hearing_test %>
+    <td colspan="3">
+      <p>Hearing Screen</p>
     </td>
   </tr>
   <tr>
-    <td>
-      <%= f.label :hearing_result_right %>
-      <%= f.text_field :hearing_result_right %>
+    <td colspan="3">
+      <p>Test 1</p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td class="td_two">
+      <p>Left Ear</p>
+      <p>
+        <%= f.text_field :hearing_result_left_1, :class => "ten_number_field" %>
+         result
+      </p>
+    </td>
+    <td class="td_two" colspan="2">
+      <p>Right Ear</p>
+      <p>
+        <%= f.text_field :hearing_result_right_1, :class => "ten_number_field" %>
+         result
+      </p>
     </td>
   </tr>
   <tr>
-    <td>
-      <%= f.label :hearing_result_left %>
-      <%= f.text_field :hearing_result_left %>
+    <td colspan="3">
+      <%= f.check_box :ear_form_decibel_test_1, :class=>"checkbox_field" %>
+      <%= f.label :ear_form_decibel_test_1, "Ear Form Decibel Test", :class=>"checkbox_label_field" %>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="3">
+      <p>Test 2</p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td class="td_two">
+      <p>Left Ear</p>
+      <p>
+        <%= f.text_field :hearing_result_left_2, :class => "ten_number_field" %>
+         result
+      </p>
+    </td>
+    <td class="td_two" colspan="2">
+      <p>Right Ear</p>
+      <p>
+        <%= f.text_field :hearing_result_right_2, :class => "ten_number_field" %>
+         result
+      </p>
     </td>
   </tr>
   <tr>
-    <td>
-      <%= f.label :hearing_rescreening %>
-      <%= f.text_field :hearing_rescreening %>
+    <td colspan="3">
+      <%= f.check_box :ear_form_decibel_test_2, :class=>"checkbox_field" %>
+      <%= f.label :ear_form_decibel_test_2, "Ear Form Decibel Test", :class=>"checkbox_label_field" %>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="3">
+      <p>Test 3</p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td class="td_two">
+      <p>Left Ear</p>
+      <p>
+        <%= f.text_field :hearing_result_left_3, :class => "ten_number_field" %>
+         result
+      </p>
+    </td>
+    <td class="td_two" colspan="2">
+      <p>Right Ear</p>
+      <p>
+        <%= f.text_field :hearing_result_right_3, :class => "ten_number_field" %>
+         result
+      </p>
     </td>
   </tr>
   <tr>
-    <td>
+    <td colspan="3">
+      <%= f.check_box :ear_form_decibel_test_3, :class=>"checkbox_field" %>
+      <%= f.label :ear_form_decibel_test_3, "Ear Form Decibel Test", :class=>"checkbox_label_field" %>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="3">
       <%= f.label :hearing_comments %>
       <%= f.text_field :hearing_comments %>
     </td>

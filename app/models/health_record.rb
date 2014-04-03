@@ -17,7 +17,7 @@ class HealthRecord < ActiveRecord::Base
   end
 
   def is_height_weight_taken
-    return !height_feet.nil? && !weight.nil?
+    return !height_feet.nil? && !weight_lbs.nil?
   end
 
   def hemoglobin_validation

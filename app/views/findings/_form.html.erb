@@ -1,5 +1,5 @@
-  <%= form_for(@finding) do |f| %>
-  
+<%= form_for(@finding) do |f| %>
+
   <% if @finding.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@finding.errors.count, "error") %> prohibited this finding from being saved:</h2>
@@ -14,69 +14,208 @@
 
   <table class = "table table-bordered">
   	<tbody>
-  		<tr>
-		  <div class="field">
-		    <td> <%= f.label :general_statement %></td>
-		    <td><%= f.text_area :general_statement , :style => "width:98%;" %></td>
-		  </div>	
-		</tr>
-		<tr>
-		  <div class="field">
-    		<td><%= f.label :signature %></td>
-    		<td><%= f.text_field :signature %></td>
-  		  </div>	
-		</tr>
-		<tr>
-		  <div class="field">
-    		<td><%= f.label "Date" %></td>
-    		<td><%= f.date_select :sig_date %></td>
-  		  </div>	
-		</tr>
-	</tbody>
-  </table>
-	
-  	
-  <div class="field">
-   <table class = "table table-bordered">
-       <thead>
-         <tr>
-            <th >
-    	    	<h3 align = "center">Diagnostic</h3>
-            </th>
-    		<th >
-    			<h3 align = "center">Treatment</h3>
-    		</th>
-         </tr>
-       </thead>
-        <tbody>
-	    	<tr>	
-	  			<td> <%= f.text_area :finding_a%> </td>
-	  			<td> <%= f.text_area :treatment_a , :style => "width:98%;"  %> </td>
-	    	</tr>
-	    	<tr>
-	    		<td> <%= f.text_area :finding_b %> </td>
-	  			<td> <%= f.text_area :treatment_b  , :style => "width:98%;" %> </td>
-	    	</tr>
-	    	<tr>
-	    		<td> <%= f.text_area :finding_c %> </td>
-	  			<td> <%= f.text_area :treatment_c , :style => "width:98%;"  %> </td>
-	    	</tr>
-	    	<tr>	
-	    		<td> <%= f.text_area :finding_d %> </td>
-	  			<td> <%= f.text_area :treatment_d , :style => "width:98%;"  %> </td>
-	        </tr>
-	    	<tr>	
-	    		<td> <%= f.label :faculty_signature %> </td>
-	  			<td> <%= f.text_field :faculty_signature %></td>
-	        </tr>
-	    	<tr>	
-	    		<td> <%= f.label "Date"%> </td>
-	  			<td>    <%= f.date_select :faculty_sig_date %></td>
-	        </tr>			
-	    </tbody>
-   </table>
+      <tr>
+        <td class="physical_title" colspan="4">
+          Well Child Check
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial_label">
+          WNL
+        </td>
+        <td  class="physical_td_radial_label">
+          AB
+        </td>
+        <td class="physical_td_radial_label">
+          Not Evaluated
+        </td>
+        <td class="physical_td_radial_label">
+          Unable To Cooperate
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:general_statement, "WNL") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:general_statement, "Abnormal") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:general_statement, "Not Evaluated") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:general_statement, "Unable to cooperate") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "1.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "2.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "3.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "4.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "5.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "6.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "7.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "8.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "9.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "10.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
 
-  </div>
+      <tr>
+        <td class="physical_title" colspan="4">
+          Follow Up
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "1.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "2.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "3.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "4.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "5.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "6.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "7.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "8.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "9.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :Comments, "10.) " %>
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="4">
+          Anticipatory Education/Guidance (As per guidance)
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <%= f.check_box :signature, :class=>"checkbox_field" %>
+          <%= f.label :signature, "Chart Complete", :class=>"checkbox_label_field" %>
+        </td>
+        <td colspan="2">
+          <%= f.check_box :signature, :class=>"checkbox_field" %>
+          <%= f.label :signature, "Chart NOT Complete", :class=>"checkbox_label_field" %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <h3>By marking this box as complete NP student verifies that all screenings and SMP encounters are complete and have been reviewed by the faculty.</h3>
+        </td>
+      </tr>
+
+      <tr>
+  	    <td><%= f.label :signature, "NP signature" %></td>
+    	  <td><%= f.text_field :signature %></td>
+  	  </tr>
+      <tr>
+        <td><%= f.label :signature, "faculty signature" %></td>
+        <td><%= f.text_field :signature %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :signature, "Other NP signature" %></td>
+        <td><%= f.text_field :signature %></td>
+      </tr>
+    </tbody>
+  </table>
+
 
 
   <% if @finding.child_id.nil?%>
@@ -84,7 +223,7 @@
   <% else %>
      <%= f.hidden_field :child_id, value: @finding.child_id%>
   <% end %>
-  
+
   <table>
   	<tbody>
   		<tr>
@@ -104,4 +243,4 @@
   	</tbody>  
   </table>
 
- <% end %>
+<% end %>

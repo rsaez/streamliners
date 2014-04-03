@@ -3,11 +3,59 @@
 
 $grayMediumLight: #eaeaea;
 
+/* Physical Form */
+.physical_title{
+  font-weight: bold;
+  text-align: justify;
+}
+
+.physical_td_radial_label{
+  text-align: justify;
+  width: 25%;
+}
+
+.physical_td_radial{
+  text-align: justify;
+
+}
+
+.physical_comment_field{
+  width: 80%;
+}
+
+
+
+/* Health Form */
+
+.number_field{
+  width: 34px;
+  
+}
+
+.ten_number_field{
+  width: 80px;
+}
+
+.two_labels{
+  
+}
+
+.td_two{
+  width: 50%;
+}
+
+.td_three{
+  width: 33.33%;
+}
+
 /* directory */
 
 td{
   
 }
+
+
+
 
 .directory{
   
@@ -95,6 +143,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  text-align: center;
 }
 
 h1 {
