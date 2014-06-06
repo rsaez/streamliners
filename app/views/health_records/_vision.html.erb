@@ -1,129 +1,38 @@
 <%= form_for(@health_record) do |f| %>
 	<tr>
-    <td colspan="3">
-      <p>Vision Screen</p>
+    <td>
+      <%= f.label :vision_test %>
+      <%= f.text_field :vision_test %><br>
     </td>
   </tr>
-
   <tr>
-    <td colspan="3">
-      <p>Test 1</p>
+    <td>
+      <%= f.label :vision_acuity_left %>
+      <%= f.text_field :vision_acuity_left %>
     </td>
   </tr>
-  
   <tr>
-    <td class="td_three">
-      <p>Left Eye</p>
-      <p>
-        <% @health_record.vision_acuity_left_1 = 99 %>
-        20 / 
-        <%= f.text_field :vision_acuity_left_1, :class => "number_field" %>
-         result
-      </p>
-    </td>
-    <td class="td_three">
-      <p>Right Eye</p>
-      <p>
-        20 / 
-        <%= f.text_field :vision_acuity_right_1, :class => "number_field" %>
-         result
-      </p>
-    </td>
-    <td class="td_three">
-      <p>Both Eyes</p>
-      <p>
-        20 / 
-        <%= f.text_field :vision_acuity_both_1, :class => "number_field" %>
-         result
-      </p>
+    <td>
+      <%= f.label :vision_acuity_right %>
+      <%= f.text_field :vision_acuity_right %>
     </td>
   </tr>
-
   <tr>
-    <td colspan="3">
-      <p>Test 2</p>
+    <td>
+      <%= f.label :vision_rescreening %>
+      <%= f.text_field :vision_rescreening %>
     </td>
   </tr>
-  
   <tr>
-    <td class="td_three">
-      <p>Left Eye</p>
-      <p>
-        20 / 
-        <%= f.text_field :vision_acuity_left_2, :class => "number_field" %>
-         result
-      </p>
-    </td>
-    <td class="td_three">
-      <p>Right Eye</p>
-      <p>
-        20 / 
-        <%= f.text_field :vision_acuity_right_2, :class => "number_field" %>
-         result
-      </p>
-    </td>
-    <td class="td_three">
-      <p>Both Eyes</p>
-      <p>
-        20 / 
-        <%= f.text_field :vision_acuity_both_2, :class => "number_field" %>
-         result
-      </p>
+    <td>
+      <%= f.label :vision_color %>
+      <%= f.text_field :vision_color %>
     </td>
   </tr>
-
   <tr>
-    <td colspan="3">
-      <p>Test 3</p>
-    </td>
-  </tr>
-  
-  <tr>
-    <td class="td_three">
-      <p>Left Eye</p>
-      <p>
-        20 / 
-        <%= f.text_field :vision_acuity_left_3, :class => "number_field" %>
-         result
-      </p>
-    </td>
-    <td class="td_three">
-      <p>Right Eye</p>
-      <p>
-        20 / 
-        <%= f.text_field :vision_acuity_right_3, :class => "number_field" %>
-         result
-      </p>
-    </td>
-    <td class="td_three">
-      <p>Both Eyes</p>
-      <p>
-        20 / 
-        <%= f.text_field :vision_acuity_both_3, :class => "number_field" %>
-         result
-      </p>
-    </td>
-  </tr>
-
-  <tr>
-    <td colspan="3">
-      <%= f.check_box :vision_color, :class=>"checkbox_field" %>
-      <%= f.label :vision_color, "Color Blindness", :class=>"checkbox_label_field" %>
-    </td>
-  </tr>
-
-  <tr>
-    <td colspan="3">
-      <%= f.label :wears_corrective_lenses, "Wears corrective lenses?" %>
-    <%= f.select :wears_corrective_lenses,  options_for_select(%w[Yes No N/A]), {}, html_options={:class =>"select_field"} %>
-    </td>
-  </tr>
-  
-  <tr>
-    <td colspan="3">
+    <td>
       <%= f.label :vision_comments %>
       <%= f.text_field :vision_comments %>
     </td>
   </tr>
-
 <% end %>

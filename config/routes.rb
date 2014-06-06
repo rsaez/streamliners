@@ -1,6 +1,4 @@
 Streamliners::Application.routes.draw do
-  resources :directories
-
   #get "users/new"
   #get "users/create"
   #get "users/show"

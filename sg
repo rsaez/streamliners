@@ -1,0 +1,377 @@
+[33mcommit 1d03dc863569c42cf09d3802b9ddc28ffbfd576f[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Thu Apr 3 03:58:43 2014 -0400
+
+    finished layout, added directories
+
+[33mcommit b621d390d4c740ea3be9024476741f2f20dba225[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Sun Mar 16 12:56:37 2014 -0400
+
+    editing healthrecords schema
+
+[33mcommit cec752c4bbeaaa87b30a77748a837d3f8fa1db08[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Thu Mar 13 11:56:08 2014 -0400
+
+    Children forms added all variables
+
+[33mcommit cf982f1d5430f58d47b41e282131551c6614d96a[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Sat Mar 1 11:58:23 2014 -0500
+
+    added p to the forms
+
+[33mcommit 2523847003cd4e24d5ccc16287d915e394025de0[m
+Merge: 8dee87b d3dfc94
+Author: rsaez <rsaez@gatech.edu>
+Date:   Thu Feb 27 12:55:30 2014 -0500
+
+    Merge branch 'master' of https://github.com/rsaez/streamliners
+
+[33mcommit 8dee87b4d510c7efc8a0013c70137bceeba7dd0f[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Thu Feb 27 12:54:26 2014 -0500
+
+    added table to form
+
+[33mcommit a3d64e8109d7bdf6c4753d2417e3ff955623c7f4[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Thu Feb 27 09:43:10 2014 -0500
+
+    adjusted all the forms
+
+[33mcommit d3dfc94bc326ae192d1750081900fe1ef48b4d53[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Sun Dec 8 21:10:07 2013 -0500
+
+    Update README.md
+    
+    added admin instructions
+
+[33mcommit 05665a63654690f16ba627d421bd95c1754b1322[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Sun Dec 8 02:58:41 2013 -0500
+
+    Update README.md
+    
+    fixed spacing in between collaborators
+
+[33mcommit 478c62d5a18bdfa28ae82f16ccc29468d8d9d5ff[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Sun Dec 8 02:54:54 2013 -0500
+
+    Update README.md
+    
+    added collaborators
+
+[33mcommit e5e18eb98022f788cf04f7e23fea2bc77efcbae1[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Sun Dec 8 02:48:46 2013 -0500
+
+    Update README.md
+    
+    Added Heroku link
+
+[33mcommit f89a68b9ba7ca9c6d3b6b23d66efb71eba02b2dd[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Sun Dec 8 02:46:27 2013 -0500
+
+    Update README.md
+    
+    adding install instructions
+
+[33mcommit fef9a94499668ff39e6fb5e19a7217ec4e5e980a[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Sat Dec 7 21:47:31 2013 -0500
+
+    trying to get pull to work
+
+[33mcommit 08b8b128d30a37db5f6b4cc3c7fd89db74e8d615[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Sun Dec 1 19:05:05 2013 -0500
+
+    Hide summary page for users with role new.
+
+[33mcommit 5af3e6265bea6b5970b3da275e3bc6d6c6af1692[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Sun Dec 1 16:49:31 2013 -0500
+
+    Add admin dashboard where we can view existing roles of users and update them.
+
+[33mcommit ad458b05f760031c8ce93fc78c0286aaff140abf[m
+Merge: c4b85f1 a997469
+Author: Nishant <nshah99@gatech.edu>
+Date:   Sun Dec 1 16:06:17 2013 -0500
+
+    Merge branch 'master' of https://github.com/rsaez/streamliners
+
+[33mcommit c4b85f1058cbaf901f55f763696737e99f2c3ab8[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Sun Dec 1 16:06:10 2013 -0500
+
+    Add ManageUsers button for admin. Add an admin from rails console by setting role of a user to admin.
+
+[33mcommit a99746903b6161adf01cf1ba5f974ccd77dfaa25[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Sun Dec 1 12:52:48 2013 -0800
+
+    Sorted Harshit's layout
+
+[33mcommit 747dfdb5a2180ad181009f4527a6e7f6a61871a3[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Sun Dec 1 03:09:28 2013 -0800
+
+    Changed Submit button image and added Back button
+
+[33mcommit 29df2e1509ddd5aa38dfdc0ca36dd7c62fa5dc6c[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Sun Dec 1 02:49:59 2013 -0800
+
+    Changed layout of Summary
+
+[33mcommit 5b646f16a21ca4634a039baf754b68c25f2825c2[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Sun Dec 1 01:48:01 2013 -0800
+
+    Aligned Search button with field
+
+[33mcommit ff5323f37a97aa4e4b510a8a29d94b9348e12d05[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Sun Dec 1 00:59:37 2013 -0800
+
+    Added table border to children index
+
+[33mcommit 25ed4f9abe0bdc8ec9def144ef10c059bc23363e[m
+Merge: a97b9e8 33f27e1
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Sun Dec 1 00:26:54 2013 -0800
+
+    Merge branch 'master' of https://github.com/rsaez/streamliners
+
+[33mcommit a97b9e8aed8f040e073d2f756e25fffeb72a46ae[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Sun Dec 1 00:25:58 2013 -0800
+
+    Added checks for signed in for each model
+
+[33mcommit 33f27e1e6b32c59862543d1d2a2b316cae2376a5[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Sun Dec 1 02:03:07 2013 -0500
+
+    Add bmi and bloodsugar to health record.
+
+[33mcommit 037d71fb3007487b30083e520527ea9422052374[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Sat Nov 30 18:13:15 2013 -0800
+
+    On creating new user, redirects to children redirectory.
+    
+    Header redirects to children directory.
+    
+    Add validation for the summary form.
+
+[33mcommit daaa568264db55c42c60422dc00c17d5d9c8035c[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Sat Nov 30 17:08:19 2013 -0800
+
+    Refactored code
+
+[33mcommit 84a3c3882726f909e9717e275afe243cf8dd186d[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Fri Nov 29 23:25:14 2013 -0800
+
+    Edit is working for Findings now
+
+[33mcommit 0e10b490a8bbd00a7d271aada31d1afa832a925e[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Tue Nov 26 21:43:13 2013 -0500
+
+    Bug fix for health record controller for create failure condition.
+
+[33mcommit 0ab9da12d420bee59e208e0acc88ab56146b8c8b[m
+Merge: 4ff1609 7038e28
+Author: Nishant <nshah99@gatech.edu>
+Date:   Tue Nov 26 21:31:42 2013 -0500
+
+    Merge branch 'master' of https://github.com/rsaez/streamliners
+
+[33mcommit 4ff1609152b1963dde8d351e4708e2c9bc5887f9[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Tue Nov 26 21:27:50 2013 -0500
+
+    Also reset your database and repopulate it. The app will crash as varibales like age are old in the old impl but have been used in the logic now.
+
+[33mcommit 7038e289f59664592648e1a5e7e938d56fa7d80e[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Tue Nov 26 21:27:50 2013 -0500
+
+    Basic validations on hemoglobin and order of tests. It is buggy and does not allow the user to update/create a field which is violating the validation. We would want to be able to skip validations for a few of them. Look at http://stackoverflow.com/questions/10435909/a-more-elegant-way-to-skip-validations-in-rails for skipping validations. Also, look at client side validations instead of model based validations. Can use jQuery to do this.
+
+[33mcommit 76b52ac2bfb5b4d2878a7f56637e561830909c24[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Tue Nov 26 19:26:37 2013 -0500
+
+    Minor: Small UI change based on feedback. Add units to some fields.
+
+[33mcommit eba5809895ce1b532fba2c1ac116b46f1221ff85[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Wed Nov 6 14:00:26 2013 -0500
+
+    Add search for children
+
+[33mcommit e0390cb5d1903e3e7e3e05d0420a4d306f704e6e[m
+Author: Harshit Gupta <hgupta2711@gmail.com>
+Date:   Fri Nov 1 00:58:20 2013 -0400
+
+    edit file for physical exam added
+
+[33mcommit 8633f1941f59a02118ce30be6e26717114b7d337[m
+Author: abhishek <abhishek@ubuntu.(none)>
+Date:   Thu Oct 31 21:25:05 2013 -0400
+
+    Linking the Forms together
+
+[33mcommit ef34cff06fc339d0288889dfce4fae939b980824[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Thu Oct 31 19:33:31 2013 -0400
+
+    Debugged the create function for findings, formatted show and index for findings.
+    
+    Added child_id for findings and modified child and finding models.
+
+[33mcommit 5c2a8488462bd24eb51181daddaa97ef003d8e10[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Thu Oct 31 18:42:51 2013 -0400
+
+    Removed migration file causing error.
+
+[33mcommit bb8a1fa4fc591a31a3c3dfa5e263010fbae82c28[m
+Author: Harshit Gupta <hgupta2711@gmail.com>
+Date:   Thu Oct 31 03:02:38 2013 -0400
+
+    Child_id part for physical exams
+
+[33mcommit 9515bf3ec9acb55e26e9825c5d6b5e228732ecf1[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Wed Oct 30 10:28:44 2013 -0400
+
+    Added child_id to health records
+
+[33mcommit e0ffee81bb12a4a120c4e5678d378ce12f9b1e24[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Thu Oct 24 01:47:14 2013 -0400
+
+    Add signin signout feature. Change root to point to sigin.
+
+[33mcommit 6ccb9031a7762616d48d1b3295fafd578b54480d[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Thu Oct 24 00:46:18 2013 -0400
+
+    Add user model and controller for authentication. Add bcrypt gem. Create UI for user actions.
+
+[33mcommit 0d4173a86385a733b53092b9bb271728f4dc9c3e[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Wed Oct 23 23:45:14 2013 -0400
+
+    Linked health_records form to the children index page. Form update feature added. Added association between child and health_record.
+
+[33mcommit 506509acbe554cb55ed786545435f33b234b9c31[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Wed Oct 23 19:06:03 2013 -0400
+
+    adding attributes to health record
+
+[33mcommit 3268317124ed0b4756a6a98005e6f9969a5751eb[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Wed Oct 16 05:01:00 2013 -0400
+
+    DB migrated
+
+[33mcommit 9a3e1a647f6950e64f43038498e3ae082b40512e[m
+Merge: 6e80bfe 84f71ee
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Wed Oct 16 04:48:10 2013 -0400
+
+    Merge branch 'master' of https://github.com/rsaez/streamliners
+
+[33mcommit 6e80bfe1a163f64b6882df571d6613387aa02208[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Wed Oct 16 04:46:38 2013 -0400
+
+    Formatting changes
+
+[33mcommit 84f71eec7c9e9e5b058fd5586de600da5db99912[m
+Author: Harshit Gupta <hgupta2711@gmail.com>
+Date:   Wed Oct 16 02:12:44 2013 -0400
+
+    Delete routes.rb~
+    
+    not needed
+
+[33mcommit 6ed0707b902bfa453a93dee7d3f20063240ccc5d[m
+Author: Harshit Gupta <hgupta2711@gmail.com>
+Date:   Wed Oct 16 02:11:42 2013 -0400
+
+    Delete new.html.erb~
+    
+    Not needed
+
+[33mcommit 2e1c3f25b94f5adbf5549669f0a06d4b34bb4569[m
+Author: Harshit Gupta <hgupta2711@gmail.com>
+Date:   Wed Oct 16 02:10:49 2013 -0400
+
+    Delete physical_exams_controller.rb~
+    
+    Not needed
+
+[33mcommit b5bd3999a501868f3b11b323998b55b5d636416b[m
+Author: Harshit Gupta <hgupta2711@gmail.com>
+Date:   Wed Oct 16 02:10:08 2013 -0400
+
+    Delete physical_exam_controller.rb~
+    
+    Not needed
+
+[33mcommit 03ed2d2992f6a23d23e15c9b79727fd7411b9235[m
+Author: Harshit Gupta <hgupta2711@gmail.com>
+Date:   Tue Oct 15 20:23:53 2013 -0400
+
+    child form 3 physical exam
+
+[33mcommit a1738ab18d48f15b62f1fd10d26e31027c82c4aa[m
+Author: Ganesh Parameswaran <ganeshparameswaran2010@gmail.com>
+Date:   Tue Oct 15 05:02:02 2013 -0400
+
+    Scaffolding for Finding and some minor formatting
+
+[33mcommit a846b7d5ac78a4c6557ac4406f0700f427c5fba8[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Mon Oct 14 22:14:15 2013 -0400
+
+    Add section 1 and 2 for Child Records
+
+[33mcommit ac144c561ec4c5917a5ba37cc70efe9f0b458371[m
+Author: abhishek <abhishek@ubuntu.(none)>
+Date:   Mon Oct 14 15:19:33 2013 -0400
+
+    Implementing basic Child Record
+
+[33mcommit 710e2fda5eaa740ae5a91b7fdad6eb5d503bec6b[m
+Merge: 591f96f c5c9a18
+Author: Nishant <nshah99@gatech.edu>
+Date:   Tue Oct 8 19:00:14 2013 -0400
+
+    Merge https://github.com/rsaez/streamliners
+
+[33mcommit 591f96f4e03cb63b6acbece16d54d2dbc862a726[m
+Author: Nishant <nshah99@gatech.edu>
+Date:   Tue Oct 8 18:44:12 2013 -0400
+
+    Initial repository
+
+[33mcommit c5c9a18b6838c79bdbab7f37e6fa9ff8f52b611c[m
+Author: rsaez <rsaez@gatech.edu>
+Date:   Wed Oct 2 08:55:12 2013 -0700
+
+    Initial commit

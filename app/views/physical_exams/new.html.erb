@@ -1,1 +1,391 @@
-<%= render 'form' %>
+<h1>Physical Exam</h1>
+
+<%= form_for(@physical_exam) do |f| %>
+
+  <div class="field">
+    <br>
+    
+    <%= f.label :general_appearance%>
+    <br>
+   
+    <%= radio_button_tag(:general_appearance, "Within Norm") %>
+    <%= label_tag(:general_appearance, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:general_appearance, "Abnormal") %>
+    <%= label_tag(:general_appearance, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:general_appearance, "Not Evaluated") %>
+    <%= label_tag(:general_appearance, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:general_appearance, "Unable to cooperate") %>
+    <%= label_tag(:general_appearance, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :general_appearance_c%><br>     
+</div>
+
+  <br>
+  
+
+  <div class="field">
+	
+    <%= f.label :posture %>
+    <br>
+    <%= radio_button_tag(:posture, "Within Norm") %>
+    <%= label_tag(:posture, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:posture, "Abnormal") %>
+    <%= label_tag(:posture, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:posture, "Not Evaluated") %>
+    <%= label_tag(:posture, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:posture, "Unable to cooperate") %>
+    <%= label_tag(:posture, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :posture_c%><br>     
+
+  </div>
+<br>
+  <div class="field">
+    <%= f.label :speech %>
+    <br>
+    <%= radio_button_tag(:speech, "Within Norm") %>
+    <%= label_tag(:speech, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:speech, "Abnormal") %>
+    <%= label_tag(:speech, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:speech, "Not Evaluated") %>
+    <%= label_tag(:speech, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:speech, "Unable to cooperate") %>
+    <%= label_tag(:speech, " Unable to cooperate  ",:style =>"display:inline") %> 
+<%= f.label :Comments %>
+    <%= f.text_field :speech_c%><br>     
+
+ </div>
+
+<br>
+  <div class="field">
+    <%= f.label :head %>
+    <br>
+    <%= radio_button_tag(:head, "Within Norm") %>
+    <%= label_tag(:head, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:head, "Abnormal") %>
+    <%= label_tag(:head, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:head, "Not Evaluated") %>
+    <%= label_tag(:head, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:head, "Unable to cooperate") %>
+    <%= label_tag(:head, " Unable to cooperate  ",:style =>"display:inline") %>    </br>
+<%= f.label :Comments %>
+    <%= f.text_field :head_c%><br>  
+</div>
+<br>
+  <div class="field">
+    <%= f.label :skin %>
+    <br>
+    <%= radio_button_tag(:skin, "Within Norm") %>
+    <%= label_tag(:skin, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:skin, "Abnormal") %>
+    <%= label_tag(:skin, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:skin, "Not Evaluated") %>
+    <%= label_tag(:skin, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:skin, "Unable to cooperate") %>
+    <%= label_tag(:skin, " Unable to cooperate  ",:style =>"display:inline") %>  
+<%= f.label :Comments %>
+    <%= f.text_field :skin_c%><br>
+</div>
+
+<br>
+  <div class="field">
+    <%= f.label :eyes_external_aspects %>
+    <br>
+    <%= radio_button_tag(:eyes_external_aspects, "Within Norm") %>
+    <%= label_tag(:eyes_external_aspects, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:eyes_external_aspects, "Abnormal") %>
+    <%= label_tag(:eyes_external_aspects, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:eyes_external_aspects, "Not Evaluated") %>
+    <%= label_tag(:eyes_external_aspects, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:eyes_external_aspects, "Unable to cooperate") %>
+    <%= label_tag(:eyes_external_aspects, " Unable to cooperate  ",:style =>"display:inline") %> 
+<%= f.label :Comments %>
+    <%= f.text_field :eyes_external_aspects_c%><br>
+   </br>
+  </div>
+<br>
+  <div class="field">
+    <%= f.label :eyes_optic_fundiscopic %>
+    <br>
+    <%= radio_button_tag(:eyes_optic_fundiscopic, "Within Norm") %>
+    <%= label_tag(:eyes_optic_fundiscopic, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:eyes_optic_fundiscopic, "Abnormal") %>
+    <%= label_tag(:eyes_optic_fundiscopic, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:eyes_optic_fundiscopic, "Not Evaluated") %>
+    <%= label_tag(:eyes_optic_fundiscopic, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:eyes_optic_fundiscopic, "Unable to cooperate") %>
+    <%= label_tag(:eyes_optic_fundiscopic, " Unable to cooperate  ",:style =>"display:inline") %>
+  
+<%= f.label :Comments %>
+    <%= f.text_field :eyes_optic_fundiscopic_c%><br>
+</div>
+<br>
+  <div class="field">
+    <%= f.label :eyes_cover_test  %>
+    <br>
+    <%= radio_button_tag(:eyes_cover_test, "Within Norm") %>
+    <%= label_tag(:eyes_cover_test, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:eyes_cover_test, "Abnormal") %>
+    <%= label_tag(:eyes_cover_test, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:eyes_cover_test, "Not Evaluated") %>
+    <%= label_tag(:eyes_cover_test, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:eyes_cover_test, "Unable to cooperate") %>
+    <%= label_tag(:eyes_cover_test, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :eyes_cover_test_c%><br>  
+</div>
+<br>
+  <div class="field">
+    <%= f.label :ears_external %>
+    <br>
+    <%= radio_button_tag(:ears_external, "Within Norm") %>
+    <%= label_tag(:ears_external, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:ears_external, "Abnormal") %>
+    <%= label_tag(:ears_external, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:ears_external, "Not Evaluated") %>
+    <%= label_tag(:ears_external, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:ears_external, "Unable to cooperate") %>
+    <%= label_tag(:ears_external, " Unable to cooperate  ",:style =>"display:inline") %>  
+<%= f.label :Comments %>
+    <%= f.text_field :ears_external_c%><br>
+</div>
+
+<br>
+  <div class="field">
+    <%= f.label :ears_tympanic %>
+    <br>
+    <%= radio_button_tag(:ears_tympanic, "Within Norm") %>
+    <%= label_tag(:ears_tympanic, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:ears_tympanic, "Abnormal") %>
+    <%= label_tag(:ears_tympanic, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:ears_tympanic, "Not Evaluated") %>
+    <%= label_tag(:ears_tympanic, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:ears_tympanic, "Unable to cooperate") %>
+    <%= label_tag(:ears_tympanic, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :ears_tympanic_c%><br>
+  </div>
+<br>
+  <div class="field">
+    <%= f.label :nose %>
+    <br>
+    <%= radio_button_tag(:nose, "Within Norm") %>
+    <%= label_tag(:nose, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:nose, "Abnormal") %>
+    <%= label_tag(:nose, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:nose, "Not Evaluated") %>
+    <%= label_tag(:nose, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:nose, "Unable to cooperate") %>
+    <%= label_tag(:nose, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :nose_c%><br>
+  </div>
+<br>
+  <div class="field">
+    <%= f.label :teeth %>
+    <br>
+    <%= radio_button_tag(:teeth, "Within Norm") %>
+    <%= label_tag(:teeth, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:teeth, "Abnormal") %>
+    <%= label_tag(:teeth, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:teeth, "Not Evaluated") %>
+    <%= label_tag(:teeth, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:teeth, "Unable to cooperate") %>
+    <%= label_tag(:teeth, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :teeth_c%><br>
+  </div>
+<br>
+  <div class="field">
+    <%= f.label :heart %>
+    <br>
+    <%= radio_button_tag(:heart, "Within Norm") %>
+    <%= label_tag(:heart, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:heart, "Abnormal") %>
+    <%= label_tag(:heart, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:heart, "Not Evaluated") %>
+    <%= label_tag(:heart, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:heart, "Unable to cooperate") %>
+    <%= label_tag(:heart, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :heart_c%><br>
+  </div>
+<br>
+  <div class="field">
+    <%= f.label :lungs %>
+    <br>
+    <%= radio_button_tag(:lungs, "Within Norm") %>
+    <%= label_tag(:lungs, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:lungs, "Abnormal") %>
+    <%= label_tag(:lungs, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:lungs, "Not Evaluated") %>
+    <%= label_tag(:lungs, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:lungs, "Unable to cooperate") %>
+    <%= label_tag(:lungs, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :lungs_c%><br>
+  </div>
+<br>
+  <div class="field">
+    <%= f.label :abdomen %>
+    <br>
+    <%= radio_button_tag(:abdomen, "Within Norm") %>
+    <%= label_tag(:abdomen, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:abdomen, "Abnormal") %>
+    <%= label_tag(:abdomen, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:abdomen, "Not Evaluated") %>
+    <%= label_tag(:abdomen, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:abdomen, "Unable to cooperate") %>
+    <%= label_tag(:abdomen, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :abdomen_c%><br>
+  </div>
+<br>
+  <div class="field">
+    <%= f.label :bones %>
+    <br>
+    <%= radio_button_tag(:bones, "Within Norm") %>
+    <%= label_tag(:bones, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:bones, "Abnormal") %>
+    <%= label_tag(:bones, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:bones, "Not Evaluated") %>
+    <%= label_tag(:bones, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:bones, "Unable to cooperate") %>
+    <%= label_tag(:bones, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :bones_c%><br>
+  </div>
+<br>
+  <div class="field">
+    <%= f.label :scoliosis_gross_motor %>
+    <br>
+    <%= radio_button_tag(:scoliosis_gross_motor, "Within Norm") %>
+    <%= label_tag(:scoliosis_gross_motor, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_gross_motor, "Abnormal") %>
+    <%= label_tag(:scoliosis_gross_motor, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_gross_motor, "Not Evaluated") %>
+    <%= label_tag(:scoliosis_gross_motor, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_gross_motor, "Unable to cooperate") %>
+    <%= label_tag(:scoliosis_gross_motor, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :scoliosis_gross_motor_c%><br>
+  </div>
+<br>
+  <div class="field">
+    <%= f.label :scoliosis_comm_skill %>
+    <br>
+    <%= radio_button_tag(:scoliosis_comm_skill, "Within Norm") %>
+    <%= label_tag(:scoliosis_comm_skill, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_comm_skill, "Abnormal") %>
+    <%= label_tag(:scoliosis_comm_skill, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_comm_skill, "Not Evaluated") %>
+    <%= label_tag(:scoliosis_comm_skill, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_comm_skill, "Unable to cooperate") %>
+    <%= label_tag(:scoliosis_comm_skill, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :scoliosis_comm_skill_c%><br>
+  </div>
+<br>
+  <div class="field">
+    <%= f.label :scoliosis_cognitive %>
+    <br>
+    <%= radio_button_tag(:scoliosis_cognitive, "Within Norm") %>
+    <%= label_tag(:scoliosis_cognitive, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_cognitive, "Abnormal") %>
+    <%= label_tag(:scoliosis_cognitive, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_cognitive, "Not Evaluated") %>
+    <%= label_tag(:scoliosis_cognitive, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_cognitive, "Unable to cooperate") %>
+    <%= label_tag(:scoliosis_cognitive, " Unable to cooperate  ",:style =>"display:inline") %>  
+<%= f.label :Comments %>
+    <%= f.text_field :scoliosis_cognitive_c%><br>
+</div>
+
+<br>
+  <div class="field">
+    <%= f.label :scoliosis_self_help %>
+    <br>
+    <%= radio_button_tag(:scoliosis_self_help, "Within Norm") %>
+    <%= label_tag(:scoliosis_self_help, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_self_help, "Abnormal") %>
+    <%= label_tag(:scoliosis_self_help, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_self_help, "Not Evaluated") %>
+    <%= label_tag(:scoliosis_self_help, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_self_help, "Unable to cooperate") %>
+    <%= label_tag(:scoliosis_self_help, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :scoliosis_self_help_c%><br>  
+</div>
+<br> 
+ <div class="field">
+    <%= f.label :scoliosis_social_skills %>
+    <br>
+    <%= radio_button_tag(:scoliosis_social_skills, "Within Norm") %>
+    <%= label_tag(:scoliosis_social_skills, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_social_skills, "Abnormal") %>
+    <%= label_tag(:scoliosis_social_skills, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_social_skills, "Not Evaluated") %>
+    <%= label_tag(:scoliosis_social_skills, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:scoliosis_social_skills, "Unable to cooperate") %>
+    <%= label_tag(:scoliosis_social_skills, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :scoliosis_social_skills_c%><br>
+  </div>
+<br>
+  <div class="field">
+    <%= f.label :glandis %>
+    <br>
+    <%= radio_button_tag(:glandis, "Within Norm") %>
+    <%= label_tag(:glandis, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:glandis, "Abnormal") %>
+    <%= label_tag(:glandis, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:glandis, "Not Evaluated") %>
+    <%= label_tag(:glandis, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:glandis, "Unable to cooperate") %>
+    <%= label_tag(:glandis, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :glandis_c%><br>
+  </div>
+<br>
+
+
+  <div class="field">
+    <%= f.label :muscular_coord %>
+    <br>
+    <%= radio_button_tag(:muscular_coord, "Within Norm") %>
+    <%= label_tag(:muscular_coord, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:muscular_coord, "Abnormal") %>
+    <%= label_tag(:muscular_coord, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:muscular_coord, "Not Evaluated") %>
+    <%= label_tag(:muscular_coord, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:muscular_coord, "Unable to cooperate") %>
+    <%= label_tag(:muscular_coord, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :muscular_coord_c%><br>
+  </div>
+	<br>
+  <div class="field">
+    <%= f.label :other %>
+    <br>
+    <%= radio_button_tag(:other, "Within Norm") %>
+    <%= label_tag(:other, "Within Norm  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:other, "Abnormal") %>
+    <%= label_tag(:other, " Abnormal  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:other, "Not Evaluated") %>
+    <%= label_tag(:other, " Not Evaluated  ",:style =>"display:inline") %>
+    <%= radio_button_tag(:other, "Unable to cooperate") %>
+    <%= label_tag(:other, " Unable to cooperate  ",:style =>"display:inline") %>
+<%= f.label :Comments %>
+    <%= f.text_field :other_c%><br>
+  </div>
+  
+<br>
+    <div  class: "btn btn-large btn-primary">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+</br>
+</br>
+</br>
+

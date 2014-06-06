@@ -1,7 +1,7 @@
 <h1>Child Directory</h1>
 <%= link_to 'Create Record for New Child', new_child_path %>
-<br />
-<br />
+<br>
+<br>
 <%= form_tag children_path, class: "form-group", :method => 'get' do %>
   <div class="row" >
     <div class="col-xs-10" id = "search">
@@ -34,31 +34,36 @@
         <td><%= link_to 'Show', child , class: "btn btn-default btn-lg"%>
         <td><%= link_to 'Edit', edit_child_path(child), class: "btn btn-default btn-lg" %>
         <td><%= link_to 'Delete', child, class: "btn btn-default btn-lg",method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        
         <% if child.health_records.empty? %>
-          <td><%= link_to 'Health-Form', new_health_record_path(:child_id => child.id), class: "btn btn-success" %></td>
-        <% else %>
+          
+         
+        <td><%= link_to 'Health-Form', new_health_record_path(:child_id => child.id), class: "btn btn-success" %></td>
+         <% else %>
            <% last_record = child.health_records.last %>
-           <td><%= link_to 'Health-Form', edit_health_record_path(last_record), class: "btn btn-success" %></td>
-      	<% end %>
+
+	 <td><%= link_to 'Health-Form', edit_health_record_path(last_record), class: "btn btn-success" %></td>
+	 <% end %>
  
-        <% if child.physical_exam.empty? %>        
-          <td><%= link_to 'Physical-Form', new_physical_exam_path(:child_id => child.id), class: "btn btn-success" %></td>
-        <% else %>
-          <% last_record = child.physical_exam.last %>
-	        <td><%= link_to 'Physical-Form', edit_physical_exam_path(last_record), class: "btn btn-success" %></td>
-        <% end %>
+
+      <% if child.physical_exam.empty? %>        
+      <td><%= link_to 'Physical-Form', new_physical_exam_path(:child_id => child.id), class: "btn btn-success" %></td>
+         <% else %>
+           <% last_record = child.physical_exam.last %>
+	     <td><%= link_to 'Physical-Form', edit_physical_exam_path(last_record), class: "btn btn-success" %></td><% end %>
     
-        <% if  current_user.role != "new" %>
-          <% if child.finding.empty? %>
-            <td><%= link_to 'Summary-Form', new_finding_path(:child_id => child.id), class: "btn btn-success" %></td>
-          <% else %>
-            <% last_record = child.finding.last %>
-            <td><%= link_to 'Summary-Form', edit_finding_path(last_record), class: "btn btn-success" %></td>
-          <% end %>      
-        <% end %>
+  <% if  current_user.role != "new" %>
+    <% if child.finding.empty? %>
+          
+         
+        <td><%= link_to 'Summary-Form', new_finding_path(:child_id => child.id), class: "btn btn-success" %></td>
+         <% else %>
+           <% last_record = child.finding.last %>
+
+   <td><%= link_to 'Summary-Form', edit_finding_path(last_record), class: "btn btn-success" %></td><% end %>      
+
       </tr>
     <% end %>
+  <% end %>
   </tbody>
 </table>
 
