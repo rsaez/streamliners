@@ -26,13 +26,13 @@ This is assuming you have no version of ruby or rails installed in your system. 
 For more detailed info about installing Development Kit (for multiple versions), go here (https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
 
 ### create admin account
-At the command line, Goto the project folder.
-type the> rails console
-> u = User.first
-> u.role = "admin"
-> u.save
-> exit
-Now log in using the first users username and password.
+;At the command line, Goto the project folder.
+;type the> rails console
+;> u = User.first
+;> u.role = "admin"
+;> u.save
+;> exit
+;Now log in using the first users username and password.
 
 ### Deployment
 This app is deployed at (https://streamliners.herokuapp.com)
