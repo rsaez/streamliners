@@ -11,24 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140607074727) do
+ActiveRecord::Schema.define(version: 20140607081119) do
+
+  create_table "assessment", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "children", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "findings", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "health_records", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "physical_exams", force: true do |t|
+  create_table "physical", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -45,5 +40,10 @@ ActiveRecord::Schema.define(version: 20140607074727) do
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
   add_index "users", ["user_name"], name: "index_users_on_user_name", unique: true
+
+  create_table "vitals", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
