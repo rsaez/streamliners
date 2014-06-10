@@ -45,7 +45,7 @@ class HealthRecordsController < ApplicationController
   
 
   def health_record_params
-      params.require(:health_record).permit(:relevant_information,:blood_pressure,:hearing_test,:hearing_rescreening,       :blood_sugar,:bmi,:systolic1,:diastolic1,:height_feet,:height_inches,:child_id, , :age, :height, :weight,  :hemoglobin,  :hearing_result_left, :hearing_result_right, :hearing_rescreening, :hearing_comments, :vision_test,:vision_acuity_right,:vision_acuity_left,:vision_rescreening,:vision_color,:vision_comments)
+      params.require(:health_record).permit(:created_at, :updated_at, :child_id, :hearing_hz_left_1, :hearing_db_left_1, :ear_left_pass_1, :hearing_hz_right_1, :hearing_db_right_1, :ear_right_pass_1, :hearing_hz_left_2, :hearing_db_left_2, :ear_left_pass_2, :hearing_hz_right_2, :hearing_db_right_2, :ear_right_pass_2, :hearing_hz_left_3, :hearing_db_left_3, :ear_left_pass_3, :hearing_hz_right_3, :hearing_db_right_3, :ear_right_pass_3, :hearing_comments, :vision_acuity_left_1, :vision_acuity_right_1, :vision_acuity_both_1, :vision_acuity_right_2, :vision_acuity_left_2, :vision_acuity_both_2, :vision_acuity_right_3, :vision_acuity_left_3, :vision_acuity_both_3, :vision_color_blindness, :cover_test_left, :cover_test_right, :cover_test_both, :wears_corrective_lenses, :vision_comments)
   end
 
 end

@@ -110,6 +110,6 @@ class ChildrenController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def child_params
-      params.require(:child).permit(:name, :gender, :dob, :location, :age_years, :age_months, :age_total_months, :no_parent_present, :parental_permission_given, :allergies, :allergies_info, :immunization_utd, :dtap, :hib, :pneumovax, :hepa, :influenza, :mmr, :immunization_review, :relevant_information, :absences)
+      params.require(:child).permit(:created_at, :updated_at, :last_name, :first_name, :gender, :dob, :age_years, :age_months, :age_total_months, :location, :no_parent_present, :parental_permission_given, :allergies, :allergies_information, :immunization_utd, :dtap, :hib, :pneumovax, :hepa, :hepb, :influenza, :mmr, :immunization_needed, :revelant_information, :absences, :height_feet, :height_inches, :height_total_inches, :height_total_cm, :weight_lbs, :weight_oz, :weight_kg, :bmi_result, :bmi_percentile, :systolic_1, :diastolic_1, :systolic_2, :diastolic_2, :systolic_3, :diastolic_3, :hemoglobin, :blood_glucose)
     end
 end

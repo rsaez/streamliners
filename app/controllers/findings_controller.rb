@@ -47,6 +47,6 @@ class FindingsController < ApplicationController
 
     
     def finding_params
-      params.require(:finding).permit(:child_id, :diagnosis_treatment, :faculty_signature, :faculty_sig_date, :finding_a, :finding_b, :finding_c, :finding_d, :treatment_a, :treatment_b, :treatment_c, :treatment_d, :general_statement, :signature, :sig_date)
+      params.require(:finding).permit(:created_at, :updated_at, :child_id, :well_child_check, :findings_01, :findings_02, :findings_03, :findings_04, :findings_05, :findings_06, :findings_07, :findings_08, :findings_09, :findings_10, :follow_up_01, :follow_up_02, :follow_up_03, :follow_up_04, :follow_up_05, :follow_up_06, :follow_up_07, :follow_up_08, :follow_up_09, :follow_up_10, :text, :guidance, :chart_complete, :np_signature, :faculty_signature, :other_np_signature)
     end
 end

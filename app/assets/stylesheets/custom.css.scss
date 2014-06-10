@@ -3,16 +3,23 @@
 
 $grayMediumLight: #eaeaea;
 
-/* directory */
+/* roster */
+
+.text_field{
+  width: 98%;
+}
+
+td.roster_td{
+  width: 130px;
+}
 
 td{
-  
+  width: auto;
+  padding-right: 30px;
 }
 
 .directory{
   
-  
-
 }
 
 
@@ -161,8 +168,4 @@ footer {
       margin-left: 10px;
     }
   }
-}
-
-td{
-padding-right: 30px;
 }
