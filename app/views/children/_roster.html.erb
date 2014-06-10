@@ -1,0 +1,46 @@
+<%= form_for(@child, html: {class:"form-horizontal"}) do |f| %>
+  
+  <% if @child.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@child.errors.count, "error") %> prohibited this child from being saved:</h2>
+      <ul>
+        <% @child.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="table table-bordered">
+    <tbody>
+      
+      <tr>
+        <td class="roster_td" colspan="">
+          <%= f.label :"Last Name: " %>
+        </td>
+        <td>
+          <%= f.text_field :last_name, :class => "text_field" %>
+        </td>
+      </tr>
+      <tr>
+        <td class="roster_td" colspan="">
+          <%= f.label :"First Name: " %>
+        </td>
+        <td>
+          <%= f.text_field :first_name, :class => "text_field" %>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <% if @child_id.nil?%>
+    <%= f.hidden_field :child_id, value: params[:child_id]%>
+  <% else %>
+    <%= f.hidden_field :child_id, value: @child_id%>
+  <% end %>
+  
+  <div  class: "btn btn-large btn-primary">
+    <%= f.submit %>
+  </div>
+<% end %>

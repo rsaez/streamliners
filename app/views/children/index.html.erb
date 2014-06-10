@@ -1,4 +1,4 @@
-<h1>Child Directory</h1>
+<h1>Patient Child Directory</h1>
 <%= link_to 'Create Record for New Child', new_child_path %>
 <br>
 <br>
@@ -16,54 +16,21 @@
 <table class="table table-bordered">
   <thead class="directory">
     <tr>
-      <td style="width: 110px">Name</td>
-      <td>Location</td>
-      <td style="width: 90px">DOB</td>
-      <td>Gender</td>
-      <td></td>
+      <td style="width: 110px">Last Name</td>
+      <td style="width: 110px">First Name</td>
+      <td colspan="2"></td>
     </tr>
   </thead>
 
   <tbody>
     <% @result.each do |child| %>
       <tr>
-        <td><%= child.name %></td>
-        <td><%= child.location %></td>
-        <td><%= child.dob %></td>
-        <td><%= child.gender %></td>
+        <td><%= child.last_name %></td>
+        <td><%= child.first_name %></td>
         <td><%= link_to 'Show', child , class: "btn btn-default btn-lg"%>
-        <td><%= link_to 'Edit', edit_child_path(child), class: "btn btn-default btn-lg" %>
         <td><%= link_to 'Delete', child, class: "btn btn-default btn-lg",method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% if child.health_records.empty? %>
-          
-         
-        <td><%= link_to 'Health-Form', new_health_record_path(:child_id => child.id), class: "btn btn-success" %></td>
-         <% else %>
-           <% last_record = child.health_records.last %>
-
-	 <td><%= link_to 'Health-Form', edit_health_record_path(last_record), class: "btn btn-success" %></td>
-	 <% end %>
- 
-
-      <% if child.physical_exam.empty? %>        
-      <td><%= link_to 'Physical-Form', new_physical_exam_path(:child_id => child.id), class: "btn btn-success" %></td>
-         <% else %>
-           <% last_record = child.physical_exam.last %>
-	     <td><%= link_to 'Physical-Form', edit_physical_exam_path(last_record), class: "btn btn-success" %></td><% end %>
-    
-  <% if  current_user.role != "new" %>
-    <% if child.finding.empty? %>
-          
-         
-        <td><%= link_to 'Summary-Form', new_finding_path(:child_id => child.id), class: "btn btn-success" %></td>
-         <% else %>
-           <% last_record = child.finding.last %>
-
-   <td><%= link_to 'Summary-Form', edit_finding_path(last_record), class: "btn btn-success" %></td><% end %>      
-
       </tr>
     <% end %>
-  <% end %>
   </tbody>
 </table>
 

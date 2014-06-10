@@ -23,9 +23,7 @@ class ChildrenController < ApplicationController
       redirect_to root_path
     end
 
-    @child.age_years = ageYears(@child)
-    @child.age_months = ageMonths(@child)
-    @child.age_total_months = ageTotalMonths(@child)
+
   end
 
   # GET /children/new
@@ -43,6 +41,13 @@ class ChildrenController < ApplicationController
     end
   end
   
+  # GET /children/1/editchild
+  def editchild
+    if !signed_in?
+      redirect_to root_path
+    end
+  end
+
   # POST /children
   # POST /children.json
   def create
@@ -58,9 +63,7 @@ class ChildrenController < ApplicationController
       end
     end
 
-    @child.age_years = ageYears(@child)
-    @child.age_months = ageMonths(@child)
-    @child.age_total_months = ageTotalMonths(@child)
+    
   end
 
   # PATCH/PUT /children/1
@@ -89,7 +92,8 @@ class ChildrenController < ApplicationController
   
   def ageYears(child)
     now = Time.now.utc.to_date
-    return now.year - child.dob.year
+    return now.year - 
+    child.dob.year
   end
 
   def ageMonths(child)
