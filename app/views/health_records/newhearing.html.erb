@@ -1,0 +1,24 @@
+<h1><%= @child.last_name %>, <%= @child.first_name %></h1>
+
+<table class="table table-bordered">
+	<tbody>
+  	<tr>
+    	<%= render 'layouts/menu' %>
+    </tr>
+  </tbody>
+</table>
+<table class="table table-bordered">
+ 	<thead>
+		<tr>
+			<td>
+				<%= link_to 'Update', edithearing_path(@child), class: "btn btn-success" %>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+    <%= render 'hearing' %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_child_path(@child) %> |
+<%= link_to 'Directory', children_path %>

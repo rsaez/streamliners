@@ -5,6 +5,20 @@ class HealthRecordsController < ApplicationController
     end
     @health_record = HealthRecord.new 
   end
+
+  def newhearing
+    if !signed_in?
+      redirect_to root_path
+    end
+    @health_record = HealthRecord.new 
+  end
+
+  def newvision
+    if !signed_in?
+      redirect_to root_path
+    end
+    @health_record = HealthRecord.new 
+  end
   
   def show
     if !signed_in?
@@ -12,8 +26,36 @@ class HealthRecordsController < ApplicationController
     end
     @health_record = HealthRecord.find(params[:id])
   end
+
+  def hearing
+    if !signed_in?
+      redirect_to root_path
+    end
+    @health_record = HealthRecord.find(params[:id])
+  end
+
+  def vision
+    if !signed_in?
+      redirect_to root_path
+    end
+    @health_record = HealthRecord.find(params[:id])
+  end
   
   def edit
+    if !signed_in?
+      redirect_to root_path
+    end
+    @health_record = HealthRecord.find(params[:id])
+  end
+
+  def edithearing
+    if !signed_in?
+      redirect_to root_path
+    end
+    @health_record = HealthRecord.find(params[:id])
+  end
+
+  def editvision
     if !signed_in?
       redirect_to root_path
     end

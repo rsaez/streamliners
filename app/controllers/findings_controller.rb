@@ -7,7 +7,21 @@ class FindingsController < ApplicationController
     @finding = Finding.new
   end
 
+  def newassessment
+    if !signed_in?
+      redirect_to root_path
+    end
+    @finding = Finding.new
+  end
+
   def show
+    if !signed_in?
+      redirect_to root_path
+    end
+     @finding = Finding.find(params[:id])
+  end
+
+  def assessment
     if !signed_in?
       redirect_to root_path
     end
@@ -19,6 +33,13 @@ class FindingsController < ApplicationController
       redirect_to root_path
     end
     @finding = Finding.find(params[:id])
+  end
+
+  def editassessment
+    if !signed_in?
+      redirect_to root_path
+    end
+     @finding = Finding.find(params[:id])
   end
 
   def update

@@ -1,7 +1,27 @@
-<td><%= link_to 'Child', child_path, class: "btn btn-success" %></td>
-<td><%= link_to 'Vitals', vitals_path, class: "btn btn-success" %></td>
-<td><%= link_to 'Hearing', vitals_path, class: "btn btn-success" %></td>
-<td><%= link_to 'Vision', vitals_path, class: "btn btn-success" %></td>
-<td><%= link_to 'Physical I', vitals_path, class: "btn btn-success" %></td>
-<td><%= link_to 'Physical II', vitals_path, class: "btn btn-success" %></td>
-<td><%= link_to 'Assessment', vitals_path, class: "btn btn-success" %></td>
+<td class="td_menu" >
+	<%= link_to 'Child', child_path, class: "btn btn-success" %>
+	<%= link_to 'Vitals', vitals_path, class: "btn btn-success" %>
+
+	<% if @health_records.blank? %>
+  	<%= link_to 'Hearing', new_hearing_path, class: "btn btn-success" %>
+  	<%= link_to 'Vision', new_hearing_path, class: "btn btn-success" %>
+  <% else %>
+  	<%= link_to 'Hearing', hearing_path, class: "btn btn-success" %>
+  	<%= link_to 'Vision', vision_path, class: "btn btn-success" %>
+	<% end %>
+
+	<% if @physical_exams.blank? %>
+		<%= link_to 'Physical I', new_physicali_path, class: "btn btn-success" %>
+		<%= link_to 'Physical II', new_physicalii_path, class: "btn btn-success" %>
+	<% else %>
+		<%= link_to 'Physical I', physicali_path, class: "btn btn-success" %>
+		<%= link_to 'Physical II', physicalii_path, class: "btn btn-success" %>
+	<% end %>
+
+	<% if @physical_exams.blank? %>
+		<%= link_to 'Assessment', new_assessment_path, class: "btn btn-success" %>
+	<% else %>
+		<%= link_to 'Assessment', assessment_path, class: "btn btn-success" %>
+	<% end %>
+
+</td>

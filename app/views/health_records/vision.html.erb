@@ -1,5 +1,22 @@
-<%= form_for(@health_record) do |f| %>
-	<tr>
+<h1><%= @child.last_name %>, <%= @child.first_name %></h1>
+
+<table class="table table-bordered">
+	<tbody>
+  	<tr>
+    	<%= render 'layouts/menu' %>
+    </tr>
+  </tbody>
+</table>
+<table class="table table-bordered">
+ 	<thead>
+		<tr>
+			<td>
+				<%= link_to 'Update', edithearing_path(@child), class: "btn btn-success" %>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+    <tr>
     <td colspan="3">
       <p>Vision Screen</p>
     </td>
@@ -125,4 +142,8 @@
       <%= f.text_field :vision_comments %>
     </td>
   </tr>
-<% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_child_path(@child) %> |
+<%= link_to 'Directory', children_path %>

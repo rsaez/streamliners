@@ -7,12 +7,40 @@ class PhysicalExamsController < ApplicationController
     end
     @physical_exam = PhysicalExam.new 
   end
+
+  def newphysicali
+    if !signed_in?
+      redirect_to root_path
+    end
+    @physical_exam = PhysicalExam.new 
+  end
+
+  def newphysicali
+    if !signed_in?
+      redirect_to root_path
+    end
+    @physical_exam = PhysicalExam.new 
+  end
   
   def show
     if !signed_in?
       redirect_to root_path
     end
     @physical_exam = PhysicalExam.find(params[:id])
+  end
+
+  def physicali
+    if !signed_in?
+      redirect_to root_path
+    end
+    @physical_exam = PhysicalExam.new 
+  end
+
+  def physicalii
+    if !signed_in?
+      redirect_to root_path
+    end
+    @physical_exam = PhysicalExam.new 
   end
  
   def edit
@@ -21,7 +49,21 @@ class PhysicalExamsController < ApplicationController
     end
     @physical_exam = PhysicalExam.find(params[:id])
   end
+
+  def editphysicali
+    if !signed_in?
+      redirect_to root_path
+    end
+    @physical_exam = PhysicalExam.new 
+  end
   
+  def editphysicalii
+    if !signed_in?
+      redirect_to root_path
+    end
+    @physical_exam = PhysicalExam.new 
+  end
+
   def update
   @physical_exam = PhysicalExam.find(params[:id])
       if @physical_exam.update_attributes(health_record_params)
