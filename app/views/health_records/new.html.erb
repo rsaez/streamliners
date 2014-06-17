@@ -1,2 +1,17 @@
-<h1>Child Information Record</h1>
-<%= render 'form'%>
+<h1><%= @child.last_name %>, <%= @child.first_name %></h1>
+
+<table class="table table-bordered">
+	<tbody>
+  	<tr>
+    	<%= render 'layouts/menu' %>
+    </tr>
+  </tbody>
+</table>
+<table class="table table-bordered">
+ 	<tbody>
+    <%= render 'hearing' %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_child_path(@child) %> |
+<%= link_to 'Directory', children_path %>

@@ -1,25 +1,42 @@
 <td class="td_menu" >
-	<%= link_to 'Child', child_path, class: "btn btn-success" %>
-	<%= link_to 'Vitals', vitals_path, class: "btn btn-success" %>
+	<% if @child.gender.blank? %>
+  	<%= link_to 'Child', editchild_path, class: "btn btn-success" %>
+  <% else %>
+  	<%= link_to 'Child', child_path, class: "btn btn-success" %>
+	<% end %>
 
-	<% if @health_records.blank? %>
-  	<%= link_to 'Hearing', new_hearing_path, class: "btn btn-success" %>
-  	<%= link_to 'Vision', new_hearing_path, class: "btn btn-success" %>
+	<% if @child.height_feet.blank? %>
+  	<%= link_to 'Vitals', editvitals_path, class: "btn btn-success" %>
+  <% else %>
+  	<%= link_to 'Vitals', vitals_path, class: "btn btn-success" %>
+	<% end %>
+
+	<% if @child.hearing_hz_left_1.blank? %>
+  	<%= link_to 'Hearing', edithearing_path, class: "btn btn-success" %>
   <% else %>
   	<%= link_to 'Hearing', hearing_path, class: "btn btn-success" %>
+	<% end %>
+
+	<% if @child.vision_acuity_left_1.blank? %>
+  	<%= link_to 'Vision', editvision_path, class: "btn btn-success" %>
+  <% else %>
   	<%= link_to 'Vision', vision_path, class: "btn btn-success" %>
 	<% end %>
 
-	<% if @physical_exams.blank? %>
-		<%= link_to 'Physical I', new_physicali_path, class: "btn btn-success" %>
-		<%= link_to 'Physical II', new_physicalii_path, class: "btn btn-success" %>
+	<% if @children.general_appearance.blank? %>
+		<%= link_to 'Physical I', editphysicali_path, class: "btn btn-success" %>
 	<% else %>
 		<%= link_to 'Physical I', physicali_path, class: "btn btn-success" %>
-		<%= link_to 'Physical II', physicalii_path, class: "btn btn-success" %>
 	<% end %>
 
-	<% if @physical_exams.blank? %>
-		<%= link_to 'Assessment', new_assessment_path, class: "btn btn-success" %>
+	<% if @children.lymph_all_normal.blank? %>
+		<%= link_to 'Physical I', editphysicalii_path, class: "btn btn-success" %>
+	<% else %>
+		<%= link_to 'Physical I', physicalii_path, class: "btn btn-success" %>
+	<% end %>
+
+	<% if @children.well_child_check.blank? %>
+		<%= link_to 'Assessment', new_finding_path, class: "btn btn-success" %>
 	<% else %>
 		<%= link_to 'Assessment', assessment_path, class: "btn btn-success" %>
 	<% end %>

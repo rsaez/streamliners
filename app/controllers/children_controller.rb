@@ -1,5 +1,7 @@
 class ChildrenController < ApplicationController
-  before_action :set_child, only: [:show, :vitals, :edit, :editchild, :editvitals, :update, :destroy]
+  before_action :set_child, only: [:show, :vitals, :hearing, :vision, :physicali, :physicalii, :assessment,
+    :edit, :editchild, :editvitals, :edithearing, :editvision, :editphysicali, :editphysicalii, :editassessment,
+    :update, :destroy]
 
   # GET /children
   # GET /children.json
@@ -39,6 +41,41 @@ class ChildrenController < ApplicationController
 
   end
 
+  def hearing
+    if !signed_in?
+      redirect_to root_path
+    end
+
+  end
+
+  def vision
+    if !signed_in?
+      redirect_to root_path
+    end
+
+  end
+
+  def physicali
+    if !signed_in?
+      redirect_to root_path
+    end
+
+  end
+
+  def physicalii
+    if !signed_in?
+      redirect_to root_path
+    end
+
+  end
+
+  def assessment
+    if !signed_in?
+      redirect_to root_path
+    end
+
+  end
+
   # GET /children/new
   def new
     if !signed_in?
@@ -68,6 +105,36 @@ class ChildrenController < ApplicationController
       redirect_to root_path
     end
     
+  end
+
+  def edithearing
+    if !signed_in?
+      redirect_to root_path
+    end
+  end
+
+  def editvision
+    if !signed_in?
+      redirect_to root_path
+    end
+  end
+
+  def editphysicali
+    if !signed_in?
+      redirect_to root_path
+    end
+  end
+
+  def editpysicalii
+    if !signed_in?
+      redirect_to root_path
+    end
+  end
+
+  def editassessment
+    if !signed_in?
+      redirect_to root_path
+    end
   end
 
   # POST /children

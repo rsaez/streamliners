@@ -1,11 +1,11 @@
 <%= form_for(@health_record) do |f| %>
 	<tr>
-    <td colspan="3">
+    <td class="roster_td" colspan="3">
       <p>Hearing Screen</p>
     </td>
   </tr>
   <tr>
-    <td colspan="3">
+    <td class="roster_td" colspan="3">
       <p>Test 1</p>
     </td>
   </tr>
@@ -13,23 +13,23 @@
   <tr>
     <td class="td_two">
       <p>Left Ear</p>
+    </td>
+    <td>
       <p>
-        <%= f.text_field :hearing_result_left_1, :class => "ten_number_field" %>
-         result
+        <%= f.text_field :hearing_hz_left_1, :class => "ten_number_field" %>hz, 
+        <%= f.text_field :hearing_db_left_1, :class => "ten_number_field" %>db, 
+        <%= f.text_field :ear_left_pass_1 %> pass/fail. 
       </p>
     </td>
-    <td class="td_two" colspan="2">
+    <td class="td_two" colspan="">
       <p>Right Ear</p>
-      <p>
-        <%= f.text_field :hearing_result_right_1, :class => "ten_number_field" %>
-         result
-      </p>
     </td>
-  </tr>
-  <tr>
-    <td colspan="3">
-      <%= f.check_box :ear_form_decibel_test_1, :class=>"checkbox_field" %>
-      <%= f.label :ear_form_decibel_test_1, "Ear Form Decibel Test", :class=>"checkbox_label_field" %>
+    <td>
+      <p>
+        <%= f.text_field :hearing_hz_right_1, :class => "ten_number_field" %>hz, 
+        <%= f.text_field :hearing_db_right_1, :class => "ten_number_field" %>db, 
+        <%= f.text_field :ear_right_pass_1 %> pass/fail.
+      </p>
     </td>
   </tr>
   
@@ -42,23 +42,23 @@
   <tr>
     <td class="td_two">
       <p>Left Ear</p>
+    </td>
+    <td>
       <p>
-        <%= f.text_field :hearing_result_left_2, :class => "ten_number_field" %>
-         result
+        <%= f.text_field :hearing_hz_left_2, :class => "ten_number_field" %>hz, 
+        <%= f.text_field :hearing_db_left_2, :class => "ten_number_field" %>db, 
+        <%= f.text_field :ear_left_pass_2 %> pass/fail. 
       </p>
     </td>
-    <td class="td_two" colspan="2">
+    <td class="td_two" colspan="">
       <p>Right Ear</p>
-      <p>
-        <%= f.text_field :hearing_result_right_2, :class => "ten_number_field" %>
-         result
-      </p>
     </td>
-  </tr>
-  <tr>
-    <td colspan="3">
-      <%= f.check_box :ear_form_decibel_test_2, :class=>"checkbox_field" %>
-      <%= f.label :ear_form_decibel_test_2, "Ear Form Decibel Test", :class=>"checkbox_label_field" %>
+    <td>
+      <p>
+        <%= f.text_field :hearing_hz_right_2, :class => "ten_number_field" %>hz, 
+        <%= f.text_field :hearing_db_right_2, :class => "ten_number_field" %>db, 
+        <%= f.text_field :ear_right_pass_2 %> pass/fail.
+      </p>
     </td>
   </tr>
 
@@ -71,23 +71,23 @@
   <tr>
     <td class="td_two">
       <p>Left Ear</p>
+    </td>
+    <td>
       <p>
-        <%= f.text_field :hearing_result_left_3, :class => "ten_number_field" %>
-         result
+        <%= f.text_field :hearing_hz_left_3, :class => "ten_number_field" %>hz, 
+        <%= f.text_field :hearing_db_left_3, :class => "ten_number_field" %>db, 
+        <%= f.text_field :ear_left_pass_3 %> pass/fail. 
       </p>
     </td>
-    <td class="td_two" colspan="2">
+    <td class="td_two" colspan="">
       <p>Right Ear</p>
-      <p>
-        <%= f.text_field :hearing_result_right_3, :class => "ten_number_field" %>
-         result
-      </p>
     </td>
-  </tr>
-  <tr>
-    <td colspan="3">
-      <%= f.check_box :ear_form_decibel_test_3, :class=>"checkbox_field" %>
-      <%= f.label :ear_form_decibel_test_3, "Ear Form Decibel Test", :class=>"checkbox_label_field" %>
+    <td>
+      <p>
+        <%= f.text_field :hearing_hz_right_3, :class => "ten_number_field" %>hz, 
+        <%= f.text_field :hearing_db_right_3, :class => "ten_number_field" %>db, 
+        <%= f.text_field :ear_right_pass_3 %> pass/fail.
+      </p>
     </td>
   </tr>
   

@@ -1,4 +1,6 @@
 class HealthRecordsController < ApplicationController
+  before_action :set_health_record, only: [:show, :hearing, :vision, :edit, :edithearing, :editvision, :update, :destroy]
+
   def new
     if !signed_in?
       redirect_to root_path
@@ -84,10 +86,14 @@ class HealthRecordsController < ApplicationController
         render 'new'
      end
   end
-  
 
-  def health_record_params
-      params.require(:health_record).permit(:created_at, :updated_at, :child_id, :hearing_hz_left_1, :hearing_db_left_1, :ear_left_pass_1, :hearing_hz_right_1, :hearing_db_right_1, :ear_right_pass_1, :hearing_hz_left_2, :hearing_db_left_2, :ear_left_pass_2, :hearing_hz_right_2, :hearing_db_right_2, :ear_right_pass_2, :hearing_hz_left_3, :hearing_db_left_3, :ear_left_pass_3, :hearing_hz_right_3, :hearing_db_right_3, :ear_right_pass_3, :hearing_comments, :vision_acuity_left_1, :vision_acuity_right_1, :vision_acuity_both_1, :vision_acuity_right_2, :vision_acuity_left_2, :vision_acuity_both_2, :vision_acuity_right_3, :vision_acuity_left_3, :vision_acuity_both_3, :vision_color_blindness, :cover_test_left, :cover_test_right, :cover_test_both, :wears_corrective_lenses, :vision_comments)
-  end
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_health_record
+      @health_record = HealthRecord.find(params[:id])
+    end
 
+    def health_record_params
+        params.require(:health_record).permit(:created_at, :updated_at, :child_id, :hearing_hz_left_1, :hearing_db_left_1, :ear_left_pass_1, :hearing_hz_right_1, :hearing_db_right_1, :ear_right_pass_1, :hearing_hz_left_2, :hearing_db_left_2, :ear_left_pass_2, :hearing_hz_right_2, :hearing_db_right_2, :ear_right_pass_2, :hearing_hz_left_3, :hearing_db_left_3, :ear_left_pass_3, :hearing_hz_right_3, :hearing_db_right_3, :ear_right_pass_3, :hearing_comments, :vision_acuity_left_1, :vision_acuity_right_1, :vision_acuity_both_1, :vision_acuity_right_2, :vision_acuity_left_2, :vision_acuity_both_2, :vision_acuity_right_3, :vision_acuity_left_3, :vision_acuity_both_3, :vision_color_blindness, :cover_test_left, :cover_test_right, :cover_test_both, :wears_corrective_lenses, :vision_comments)
+    end
 end
