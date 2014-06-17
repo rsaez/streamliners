@@ -6,10 +6,178 @@
     	<%= render 'layouts/menu' %>
     </tr>
   </tbody>
- </table>
- <table class="table table-bordered">
-		<%= render 'children/show_child' %>
- </table>
+</table>
+<table class="table table-bordered">
+ 	<thead>
+		<tr>
+			<td>
+				<%= link_to 'Update', editchild_path(@child), class: "btn btn-success" %>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+      <td class="show_child_td" colspan="">
+        <strong>Gender: </strong>
+      </td>
+      <td>
+        <%= @child.gender %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> DOB: </strong>
+      </td>
+      <td>
+        <%= @child.dob %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Age: </strong>
+      </td>
+      <td>
+        <%= @child.age_years %> <strong> years and </strong> <%= @child.age_months %> <strong> months </strong>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Total Months: </strong>
+      </td>
+      <td>
+        <%= @child.age_total_months %> months
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Location: </strong>
+      </td>
+      <td>
+        <%= @child.location %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> No Parent Present: </strong>
+      </td>
+      <td>
+        <%= check_box_tag "", 1 , @child.no_parent_present ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Parental Permission Given: </strong>
+      </td>
+      <td>
+        <%= check_box_tag "", 1 , @child.parental_permission_given ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Allergies: </strong>
+      </td>
+      <td>
+        <%= @child.allergies %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Allergies Information: </strong>
+      </td>
+      <td>
+        <%= @child.allergies_information %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Immunizations UTD: </strong>
+      </td>
+      <td>
+        <%= check_box_tag "", 1 , @child.immunization_utd ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> DTaP: </strong>
+      </td>
+      <td>
+        <%= check_box_tag "", 1 , @child.dtap ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Hib: </strong>
+      </td>
+      <td>
+        <%= check_box_tag "", 1 , @child.hib ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Pneumovax: </strong>
+      </td>
+      <td>
+        <%= check_box_tag "", 1 , @child.pneumovax ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> HepA: </strong>
+      </td>
+      <td>
+        <%= check_box_tag "", 1 , @child.hepa ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> HepB: </strong>
+      </td>
+      <td>
+        <%= check_box_tag "", 1 , @child.hepb ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Influenza: </strong>
+      </td>
+      <td>
+        <%= check_box_tag "", 1 , @child.influenza ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> MMR: </strong>
+      </td>
+      <td>
+        <%= check_box_tag "", 1 , @child.mmr ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Immunizations Needed: </strong>
+      </td>
+      <td>
+        <%= @child.immunization_needed %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Relevant Information: </strong>
+      </td>
+      <td>
+        <%= @child.revelant_information %>
+      </td>
+    </tr>
+    <tr>
+      <td class="show_child_td" colspan="">
+        <strong> Absences: </strong>
+      </td>
+      <td>
+        <%= @child.absences %>
+      </td>
+    </tr>
+	</tbody>
+</table>
 
 <%= link_to 'Edit', edit_child_path(@child) %> |
 <%= link_to 'Directory', children_path %>

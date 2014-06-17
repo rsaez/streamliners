@@ -1,0 +1,88 @@
+<h1><%= @child.last_name %>, <%= @child.first_name %></h1>
+
+<table class="table table-bordered">
+	<tbody>
+  	<tr>
+    	<%= render 'layouts/menu' %>
+    </tr>
+  </tbody>
+</table>
+<table class="table table-bordered">
+ 	<thead>
+		<tr>
+			<td>
+				<%= link_to 'Update', editvitals_path(@child), class: "btn btn-success" %>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+    <tr>
+      <td colspan="3">
+        
+        Height: 
+        <%= @child.height_feet %> ft 
+        <%= @child.height_inches %> in; 
+        <%= @child.height_total_inches %> in; 
+        <%= @child.height_total_cm %> cm;
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        Weight: 
+        <%= @child.weight_lbs %> lbs, 
+        <%= @child.weight_oz %> oz; 
+        <%= @child.weight_kg %> kg;
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        BMI Result: 
+        <%= @child.bmi_result %>
+         %
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <p>Blood Pressure</p>
+        <p>
+        <%= f.label :"Test 1", 'Take 1', :class => 'two_labels' %>
+        <%= f.text_field :systolic_1, :class => "number_field" %>
+         Systolic / 
+        <%= f.text_field :diastolic_1, :class => "number_field" %>
+        Diastolic mm Hg
+        </p>
+        <p>
+        <%= f.label :"Test 2", 'Take 2', :class => 'two_labels' %>
+        <%= f.text_field :systolic_2, :class => "number_field" %>
+         Systolic / 
+        <%= f.text_field :diastolic_2, :class => "number_field" %>
+        Diastolic mm Hg
+        </p>
+        <p>
+        <%= f.label :"Test 3", 'Take 3', :class => 'two_labels' %>
+        <%= f.text_field :systolic_3, :class => "number_field" %>
+         Systolic / 
+        <%= f.text_field :diastolic_3, :class => "number_field" %>
+        Diastolic mm Hg
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <p>
+          <%= f.label :"Hemoglobin" %>
+          <%= f.text_field :hemoglobin, :class => "number_field" %>
+          gm/dL
+        </p>
+        <p>
+          <%= f.label :"Blood Glucose" %>
+          <%= f.text_field :blood_glucose, :class => "number_field" %>
+          mg/dL
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_child_path(@child) %> |
+<%= link_to 'Directory', children_path %>

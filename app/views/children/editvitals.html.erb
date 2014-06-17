@@ -1,0 +1,97 @@
+<h1>Editing vitals</h1>
+
+<%= form_for(@child, url: vitals_path, html: {class:"form-horizontal"}) do |f| %>
+  
+  <% if @child.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@child.errors.count, "error") %> prohibited this child from being saved:</h2>
+      <ul>
+        <% @child.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="table table-bordered">
+    <tbody>
+    <tr>
+      <td colspan="3">
+        
+        <%= f.label :"Height: " %>
+        <%= f.text_field :height_feet, :class => "number_field" %> ft 
+        <%= f.text_field :height_inches, :class => "number_field" %> in; 
+        Total Height <%= f.text_field :height_total_inches, :class => "number_field" %> in; 
+        Total Height <%= f.text_field :height_total_cm, :class => "number_field" %> cm 
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <%= f.label :"Weight: " %>
+        <%= f.text_field :weight_lbs, :class => "number_field" %> lbs; 
+        <%= f.text_field :weight_oz, :class => "number_field" %> oz 
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <%= f.label :"bmi", 'BMI' %>
+        <%= f.text_field :bmi_result, :class => "number_field" %>
+         %
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <p>Blood Pressure</p>
+        <p>
+        <%= f.label :"Test 1", 'Take 1', :class => 'two_labels' %>
+        <%= f.text_field :systolic_1, :class => "number_field" %>
+         Systolic / 
+        <%= f.text_field :diastolic_1, :class => "number_field" %>
+        Diastolic mm Hg
+        </p>
+        <p>
+        <%= f.label :"Test 2", 'Take 2', :class => 'two_labels' %>
+        <%= f.text_field :systolic_2, :class => "number_field" %>
+         Systolic / 
+        <%= f.text_field :diastolic_2, :class => "number_field" %>
+        Diastolic mm Hg
+        </p>
+        <p>
+        <%= f.label :"Test 3", 'Take 3', :class => 'two_labels' %>
+        <%= f.text_field :systolic_3, :class => "number_field" %>
+         Systolic / 
+        <%= f.text_field :diastolic_3, :class => "number_field" %>
+        Diastolic mm Hg
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <p>
+          <%= f.label :"Hemoglobin" %>
+          <%= f.text_field :hemoglobin, :class => "number_field" %>
+          gm/dL
+        </p>
+        <p>
+          <%= f.label :"Blood Glucose" %>
+          <%= f.text_field :blood_glucose, :class => "number_field" %>
+          mg/dL
+        </p>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+
+  <% if @child_id.nil?%>
+    <%= f.hidden_field :child_id, value: params[:child_id]%>
+  <% else %>
+    <%= f.hidden_field :child_id, value: @child_id%>
+  <% end %>
+  
+  <div  class: "btn btn-large btn-primary">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', @child %> |
+<%= link_to 'Directory', children_path %>

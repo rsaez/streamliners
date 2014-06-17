@@ -1,5 +1,5 @@
 class ChildrenController < ApplicationController
-  before_action :set_child, only: [:show, :edit, :update, :destroy]
+  before_action :set_child, only: [:show, :vitals, :edit, :editchild, :editvitals, :update, :destroy]
 
   # GET /children
   # GET /children.json
@@ -23,6 +23,19 @@ class ChildrenController < ApplicationController
       redirect_to root_path
     end
 
+    if !@child.dob.blank?
+      @child.age_years = ageYears(@child)
+      @child.age_months = ageMonths(@child)
+      @child.age_total_months = ageTotalMonths(@child)
+    end
+
+  end
+
+  # GET /children/1/vitals
+  def vitals
+    if !signed_in?
+      redirect_to root_path
+    end
 
   end
 
@@ -46,6 +59,15 @@ class ChildrenController < ApplicationController
     if !signed_in?
       redirect_to root_path
     end
+    
+  end
+
+  # GET /children/1/editvitals
+  def editvitals
+    if !signed_in?
+      redirect_to root_path
+    end
+    
   end
 
   # POST /children
@@ -63,7 +85,6 @@ class ChildrenController < ApplicationController
       end
     end
 
-    
   end
 
   # PATCH/PUT /children/1
