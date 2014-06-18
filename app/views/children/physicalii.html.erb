@@ -11,22 +11,184 @@
  	<thead>
 		<tr>
 			<td>
-				<%= link_to 'Update', editvitals_path(@child), class: "btn btn-success" %>
+				<%= link_to 'Update', editphysicalii_path(@child), class: "btn btn-success" %>
 			</td>
 		</tr>
 	</thead>
 	<tbody>
     <tr>
-      <td class="show_child_td" colspan="">
-        Height: 
-      </td>
-      <td colspan="3">
-        <%= @child.height_feet %> ft 
-        <%= @child.height_inches %> in; 
-        <%= @child.height_total_inches %> in total; 
-        <%= @child.height_total_cm %> cm total;
-      </td>
-    </tr>
+        <td class="physical_title" colspan="3">
+          Lymph (Pre/post, auricular, cervical, Patency, external, Turbinates, canal, TM, etc): 
+        </td>
+        <td>
+          <%= @child.lymph_all_normal %>
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_title" colspan="3">
+          Lymph Pre-Auricular: 
+        </td>
+        <td>
+          <%= @child.lymph_pre_auricular %>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="physical_title" colspan="3">
+          Lymph Post-Auricular: 
+        </td>
+        <td>
+          <%= @child.lymph_post_auricular %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="3">
+          Lymph Anterior Cervical: 
+        </td>
+        <td>
+          <%= @child.lymph_anterior_cervical %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="3">
+          Lymph Posterior Cervical: 
+        </td>
+        <td>
+          <%= @child.lymph_posterior_cervical %>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="physical_title" colspan="3">
+          Lymph Occipital: 
+        </td>
+        <td>
+          <%= @child.lymph_occipital %>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="physical_title" colspan="3">
+          Lymph Axillary: 
+        </td>
+        <td>
+          <%= @child.lymph_axillary %>
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="4">
+          Comments: 
+          <%= @child.lymph_c %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="3">
+          Vascular (Pulses, color, warmth, cap refill, etc): 
+        </td>
+        <td>
+          <%= @child.vascular %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          Comments: 
+          <%= @child.vascular_c %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="3">
+          Heart (Rate, rythm, murmur, etc): 
+        </td>
+        <td>
+          <%= @child.heart %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          Comments: 
+          <%= @childheart_c %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="3">
+          Lungs (CTA. breath sounds, WOB, etc): 
+        </td>
+        <td>
+          <%= @child.lungs %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          Comments: 
+          <%= @child.lungs_c %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="3">
+          Abdomen (BS, organomegaly, etc): 
+        </td>
+        <td>
+          <%= @child.abdomen %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          Comments: 
+          <%= @child.abdomen_c %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="3">
+          Musculoskeletal (ROM, duck walk, strength, symmetry, knees, shoulders, neck, etc): 
+        </td>
+        <td>
+          <%= @child.musculoskeletal %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          Comments: 
+          <%= @child.musculoskeletal_c %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="3">
+          Scoliosis (Only greater than 9): 
+        </td>
+        <td>
+          <%= @child.scoliosis %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          Comments: 
+          <%= @child.scoliosis_c %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="3">
+          Neuro (Cranial nerves II, CNII-XII intact, balance, heel-toe walk, reflexes, etc): 
+        </td>
+        <td>
+          <%= @child.neuro %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          Comments: 
+          <%= @child.neuro_c %>     
+        </td>
+      </tr>
     
   </tbody>
 </table>

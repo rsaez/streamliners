@@ -1,4 +1,4 @@
-<h1>Editing child</h1>
+<h1>Physical II</h1>
 
 <%= form_for(@child, html: {class:"form-horizontal"}) do |f| %>
   
@@ -37,16 +37,16 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_all_normal, "WNL") %>
+          <%= f.radio_button(:lymph_all_normal, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_all_normal, "Abnormal") %>
+          <%= f.radio_button(:lymph_all_normal, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_all_normal, "Not Evaluated") %>
+          <%= f.radio_button(:lymph_all_normal, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_all_normal, "Unable to cooperate") %>
+          <%= f.radio_button(:lymph_all_normal, "Unable to cooperate") %>
         </td>
       </tr>
 
@@ -71,16 +71,16 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_pre_auricular, "WNL") %>
+          <%= f.radio_button(:lymph_pre_auricular, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_pre_auricular, "Abnormal") %>
+          <%= f.radio_button(:lymph_pre_auricular, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_pre_auricular, "Not Evaluated") %>
+          <%= f.radio_button(:lymph_pre_auricular, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_pre_auricular, "Unable to cooperate") %>
+          <%= f.radio_button(:lymph_pre_auricular, "Unable to cooperate") %>
         </td>
       </tr>
 
@@ -105,16 +105,16 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_post_auricular, "WNL") %>
+          <%= f.radio_button(:lymph_post_auricular, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_post_auricular, "Abnormal") %>
+          <%= f.radio_button(:lymph_post_auricular, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_post_auricular, "Not Evaluated") %>
+          <%= f.radio_button(:lymph_post_auricular, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_post_auricular, "Unable to cooperate") %>
+          <%= f.radio_button(:lymph_post_auricular, "Unable to cooperate") %>
         </td>
       </tr>
 
@@ -139,16 +139,16 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_anterior_cervical, "WNL") %>
+          <%= f.radio_button(:lymph_anterior_cervical, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_anterior_cervical, "Abnormal") %>
+          <%= f.radio_button(:lymph_anterior_cervical, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_anterior_cervical, "Not Evaluated") %>
+          <%= f.radio_button(:lymph_anterior_cervical, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_anterior_cervical, "Unable to cooperate") %>
+          <%= f.radio_button(:lymph_anterior_cervical, "Unable to cooperate") %>
         </td>
       </tr>
 
@@ -173,16 +173,16 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_posterior_cervical, "WNL") %>
+          <%= f.radio_button(:lymph_posterior_cervical, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_posterior_cervical, "Abnormal") %>
+          <%= f.radio_button(:lymph_posterior_cervical, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_posterior_cervical, "Not Evaluated") %>
+          <%= f.radio_button(:lymph_posterior_cervical, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_posterior_cervical, "Unable to cooperate") %>
+          <%= f.radio_button(:lymph_posterior_cervical, "Unable to cooperate") %>
         </td>
       </tr>
       
@@ -207,16 +207,16 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_occipital, "WNL") %>
+          <%= f.radio_button(:lymph_occipital, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_occipital, "Abnormal") %>
+          <%= f.radio_button(:lymph_occipital, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_occipital, "Not Evaluated") %>
+          <%= f.radio_button(:lymph_occipital, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_occipital, "Unable to cooperate") %>
+          <%= f.radio_button(:lymph_occipital, "Unable to cooperate") %>
         </td>
       </tr>
 
@@ -241,29 +241,29 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_axillary, "WNL") %>
+          <%= f.radio_button(:lymph_axillary, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_axillary, "Abnormal") %>
+          <%= f.radio_button(:lymph_axillary, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_axillary, "Not Evaluated") %>
+          <%= f.radio_button(:lymph_axillary, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lymph_axillary, "Unable to cooperate") %>
+          <%= f.radio_button(:lymph_axillary, "Unable to cooperate") %>
         </td>
       </tr>
 
       <tr>
         <td colspan="4">
           <%= f.label :lymph_c, "Comments: " %>
-          <%= f.text_field :lymph_c, :class => "physical_comment_field" %>     
+          <%= f.text_field :lymph_c, :class => "physical_comment_field" %>
         </td>
       </tr>
 
       <tr>
         <td class="physical_title" colspan="4">
-          Vascular
+          Vascular (Pulses, color, warmth, cap refill, etc)
         </td>
       </tr>
       <tr>
@@ -282,28 +282,28 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:vascular, "WNL") %>
+          <%= f.radio_button(:vascular, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:vascular, "Abnormal") %>
+          <%= f.radio_button(:vascular, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:vascular, "Not Evaluated") %>
+          <%= f.radio_button(:vascular, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:vascular, "Unable to cooperate") %>
+          <%= f.radio_button(:vascular, "Unable to cooperate") %>
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :vascular_c, "Comments: " %>
-          <%= f.text_field :vascular_c, :class => "physical_comment_field" %>     
+          <%= f.text_field :vascular_c, :class => "physical_comment_field" %>
         </td>
       </tr>
 
       <tr>
         <td class="physical_title" colspan="4">
-          Heart
+          Heart (Rate, rythm, murmur, etc)
         </td>
       </tr>
       <tr>
@@ -322,28 +322,28 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:heart, "WNL") %>
+          <%= f.radio_button(:heart, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:heart, "Abnormal") %>
+          <%= f.radio_button(:heart, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:heart, "Not Evaluated") %>
+          <%= f.radio_button(:heart, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:heart, "Unable to cooperate") %>
+          <%= f.radio_button(:heart, "Unable to cooperate") %>
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :heart_c, "Comments: " %>
-          <%= f.text_field :heart_c, :class => "physical_comment_field" %>     
+          <%= f.text_field :heart_c, :class => "physical_comment_field" %>
         </td>
       </tr>
 
       <tr>
         <td class="physical_title" colspan="4">
-          Lungs
+          Lungs (CTA. breath sounds, WOB, etc)
         </td>
       </tr>
       <tr>
@@ -362,28 +362,28 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lungs, "WNL") %>
+          <%= f.radio_button(:lungs, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lungs, "Abnormal") %>
+          <%= f.radio_button(:lungs, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lungs, "Not Evaluated") %>
+          <%= f.radio_button(:lungs, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:lungs, "Unable to cooperate") %>
+          <%= f.radio_button(:lungs, "Unable to cooperate") %>
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :lungs_c, "Comments: " %>
-          <%= f.text_field :lungs_c, :class => "physical_comment_field" %>     
+          <%= f.text_field :lungs_c, :class => "physical_comment_field" %>
         </td>
       </tr>
 
       <tr>
         <td class="physical_title" colspan="4">
-          Abdomen
+          Abdomen (BS, organomegaly, etc)
         </td>
       </tr>
       <tr>
@@ -402,28 +402,28 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:abdomen, "WNL") %>
+          <%= f.radio_button(:abdomen, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:abdomen, "Abnormal") %>
+          <%= f.radio_button(:abdomen, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:abdomen, "Not Evaluated") %>
+          <%= f.radio_button(:abdomen, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:abdomen, "Unable to cooperate") %>
+          <%= f.radio_button(:abdomen, "Unable to cooperate") %>
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :abdomen_c, "Comments: " %>
-          <%= f.text_field :abdomen_c, :class => "physical_comment_field" %>     
+          <%= f.text_field :abdomen_c, :class => "physical_comment_field" %>
         </td>
       </tr>
 
       <tr>
         <td class="physical_title" colspan="4">
-          Musculoskeletal
+          Musculoskeletal (ROM, duck walk, strength, symmetry, knees, shoulders, neck, etc)
         </td>
       </tr>
       <tr>
@@ -442,28 +442,28 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:musculoskeletal, "WNL") %>
+          <%= f.radio_button(:musculoskeletal, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:musculoskeletal, "Abnormal") %>
+          <%= f.radio_button(:musculoskeletal, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:musculoskeletal, "Not Evaluated") %>
+          <%= f.radio_button(:musculoskeletal, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:musculoskeletal, "Unable to cooperate") %>
+          <%= f.radio_button(:musculoskeletal, "Unable to cooperate") %>
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :musculoskeletal_c, "Comments: " %>
-          <%= f.text_field :musculoskeletal_c, :class => "physical_comment_field" %>     
+          <%= f.text_field :musculoskeletal_c, :class => "physical_comment_field" %>
         </td>
       </tr>
 
       <tr>
         <td class="physical_title" colspan="4">
-          Scoliosis
+          Scoliosis (Only greater than 9)
         </td>
       </tr>
       <tr>
@@ -482,28 +482,28 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:scoliosis, "WNL") %>
+          <%= f.radio_button(:scoliosis, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:scoliosis, "Abnormal") %>
+          <%= f.radio_button(:scoliosis, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:scoliosis, "Not Evaluated") %>
+          <%= f.radio_button(:scoliosis, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:scoliosis, "Unable to cooperate") %>
+          <%= f.radio_button(:scoliosis, "Unable to cooperate") %>
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :scoliosis_c, "Comments: " %>
-          <%= f.text_field :scoliosis_c, :class => "physical_comment_field" %>     
+          <%= f.text_field :scoliosis_c, :class => "physical_comment_field" %>
         </td>
       </tr>
 
       <tr>
         <td class="physical_title" colspan="4">
-          Neuro
+          Neuro (Cranial nerves II, CNII-XII intact, balance, heel-toe walk, reflexes, etc)
         </td>
       </tr>
       <tr>
@@ -522,16 +522,16 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:neuro, "WNL") %>
+          <%= f.radio_button(:neuro, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:neuro, "Abnormal") %>
+          <%= f.radio_button(:neuro, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:neuro, "Not Evaluated") %>
+          <%= f.radio_button(:neuro, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:neuro, "Unable to cooperate") %>
+          <%= f.radio_button(:neuro, "Unable to cooperate") %>
         </td>
       </tr>
       <tr>

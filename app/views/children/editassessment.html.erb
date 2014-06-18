@@ -1,4 +1,4 @@
-<h1>Editing child</h1>
+<h1>Assessment</h1>
 
 <%= form_for(@child, html: {class:"form-horizontal"}) do |f| %>
   
@@ -37,22 +37,22 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:well_child_check, "WNL") %>
+          <%= f.radio_button(:well_child_check, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:well_child_check, "Abnormal") %>
+          <%= f.radio_button(:well_child_check, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:well_child_check, "Not Evaluated") %>
+          <%= f.radio_button(:well_child_check, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:well_child_check, "Unable to cooperate") %>
+          <%= f.radio_button(:well_child_check, "Unable to cooperate") %>
         </td>
       </tr>
 
       <tr>
         <td class="physical_title" colspan="4">
-            <p>ASSESMENTS</p>
+          <p>Physical Exam</p>
         </td>
       </tr>
       <tr>
@@ -194,13 +194,9 @@
       </tr>
 
       <tr>
-        <td colspan="2">
+        <td colspan="4">
           <%= f.check_box :chart_complete, :class=>"checkbox_field" %>
           <%= f.label :chart_complete, "Chart Complete", :class=>"checkbox_label_field" %>
-        </td>
-        <td colspan="2">
-          <%= f.check_box :chart_complete, :class=>"checkbox_field" %>
-          <%= f.label :chart_complete, "Chart NOT Complete", :class=>"checkbox_label_field" %>
         </td>
       </tr>
       <tr>
@@ -214,11 +210,11 @@
         <td><%= f.text_field :np_signature %></td>
       </tr>
       <tr>
-        <td><%= f.label :faculty_signature, "faculty signature" %></td>
+        <td><%= f.label :Faculty_signature, "faculty signature" %></td>
         <td><%= f.text_field :faculty_signature %></td>
       </tr>
       <tr>
-        <td><%= f.label :other_np_signature, "Other NP signature" %></td>
+        <td><%= f.label :Other_np_signature, "Other NP signature" %></td>
         <td><%= f.text_field :other_np_signature %></td>
       </tr>
     </tbody>
