@@ -15,6 +15,7 @@
 
   <table class="table table-bordered">
     <tbody>
+
       <tr>
         <td class="physical_title" colspan="4">
           Well Child Check
@@ -36,76 +37,82 @@
       </tr>
       <tr>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:general_statement, "WNL") %>
+          <%= radio_button_tag(:well_child_check, "WNL") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:general_statement, "Abnormal") %>
+          <%= radio_button_tag(:well_child_check, "Abnormal") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:general_statement, "Not Evaluated") %>
+          <%= radio_button_tag(:well_child_check, "Not Evaluated") %>
         </td>
         <td class="physical_td_radial">
-          <%= radio_button_tag(:general_statement, "Unable to cooperate") %>
+          <%= radio_button_tag(:well_child_check, "Unable to cooperate") %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="4">
+            <p>ASSESMENTS</p>
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "1.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :children_01, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "2.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :children_02, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "3.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :children_03, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "4.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :children_04, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "5.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :children_05, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "6.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :children_06, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "7.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :children_07, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "8.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :children_08, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "9.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :children_09, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "10.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :children_10, :class => "physical_comment_field" %>     
         </td>
       </tr>
 
@@ -117,61 +124,61 @@
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "1.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :follow_up_01, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "2.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :follow_up_02, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "3.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :follow_up_03, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "4.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :follow_up_04, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "5.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :follow_up_05, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "6.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :follow_up_06, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "7.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :follow_up_07, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "8.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :follow_up_08, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "9.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :follow_up_09, :class => "physical_comment_field" %>     
         </td>
       </tr>
       <tr>
         <td colspan="4">
           <%= f.label :Comments, "10.) " %>
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :follow_up_10, :class => "physical_comment_field" %>     
         </td>
       </tr>
 
@@ -182,18 +189,18 @@
       </tr>
       <tr>
         <td colspan="4">
-          <%= f.text_field :general_statement, :class => "physical_comment_field" %>     
+          <%= f.text_field :guidance, :class => "physical_comment_field" %>     
         </td>
       </tr>
 
       <tr>
         <td colspan="2">
-          <%= f.check_box :signature, :class=>"checkbox_field" %>
-          <%= f.label :signature, "Chart Complete", :class=>"checkbox_label_field" %>
+          <%= f.check_box :chart_complete, :class=>"checkbox_field" %>
+          <%= f.label :chart_complete, "Chart Complete", :class=>"checkbox_label_field" %>
         </td>
         <td colspan="2">
-          <%= f.check_box :signature, :class=>"checkbox_field" %>
-          <%= f.label :signature, "Chart NOT Complete", :class=>"checkbox_label_field" %>
+          <%= f.check_box :chart_complete, :class=>"checkbox_field" %>
+          <%= f.label :chart_complete, "Chart NOT Complete", :class=>"checkbox_label_field" %>
         </td>
       </tr>
       <tr>
@@ -203,16 +210,16 @@
       </tr>
 
       <tr>
-        <td><%= f.label :signature, "NP signature" %></td>
-        <td><%= f.text_field :signature %></td>
+        <td><%= f.label :np_signature, "NP signature" %></td>
+        <td><%= f.text_field :np_signature %></td>
       </tr>
       <tr>
-        <td><%= f.label :signature, "faculty signature" %></td>
-        <td><%= f.text_field :signature %></td>
+        <td><%= f.label :faculty_signature, "faculty signature" %></td>
+        <td><%= f.text_field :faculty_signature %></td>
       </tr>
       <tr>
-        <td><%= f.label :signature, "Other NP signature" %></td>
-        <td><%= f.text_field :signature %></td>
+        <td><%= f.label :other_np_signature, "Other NP signature" %></td>
+        <td><%= f.text_field :other_np_signature %></td>
       </tr>
     </tbody>
   </table>

@@ -140,7 +140,7 @@
           <strong> Cover Test Both </strong>
         </td>
         <td colspan="2">
-          <%= @child.cover_test_both %>
+          <%= check_box_tag "", 1 , @child.cover_test_both ? true : false, :disabled => true %>
         </td>
       </tr>
 

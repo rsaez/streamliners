@@ -1,7 +1,7 @@
 <h1><%= @child.last_name %>, <%= @child.first_name %></h1>
 <h3>Hearing Screening</h3>
 
-<%= form_for(@child, :url => patch_hearing_path, html: {class:"form-horizontal"}) do |f| %>
+<%= form_for(@child, html: {class:"form-horizontal"}) do |f| %>
   
   <% if @child.errors.any? %>
     <div id="error_explanation">
@@ -19,8 +19,6 @@
       <tr>
         <td class="hearing_title" colspan="4">
           <p>Test 1</p>
-          <p>THIS IS an INPUT TEST: <%= f.text_field :vision_acuity_left_1, :class => "ten_number_field" %> </p>
-        </td>
       </tr>
       
       <tr>
