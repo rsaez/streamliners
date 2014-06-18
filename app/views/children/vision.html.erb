@@ -1,0 +1,170 @@
+<h1><%= @child.last_name %>, <%= @child.first_name %></h1>
+<h3>Vision Screening</h3>
+
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <%= render 'layouts/menu' %>
+    </tr>
+  </tbody>
+</table>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>
+        <%= link_to 'Update', editvision_path(@child), class: "btn btn-success" %>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td class="vision_title" colspan="3">
+        <p>Test 1</p>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="td_three">
+        <p>Left Eye</p>
+        <p>
+          20 / 
+          <%= @child.vision_acuity_left_1 %> result
+        </p>
+      </td>
+      <td class="td_three">
+        <p>Right Eye</p>
+        <p>
+          20 / 
+          <%= @child.vision_acuity_right_1 %> result
+        </p>
+      </td>
+      <td class="td_three">
+        <p>Both Eyes</p>
+        <p>
+          20 / 
+          <%= @child.vision_acuity_both_1 %> result
+        </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="vision_title" colspan="3">
+        <p>Test 2</p>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="td_three">
+        <p>Left Eye</p>
+        <p>
+          20 / 
+          <%= @child.vision_acuity_left_2 %> result
+        </p>
+      </td>
+      <td class="td_three">
+        <p>Right Eye</p>
+        <p>
+          20 / 
+          <%= @child.vision_acuity_right_2 %> result
+        </p>
+      </td>
+      <td class="td_three">
+        <p>Both Eyes</p>
+        <p>
+          20 / 
+          <%= @child.vision_acuity_both_2 %> result
+        </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="vision_title" colspan="3">
+        <p>Test 3</p>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="td_three">
+        <p>Left Eye</p>
+        <p>
+          20 / 
+          <%= @child.vision_acuity_left_3 %> result
+        </p>
+      </td>
+      <td class="td_three">
+        <p>Right Eye</p>
+        <p>
+          20 / 
+          <%= @child.vision_acuity_right_3 %> result
+        </p>
+      </td>
+      <td class="td_three">
+        <p>Both Eyes</p>
+        <p>
+          20 / 
+          <%= @child.vision_acuity_both_3 %> result
+        </p>
+      </td>
+    </tr>
+
+    <tr>
+        <td class=".label.vision_checkbox_label" colspan="">
+          <strong> Color Blindness </strong>
+        </td>
+        <td colspan="2">
+          <%= check_box_tag "", 1 , @child.vision_color_blindness ? true : false, :disabled => true %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class=".label.vision_checkbox_label" colspan="">
+          <strong> Cover Test Left </strong>
+        </td>
+        <td colspan="2">
+          <%= check_box_tag "", 1 , @child.cover_test_left ? true : false, :disabled => true %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class=".label.vision_checkbox_label" colspan="">
+          <Strong> Cover Test Right </strong>
+        </td>
+        <td colspan="2">
+          <%= check_box_tag "", 1 , @child.cover_test_right ? true : false, :disabled => true %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class=".label.vision_checkbox_label" colspan="">
+          <strong> Cover Test Both </strong>
+        </td>
+        <td colspan="2">
+          <%= @child.cover_test_both %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="vision_title" colspan="">
+          <strong> Wears corrective lenses? </strong>
+        </td>
+        <td colspan="2">
+          <%= check_box_tag "", 1 , @child.wears_corrective_lenses ? true : false, :disabled => true %>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="vision_title" colspan="">
+          <strong> Vision Comments </strong>
+        </td>
+        <td .class="vision_text_field" colspan="2">
+          <%= @child.vision_comments %>
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+<%= link_to 'Edit', editvision_path(@child) %> |
+<%= link_to 'Directory', children_path %>

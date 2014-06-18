@@ -1,0 +1,129 @@
+<h1><%= @child.last_name %>, <%= @child.first_name %></h1>
+<h3>Hearing Screening</h3>
+
+<%= form_for(@child, :url => patch_hearing_path, html: {class:"form-horizontal"}) do |f| %>
+  
+  <% if @child.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@child.errors.count, "error") %> prohibited this child from being saved:</h2>
+      <ul>
+        <% @child.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td class="hearing_title" colspan="4">
+          <p>Test 1</p>
+          <p>THIS IS an INPUT TEST: <%= f.text_field :vision_acuity_left_1, :class => "ten_number_field" %> </p>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="td_hearing_ear" colspan="">
+          <p>Left Ear</p>
+        </td>
+        <td>
+          <p>
+            <%= f.text_field :hearing_hz_left_1, :class => "ten_number_field" %>hz, 
+            <%= f.text_field :hearing_db_left_1, :class => "ten_number_field" %>db, 
+            <%= f.text_field :ear_left_pass_1 %> pass/fail. 
+          </p>
+        </td>
+        <td class="td_hearing_ear" colspan="">
+          <p>Right Ear</p>
+        </td>
+        <td>
+          <p>
+            <%= f.text_field :hearing_hz_right_1, :class => "ten_number_field" %>hz, 
+            <%= f.text_field :hearing_db_right_1, :class => "ten_number_field" %>db, 
+            <%= f.text_field :ear_right_pass_1 %> pass/fail.
+          </p>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="hearing_title" colspan="4">
+          <p>Test 2</p>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="td_hearing_ear">
+          <p>Left Ear</p>
+        </td>
+        <td>
+          <p>
+            <%= f.text_field :hearing_hz_left_2, :class => "ten_number_field" %>hz, 
+            <%= f.text_field :hearing_db_left_2, :class => "ten_number_field" %>db, 
+            <%= f.text_field :ear_left_pass_2 %> pass/fail. 
+          </p>
+        </td>
+        <td class="td_hearing_ear" colspan="">
+          <p>Right Ear</p>
+        </td>
+        <td>
+          <p>
+            <%= f.text_field :hearing_hz_right_2, :class => "ten_number_field" %>hz, 
+            <%= f.text_field :hearing_db_right_2, :class => "ten_number_field" %>db, 
+            <%= f.text_field :ear_right_pass_2 %> pass/fail.
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="hearing_title" colspan="4">
+          <p>Test 3</p>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="td_hearing_ear" colspan="">
+          <p>Left Ear</p>
+        </td>
+        <td>
+          <p>
+            <%= f.text_field :hearing_hz_left_3, :class => "ten_number_field" %>hz, 
+            <%= f.text_field :hearing_db_left_3, :class => "ten_number_field" %>db, 
+            <%= f.text_field :ear_left_pass_3 %> pass/fail. 
+          </p>
+        </td>
+        <td class="td_hearing_ear" colspan="">
+          <p>Right Ear</p>
+        </td>
+        <td>
+          <p>
+            <%= f.text_field :hearing_hz_right_3, :class => "ten_number_field" %>hz, 
+            <%= f.text_field :hearing_db_right_3, :class => "ten_number_field" %>db, 
+            <%= f.text_field :ear_right_pass_3 %> pass/fail.
+          </p>
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="4">
+          <%= f.label :hearing_comments, 'Hearing Comments: ', :class => "show_child_td" %>
+        
+          <%= f.text_field :hearing_comments, :class => "hearing_text_field" %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <% if @child_id.nil?%>
+    <%= f.hidden_field :child_id, value: params[:child_id]%>
+  <% else %>
+    <%= f.hidden_field :child_id, value: @child_id%>
+  <% end %>
+  
+  <div  class: "btn btn-large btn-primary">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', @child %> |
+<%= link_to 'Directory', children_path %>

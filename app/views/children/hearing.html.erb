@@ -1,0 +1,119 @@
+<h1><%= @child.last_name %>, <%= @child.first_name %></h1>
+<h3>Hearing Screening</h3>
+
+<table class="table table-bordered">
+	<tbody>
+  	<tr>
+    	<%= render 'layouts/menu' %>
+    </tr>
+  </tbody>
+</table>
+<table class="table table-bordered">
+ 	<thead>
+		<tr>
+			<td>
+				<%= link_to 'Update', edithearing_path(@child), class: "btn btn-success" %>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+    <tr>
+      <td class="hearing_title" colspan="4">
+        <p>Test 1 </p>
+        <p>THIS IS A TEST: <%= @child.vision_acuity_left_1 %> </p>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="td_hearing_ear" colspan="">
+        <p>Left Ear</p>
+      </td>
+      <td>
+        <p>
+          <%= @child.hearing_hz_left_1 %>hz, 
+          <%= @child.hearing_db_left_1 %>db, 
+          <%= @child.ear_left_pass_1 %> pass/fail. 
+        </p>
+      </td>
+      <td class="td_hearing_ear" colspan="">
+        <p>Right Ear</p>
+      </td>
+      <td>
+        <p>
+          <%= @child.hearing_hz_right_1 %>hz, 
+          <%= @child.hearing_db_right_1 %>db, 
+          <%= @child.ear_right_pass_1 %> pass/fail. 
+        </p>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="hearing_title" colspan="4">
+        <p>Test 2</p>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="td_hearing_ear">
+        <p>Left Ear</p>
+      </td>
+      <td>
+        <p>
+          <%= @child.hearing_hz_left_2 %>hz, 
+          <%= @child.hearing_db_left_2 %>db, 
+          <%= @child.ear_left_pass_2 %> pass/fail. 
+        </p>
+      </td>
+      <td class="td_hearing_ear" colspan="">
+        <p>Right Ear</p>
+      </td>
+      <td>
+        <p>
+          <%= @child.hearing_hz_right_2 %>hz, 
+          <%= @child.hearing_db_right_2 %>db, 
+          <%= @child.ear_right_pass_2 %> pass/fail. 
+        </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="hearing_title" colspan="4">
+        <p>Test 3</p>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="td_hearing_ear" colspan="">
+        <p>Left Ear</p>
+      </td>
+      <td>
+        <p>
+          <%= @child.hearing_hz_left_3 %>hz, 
+          <%= @child.hearing_db_left_3 %>db, 
+          <%= @child.ear_left_pass_3 %> pass/fail. 
+        </p>
+      </td>
+      <td class="td_hearing_ear" colspan="">
+        <p>Right Ear</p>
+      </td>
+      <td>
+        <p>
+          <%= @child.hearing_hz_right_3 %>hz, 
+          <%= @child.hearing_db_right_3 %>db, 
+          <%= @child.ear_right_pass_3 %> pass/fail. 
+        </p>
+      </td>
+    </tr>
+    
+    <tr>
+      <td colspan="4">
+        <strong>Hearing Comments: </strong>
+        <%= @child.hearing_comments %>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edithearing_path(@child) %> |
+<%= link_to 'Directory', children_path %>

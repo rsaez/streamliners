@@ -1,0 +1,392 @@
+<h1>Editing child</h1>
+
+<%= form_for(@child, :url => patch_physicali_path, html: {class:"form-horizontal"}) do |f| %>
+  
+  <% if @child.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@child.errors.count, "error") %> prohibited this child from being saved:</h2>
+      <ul>
+        <% @child.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td class="physical_title" colspan="4">
+          General Appearance (Well nourished, hygienge, appears ill, etc)
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial_label">
+          WNL
+        </td>
+        <td  class="physical_td_radial_label">
+          AB
+        </td>
+        <td class="physical_td_radial_label">
+          Not Evaluated
+        </td>
+        <td class="physical_td_radial_label">
+          Unable To Cooperate
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:general_appearance, "WNL") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:general_appearance, "Abnormal") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:general_appearance, "Not Evaluated") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:general_appearance, "Unable to cooperate") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :general_appearance_c, "Comments: " %>
+          <%= f.text_field :general_appearance_c, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="4">
+          Head/Hair (Include, 3.1 fontanelle if <18 months)
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial_label">
+          WNL
+        </td>
+        <td  class="physical_td_radial_label">
+          AB
+        </td>
+        <td class="physical_td_radial_label">
+          Not Evaluated
+        </td>
+        <td class="physical_td_radial_label">
+          Unable To Cooperate
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:head, "WNL") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:head, "Abnormal") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:head, "Not Evaluated") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:head, "Unable to cooperate") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :head_c, "Comments: " %>
+          <%= f.text_field :head_c, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="4">
+          Skin (Rashes, etc)
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial_label">
+          WNL
+        </td>
+        <td  class="physical_td_radial_label">
+          AB
+        </td>
+        <td class="physical_td_radial_label">
+          Not Evaluated
+        </td>
+        <td class="physical_td_radial_label">
+          Unable To Cooperate
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:skin, "WNL") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:skin, "Abnormal") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:skin, "Not Evaluated") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:skin, "Unable to cooperate") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :skin_c, "Comments: " %>
+          <%= f.text_field :skin_c, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="4">
+          Eyes (External, PERR LA, RED reflex, lids, EOM's, cover test, etc)
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial_label">
+          WNL
+        </td>
+        <td  class="physical_td_radial_label">
+          AB
+        </td>
+        <td class="physical_td_radial_label">
+          Not Evaluated
+        </td>
+        <td class="physical_td_radial_label">
+          Unable To Cooperate
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:eyes, "WNL") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:eyes, "Abnormal") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:eyes, "Not Evaluated") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:eyes, "Unable to cooperate") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :eyes_c, "Comments: " %>
+          <%= f.text_field :eyes_c, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="4">
+          Ears (External, canal, TM, etc)
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial_label">
+          WNL
+        </td>
+        <td  class="physical_td_radial_label">
+          AB
+        </td>
+        <td class="physical_td_radial_label">
+          Not Evaluated
+        </td>
+        <td class="physical_td_radial_label">
+          Unable To Cooperate
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:ears, "WNL") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:ears, "Abnormal") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:ears, "Not Evaluated") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:ears, "Unable to cooperate") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :ears_c, "Comments: " %>
+          <%= f.text_field :ears_c, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="4">
+          Nose (Patency, external, turbinates d/L, etc)
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial_label">
+          WNL
+        </td>
+        <td  class="physical_td_radial_label">
+          AB
+        </td>
+        <td class="physical_td_radial_label">
+          Not Evaluated
+        </td>
+        <td class="physical_td_radial_label">
+          Unable To Cooperate
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:nose, "WNL") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:nose, "Abnormal") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:nose, "Not Evaluated") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:nose, "Unable to cooperate") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :nose_c, "Comments: " %>
+          <%= f.text_field :nose_c, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="4">
+          Mouth (Teeth, gums, presence of crowns, caries, pallate, etc)
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial_label">
+          WNL
+        </td>
+        <td  class="physical_td_radial_label">
+          AB
+        </td>
+        <td class="physical_td_radial_label">
+          Not Evaluated
+        </td>
+        <td class="physical_td_radial_label">
+          Unable To Cooperate
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:mouth, "WNL") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:mouth, "Abnormal") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:mouth, "Not Evaluated") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:mouth, "Unable to cooperate") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :mouth_c, "Comments: " %>
+          <%= f.text_field :mouth_c, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="4">
+          Throat (Uvula, tonsil, pharynx, exudate, voice, etc)
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial_label">
+          WNL
+        </td>
+        <td  class="physical_td_radial_label">
+          AB
+        </td>
+        <td class="physical_td_radial_label">
+          Not Evaluated
+        </td>
+        <td class="physical_td_radial_label">
+          Unable To Cooperate
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:throat, "WNL") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:throat, "Abnormal") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:throat, "Not Evaluated") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:throat, "Unable to cooperate") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :throat_c, "Comments: " %>
+          <%= f.text_field :throat_c, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+
+      <tr>
+        <td class="physical_title" colspan="4">
+          Thyroid (Anterior, posterior, etc)
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial_label">
+          WNL
+        </td>
+        <td  class="physical_td_radial_label">
+          AB
+        </td>
+        <td class="physical_td_radial_label">
+          Not Evaluated
+        </td>
+        <td class="physical_td_radial_label">
+          Unable To Cooperate
+        </td>
+      </tr>
+      <tr>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:thyroid, "WNL") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:thyroid, "Abnormal") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:thyroid, "Not Evaluated") %>
+        </td>
+        <td class="physical_td_radial">
+          <%= radio_button_tag(:thyroid, "Unable to cooperate") %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <%= f.label :thyroid_c, "Comments: " %>
+          <%= f.text_field :thyroid_c, :class => "physical_comment_field" %>     
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <% if @child_id.nil?%>
+    <%= f.hidden_field :child_id, value: params[:child_id]%>
+  <% else %>
+    <%= f.hidden_field :child_id, value: @child_id%>
+  <% end %>
+  
+  <div  class: "btn btn-large btn-primary">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', @child %> |
+<%= link_to 'Directory', children_path %>

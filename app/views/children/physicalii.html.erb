@@ -1,0 +1,35 @@
+<h1><%= @child.last_name %>, <%= @child.first_name %></h1>
+
+<table class="table table-bordered">
+	<tbody>
+  	<tr>
+    	<%= render 'layouts/menu' %>
+    </tr>
+  </tbody>
+</table>
+<table class="table table-bordered">
+ 	<thead>
+		<tr>
+			<td>
+				<%= link_to 'Update', editvitals_path(@child), class: "btn btn-success" %>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+    <tr>
+      <td class="show_child_td" colspan="">
+        Height: 
+      </td>
+      <td colspan="3">
+        <%= @child.height_feet %> ft 
+        <%= @child.height_inches %> in; 
+        <%= @child.height_total_inches %> in total; 
+        <%= @child.height_total_cm %> cm total;
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_child_path(@child) %> |
+<%= link_to 'Directory', children_path %>

@@ -23,20 +23,20 @@
   	<%= link_to 'Vision', vision_path, class: "btn btn-success" %>
 	<% end %>
 
-	<% if @children.general_appearance.blank? %>
+	<% if @child.general_appearance.blank? %>
 		<%= link_to 'Physical I', editphysicali_path, class: "btn btn-success" %>
 	<% else %>
 		<%= link_to 'Physical I', physicali_path, class: "btn btn-success" %>
 	<% end %>
 
-	<% if @children.lymph_all_normal.blank? %>
-		<%= link_to 'Physical I', editphysicalii_path, class: "btn btn-success" %>
+	<% if @child.lymph_all_normal.blank? %>
+		<%= link_to 'Physical II', editphysicalii_path, class: "btn btn-success" %>
 	<% else %>
-		<%= link_to 'Physical I', physicalii_path, class: "btn btn-success" %>
+		<%= link_to 'Physical II', physicalii_path, class: "btn btn-success" %>
 	<% end %>
 
-	<% if @children.well_child_check.blank? %>
-		<%= link_to 'Assessment', new_finding_path, class: "btn btn-success" %>
+	<% if @child.well_child_check.blank? %>
+		<%= link_to 'Assessment', editassessment_path, class: "btn btn-success" %>
 	<% else %>
 		<%= link_to 'Assessment', assessment_path, class: "btn btn-success" %>
 	<% end %>
