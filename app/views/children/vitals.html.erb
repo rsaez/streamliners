@@ -11,11 +11,13 @@
  	<thead>
 		<tr>
 			<td>
-				<%= link_to 'Update', editvitals_path(@child), class: "btn btn-success" %>
+				<%= link_to 'Update Vitals', editvitals_path(@child), class: "btn btn-success" %>
 			</td>
 		</tr>
 	</thead>
 	<tbody>
+
+    <% if !@child.height_total_inches.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         Height: 
@@ -27,16 +29,22 @@
         <%= @child.height_total_cm %> cm total;
       </td>
     </tr>
+    <% end %>
+
+
+    <% if !@child.weight_lbs.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         Weight: 
       </td>
       <td colspan="3">
-        <%= @child.weight_lbs %> lbs, 
-        <%= @child.weight_oz %> oz; 
-        <%= @child.weight_kg %> kg;
+        <%= @child.weight_lbs %> lbs; 
+        <%= @child.weight_kg %> kg
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.bmi_result.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         BMI Result: 
@@ -46,11 +54,17 @@
          %, BMI Percentile: ...
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.systolic_1.blank? || !@child.systolic_2.blank? || !@child.systolic_3.blank? %>
     <tr>
       <td class="show_child_td" colspan="4">
         Blood Pressure
       </td>
     </tr>
+
+
+    <% if !@child.systolic_1.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         Test 1: 
@@ -62,6 +76,9 @@
         Diastolic mm Hg
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.systolic_2.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         Test 2: 
@@ -73,6 +90,9 @@
         Diastolic mm Hg
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.systolic_3.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         Test 3: 
@@ -84,6 +104,10 @@
         Diastolic mm Hg
       </td>
     </tr>
+    <% end %>
+    <% end %>
+
+    <% if !@child.hemoglobin.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         Hemoglobin: 
@@ -93,6 +117,9 @@
         gm/dL
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.blood_glucose.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         Blood Glucose: 
@@ -102,6 +129,8 @@
         mg/dL
       </td>
     </tr>
+    <% end %>
+
   </tbody>
 </table>
 

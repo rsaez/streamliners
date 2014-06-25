@@ -2,20 +2,20 @@
 
 <table class="table table-bordered">
 	<tbody>
-  	<tr>
-    	<%= render 'layouts/menu' %>
-    </tr>
+  	<%= render 'layouts/menu' %>
   </tbody>
 </table>
 <table class="table table-bordered">
  	<thead>
 		<tr>
 			<td>
-				<%= link_to 'Update', editchild_path(@child), class: "btn btn-success" %>
+				<%= link_to 'Update Demographics', editchild_path(@child), class: "btn btn-success" %>
 			</td>
 		</tr>
 	</thead>
 	<tbody>
+
+    <% if !@child.gender.blank? %>
 		<tr>
       <td class="show_child_td" colspan="">
         <strong>Gender: </strong>
@@ -24,6 +24,9 @@
         <%= @child.gender %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.dob.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> DOB: </strong>
@@ -32,6 +35,9 @@
         <%= @child.dob %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.age_years.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> Age: </strong>
@@ -40,6 +46,9 @@
         <%= @child.age_years %> <strong> years and </strong> <%= @child.age_months %> <strong> months </strong>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.age_total_months.blank? && (@child.age_total_months < 24) %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> Total Months: </strong>
@@ -48,14 +57,20 @@
         <%= @child.age_total_months %> months
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.location.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
-        <strong> Location: </strong>
+        <strong> Site Location: </strong>
       </td>
       <td>
         <%= @child.location %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.no_parent_present.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> No Parent Present: </strong>
@@ -64,6 +79,9 @@
         <%= check_box_tag "", 1 , @child.no_parent_present ? true : false, :disabled => true %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.parental_permission_given.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> Parental Permission Given: </strong>
@@ -72,6 +90,9 @@
         <%= check_box_tag "", 1 , @child.parental_permission_given ? true : false, :disabled => true %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.allergies.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> Allergies: </strong>
@@ -80,14 +101,28 @@
         <%= @child.allergies %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.allergies_information.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
-        <strong> Allergies Information: </strong>
+        <strong> Allergies Reaction Type: </strong>
       </td>
       <td>
         <%= @child.allergies_information %>
       </td>
     </tr>
+    <% end %>
+    
+    <% if !@child.immunization_utd.blank? || !@child.dtap.blank? || !@child.hib.blank? || !@child.pneumovax.blank? || !@child.hepa.blank? || !@child.hepb.blank?  || !@child.influenza.blank? || !@child.dtap.blank?  || !@child.mmr.blank? || !@child.immunization_needed.blank? %>
+    <tr>
+      <td>
+        Immunization History
+      </td>
+    </tr>
+    <% end %>
+
+    <% if !@child.immunization_utd.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> Immunizations UTD: </strong>
@@ -96,6 +131,9 @@
         <%= check_box_tag "", 1 , @child.immunization_utd ? true : false, :disabled => true %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.dtap.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> DTaP: </strong>
@@ -104,6 +142,9 @@
         <%= check_box_tag "", 1 , @child.dtap ? true : false, :disabled => true %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.hib.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> Hib: </strong>
@@ -112,6 +153,9 @@
         <%= check_box_tag "", 1 , @child.hib ? true : false, :disabled => true %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.pneumovax.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> Pneumovax: </strong>
@@ -120,6 +164,9 @@
         <%= check_box_tag "", 1 , @child.pneumovax ? true : false, :disabled => true %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.hepa.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> HepA: </strong>
@@ -128,6 +175,9 @@
         <%= check_box_tag "", 1 , @child.hepa ? true : false, :disabled => true %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.hepb.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> HepB: </strong>
@@ -136,6 +186,9 @@
         <%= check_box_tag "", 1 , @child.hepb ? true : false, :disabled => true %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.influenza.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> Influenza: </strong>
@@ -144,6 +197,9 @@
         <%= check_box_tag "", 1 , @child.influenza ? true : false, :disabled => true %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.mmr.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> MMR: </strong>
@@ -152,6 +208,9 @@
         <%= check_box_tag "", 1 , @child.mmr ? true : false, :disabled => true %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.immunization_needed.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> Immunizations Needed: </strong>
@@ -160,6 +219,9 @@
         <%= @child.immunization_needed %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.revelant_information.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> Relevant Information: </strong>
@@ -168,6 +230,9 @@
         <%= @child.revelant_information %>
       </td>
     </tr>
+    <% end %>
+
+    <% if !@child.absences.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
         <strong> Absences: </strong>
@@ -176,6 +241,8 @@
         <%= @child.absences %>
       </td>
     </tr>
+    <% end %>
+    
 	</tbody>
 </table>
 

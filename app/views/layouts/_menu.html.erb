@@ -1,44 +1,42 @@
-<td class="td_menu" >
-	<% if @child.gender.blank? %>
-  	<%= link_to 'Child', editchild_path, class: "btn btn-success" %>
-  <% else %>
-  	<%= link_to 'Child', child_path, class: "btn btn-success" %>
-	<% end %>
+<tr>
+	<td class="td_menu" >
+		<% if @child.gender.blank? && @child.dob.blank? && @child.age_years.blank? && (@child.age_total_months.blank? && (@child.age_total_months < 24)) && @child.location.blank? && @child.no_parent_present.blank? && @child.parental_permission_given.blank? && @child.allergies.blank? && @child.allergies_information.blank? && (@child.immunization_utd.blank? || @child.dtap.blank? || @child.hib.blank? || @child.pneumovax.blank? || @child.hepa.blank? || @child.hepb.blank?  || @child.influenza.blank? || @child.dtap.blank?  || @child.mmr.blank? || @child.immunization_needed.blank?) && @child.immunization_utd.blank? && @child.dtap.blank? && @child.hib.blank? && @child.pneumovax.blank? && @child.hepa.blank? && @child.hepb.blank? && @child.influenza.blank? && @child.mmr.blank? && @child.immunization_needed.blank? && @child.revelant_information.blank? && @child.absences.blank? %>
+			<%= link_to 'Update Demographics', editchild_path(@child), class: "btn btn-success" %>
+		<% else %>
+			<%= link_to 'Demographics', child_path, class: "btn btn-success" %>
+		<% end %>
 
-	<% if @child.height_feet.blank? %>
-  	<%= link_to 'Vitals', editvitals_path, class: "btn btn-success" %>
-  <% else %>
-  	<%= link_to 'Vitals', vitals_path, class: "btn btn-success" %>
-	<% end %>
+		<% if @child.height_total_inches.blank? && @child.weight_lbs.blank? && @child.bmi_result.blank? && (@child.systolic_1.blank? || @child.systolic_2.blank? || @child.systolic_3.blank?) && @child.systolic_1.blank? && @child.systolic_2.blank? && @child.systolic_3.blank? && @child.hemoglobin.blank? && @child.blood_glucose.blank? %>
+			<%= link_to 'Update Vitals', editvitals_path(@child), class: "btn btn-success" %>
+		<% else %>
+			<%= link_to 'Vitals', vitals_path, class: "btn btn-success" %>
+		<% end %>
 
-	<% if @child.hearing_hz_left_1.blank? %>
-  	<%= link_to 'Hearing', edithearing_path, class: "btn btn-success" %>
-  <% else %>
-  	<%= link_to 'Hearing', hearing_path, class: "btn btn-success" %>
-	<% end %>
+		<% if @child.hearing_hz_left_1.blank? && @child.hearing_hz_left_2.blank? && @child.hearing_hz_left_3.blank? && @child.hearing_comments.blank? %>
+			<%= link_to 'Update Hearing', edithearing_path(@child), class: "btn btn-success" %>
+		<% else %>
+			<%= link_to 'Hearing', hearing_path, class: "btn btn-success" %>
+		<% end %>
 
-	<% if @child.vision_acuity_left_1.blank? %>
-  	<%= link_to 'Vision', editvision_path, class: "btn btn-success" %>
-  <% else %>
-  	<%= link_to 'Vision', vision_path, class: "btn btn-success" %>
-	<% end %>
+		<% if @child.vision_acuity_left_1.blank? && @child.vision_acuity_left_2.blank? && @child.vision_acuity_left_3.blank? && @child.vision_color_blindness.blank? && @child.cover_test_left.blank? && @child.cover_test_right.blank? && @child.cover_test_both.blank? && @child.wears_corrective_lenses.blank? && @child.vision_comments.blank? %>
+			<%= link_to 'Update Vision', editvision_path(@child), class: "btn btn-success" %>
+		<% else %>
+			<%= link_to 'Vision', vision_path, class: "btn btn-success" %>
+		<% end %>
 
-	<% if @child.general_appearance.blank? %>
-		<%= link_to 'Physical I', editphysicali_path, class: "btn btn-success" %>
-	<% else %>
-		<%= link_to 'Physical I', physicali_path, class: "btn btn-success" %>
-	<% end %>
+		<% if @child.general_appearance.blank? && @child.head.blank? && @child.skin.blank? && (@child.eyes.blank? && @child.ears.blank? && @child.nose.blank? && @child.mouth.blank? && @child.throat.blank? && @child.thyroid.blank?) && @child.lymph_all_normal.blank? && @child.lymph_pre_auricular.blank? && @child.lymph_post_auricular.blank? && @child.lymph_anterior_cervical.blank? && @child.lymph_posterior_cervical.blank? && @child.lymph_axillary.blank? && @child.vascular.blank? && @child.heart.blank? && @child.lungs.blank? && @child.abdomen.blank? && @child.musculoskeletal.blank? && @child.scoliosis.blank? && @child.neuro.blank? %>
+			<%= link_to 'Update Physical II', editphysicalii_path(@child), class: "btn btn-success" %>
+		<% else %>
+			<%= link_to 'Physical II', physicalii_path, class: "btn btn-success" %>
+		<% end %>
 
-	<% if @child.lymph_all_normal.blank? %>
-		<%= link_to 'Physical II', editphysicalii_path, class: "btn btn-success" %>
-	<% else %>
-		<%= link_to 'Physical II', physicalii_path, class: "btn btn-success" %>
-	<% end %>
+		<% if @child.well_child_check.blank? && @child.children_01.blank? && @child.children_02.blank? && @child.children_03.blank? && @child.children_04.blank? && @child.children_05.blank? && @child.children_06.blank? && @child.children_07.blank? && @child.children_08.blank? && @child.children_09.blank? && @child.children_10.blank? && @child.follow_up_01.blank? && @child.follow_up_02.blank? && @child.follow_up_03.blank? && @child.follow_up_04.blank? && @child.follow_up_05.blank? && @child.follow_up_06.blank? && @child.follow_up_07.blank? && @child.follow_up_08.blank? && @child.follow_up_09.blank? && @child.follow_up_10.blank? && @child.guidance.blank? && @child.chart_complete.blank? && @child.np_signature.blank? && @child.faculty_signature.blank? && @child.other_np_signature.blank? %>
+			<%= link_to 'Update Assessment', editassessment_path(@child), class: "btn btn-success" %>
+		<% else %>
+			<%= link_to 'Assessment', assessment_path, class: "btn btn-success" %>
+		<% end %>
 
-	<% if @child.well_child_check.blank? %>
-		<%= link_to 'Assessment', editassessment_path, class: "btn btn-success" %>
-	<% else %>
-		<%= link_to 'Assessment', assessment_path, class: "btn btn-success" %>
-	<% end %>
+		<%= link_to 'Summary', summary_path, class: "btn btn-success" %>
 
-</td>
+	</td>
+</tr>

@@ -1,5 +1,5 @@
 <h1>Patient Child Directory</h1>
-<%= link_to 'Create Record for New Child', new_child_path %>
+<%= link_to 'Add a New Child Chart', new_child_path %>
 <br>
 <br>
 <%= form_tag children_path, class: "form-group", :method => 'get' do %>
@@ -28,7 +28,10 @@
         <td><%= child.last_name %></td>
         <td><%= child.first_name %></td>
         <td><%= link_to 'Show', child , class: "btn btn-default btn-lg"%>
-        <td><%= link_to 'Delete', child, class: "btn btn-default btn-lg",method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user.role=='admin' %>
+          <td><%= link_to 'Delete', child, class: "btn btn-default btn-lg",method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        
       </tr>
     <% end %>
   </tbody>

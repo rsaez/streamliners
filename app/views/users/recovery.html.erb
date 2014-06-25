@@ -1,3 +1,4 @@
+<h1>Password Recovery</h1>
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -13,8 +14,8 @@
 
   <div class="field">
     <p>Please enter the initial of your first name followed by your last name</p>
-    <%= f.label :user_name %>
-    <%= f.text_field :user_name %><br>
+    <p>User name: </p>
+    <%= f.label :user_name%><br>
   </div>
   <br />
   <div class="field">

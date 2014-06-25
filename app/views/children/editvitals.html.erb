@@ -1,4 +1,5 @@
-<h1>Editing vitals</h1>
+<h1><%= @child.last_name %>, <%= @child.first_name %></h1>
+<h3>Edit Vitals</h3>
 
 <%= form_for(@child, html: {class:"form-horizontal"}) do |f| %>
   
@@ -20,10 +21,7 @@
         <%= f.label :"Height: ", :class => "edit_vitals_label" %>
       </td>
       <td colspan="3">
-        <%= f.text_field :height_feet, :class => "number_field" %> ft 
-        <%= f.text_field :height_inches, :class => "number_field" %> in; 
-        Total Height <%= f.text_field :height_total_inches, :class => "number_field" %> in; 
-        Total Height <%= f.text_field :height_total_cm, :class => "number_field" %> cm 
+        Total Height <%= f.text_field :height_total_inches, :class => "number_field" %> in
       </td>
     </tr>
     <tr>
@@ -31,8 +29,7 @@
         <%= f.label :"Weight: ", :class => "edit_vitals_label" %>
       </td>
       <td colspan="3">
-        <%= f.text_field :weight_lbs, :class => "number_field" %> lbs; 
-        <%= f.text_field :weight_oz, :class => "number_field" %> oz 
+        <%= f.text_field :weight_lbs, :class => "number_field" %> lbs
       </td>
     </tr>
     <tr>

@@ -9,6 +9,7 @@ Streamliners::Application.routes.draw do
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
+  match '/password_recovery', to: 'sessions#recover',     via: 'get'
   
   #get "health_record/new"
   resources :children
@@ -32,6 +33,7 @@ Streamliners::Application.routes.draw do
   get '/children/:id/physicali', to: 'children#physicali', as:'physicali'
   get '/children/:id/physicalii', to: 'children#physicalii', as:'physicalii'  
   get '/children/:id/assessment', to: 'children#assessment', as:'assessment'
+  get '/children/:id/summary', to: 'children#summary', as:'summary'
 
   # Update links
   patch '/children/:id/vitals', to: 'children#vitals', as:'patch_vitals'
@@ -40,6 +42,8 @@ Streamliners::Application.routes.draw do
   patch '/children/:id/physicali', to: 'children#physicali', as:'patch_physicali'
   patch '/children/:id/physicalii', to: 'children#physicalii', as:'patch_physicalii'
   patch '/children/:id/assessment', to: 'children#assessment', as:'patch_assessment'
+
+  match '/signin',  to: 'sessions#new',         via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

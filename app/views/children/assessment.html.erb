@@ -11,187 +11,239 @@
  	<thead>
 		<tr>
 			<td>
-				<%= link_to 'Update', editassessment_path(@child), class: "btn btn-success" %>
+				<%= link_to 'Update Assessment', editassessment_path(@child), class: "btn btn-success" %>
 			</td>
 		</tr>
 	</thead>
 	<tbody>
     
+    <% if !@child.neuro.blank? %>
     <tr>
-        <td class="physical_title" colspan="3">
-          Well Child Check
-        </td>
-        <td>
-          <%= @child.well_child_check %>
-        </td>
-      </tr>
+      <td class="physical_title" colspan="3">
+        Well Child Check
+      </td>
+      <td>
+        <%= @child.well_child_check %>
+      </td>
+    </tr>
+    <% end %>
+
+    <% if !@child.children_01.blank? %>
+    <tr>
+      <td class="physical_title" colspan="4">
+          <p>ASSESMENTS</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        1.) 
+        <%= @child.children_01 %>     
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.children_02.blank? %>
+    <tr>
+      <td colspan="4">
+        2.) 
+        <%= @child.children_02 %> 
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.children_03.blank? %>
+    <tr>
+      <td colspan="4">
+        3.) 
+        <%= @child.children_03 %> 
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.children_04.blank? %>
+    <tr>
+      <td colspan="4">
+        4.) 
+        <%= @child.children_04 %> 
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.children_05.blank? %>
+    <tr>
+      <td colspan="4">
+        5.) 
+        <%= @child.children_05 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.children_06.blank? %>
+    <tr>
+      <td colspan="4">
+        6.) 
+        <%= @child.children_06 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.children_07.blank? %>
+    <tr>
+      <td colspan="4">
+        7.) 
+        <%= @child.children_07 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.children_08.blank? %>
+    <tr>
+      <td colspan="4">
+        8.) 
+        <%= @child.children_08 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.children_09.blank? %>
+    <tr>
+      <td colspan="4">
+        9.) 
+        <%= @child.children_09 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.children_10.blank? %>
+    <tr>
+      <td colspan="4">
+        10.) 
+        <%= @child.children_10 %>
+      </td>
+    </tr>
+    <% end %>
+
+    <% if !@child.follow_up_01.blank? %>
+    <tr>
+      <td class="physical_title" colspan="4">
+        Follow Up
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        1.) 
+        <%= @child.follow_up_01 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.follow_up_02.blank? %>
+    <tr>
+      <td colspan="4">
+        2.) 
+        <%= @child.follow_up_02 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.follow_up_03.blank? %>
+    <tr>
+      <td colspan="4">
+        3.) 
+        <%= @child.follow_up_03 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.follow_up_04.blank? %>
+    <tr>
+      <td colspan="4">
+        4.) 
+        <%= @child.follow_up_04 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.follow_up_05.blank? %>
+    <tr>
+      <td colspan="4">
+        5.) 
+        <%= @child.follow_up_05 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.follow_up_06.blank? %>
+    <tr>
+      <td colspan="4">
+        6.) 
+        <%= @child.follow_up_06 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.follow_up_07.blank? %>
+    <tr>
+      <td colspan="4">
+        7.) 
+        <%= @child.follow_up_07 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.follow_up_08.blank? %>
+    <tr>
+      <td colspan="4">
+        8.) 
+        <%= @child.follow_up_08 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.follow_up_09.blank? %>
+    <tr>
+      <td colspan="4">
+        9.) 
+        <%= @child.follow_up_09 %>
+      </td>
+    </tr>
+    <% end %>
+    <% if !@child.follow_up_10.blank? %>
+    <tr>
+      <td colspan="4">
+        10.) 
+        <%= @child.follow_up_10 %>
+      </td>
+    </tr>
+    <% end %>
+
+    <% if !@child.guidance.blank? %>
+    <tr>
+      <td class="physical_title" colspan="4">
+        Anticipatory Education/Guidance (As per guidance)
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <%= @child.guidance %>
+      </td>
+    </tr>
+    <% end %>
+
+    <% if !@child.child_chart_complete.blank? %>
+    <tr>
+      <td colspan="">
+        <%= check_box_tag "", 1 , @child.chart_complete ? true : false, :disabled => true %>
+        Chart Complete
+      </td>
+      <td colspan="3">
+        <h3>By marking this box as complete NP student verifies that all screenings and SMP encounters are complete and have been reviewed by the faculty.</h3>
+      </td>
+    </tr>
+    <% end %>
 
 
-      <tr>
-        <td class="physical_title" colspan="4">
-            <p>ASSESMENTS</p>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          1.) 
-          <%= @child.children_01 %>     
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          2.) 
-          <%= @child.children_02 %> 
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          3.) 
-          <%= @child.children_03 %> 
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          4.) 
-          <%= @child.children_04 %> 
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          5.) 
-          <%= @child.children_05 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          6.) 
-          <%= @child.children_06 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          7.) 
-          <%= @child.children_07 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          8.) 
-          <%= @child.children_08 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          9.) 
-          <%= @child.children_09 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          10.) 
-          <%= @child.children_10 %>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="physical_title" colspan="4">
-          Follow Up
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          1.) 
-          <%= @child.follow_up_01 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          2.) 
-          <%= @child.follow_up_02 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          3.) 
-          <%= @child.follow_up_03 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          4.) 
-          <%= @child.follow_up_04 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          5.) 
-          <%= @child.follow_up_05 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          6.) 
-          <%= @child.follow_up_06 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          7.) 
-          <%= @child.follow_up_07 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          8.) 
-          <%= @child.follow_up_08 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          9.) 
-          <%= @child.follow_up_09 %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          10.) 
-          <%= @child.follow_up_10 %>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="physical_title" colspan="4">
-          Anticipatory Education/Guidance (As per guidance)
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          <%= @child.guidance %>
-        </td>
-      </tr>
-
-      <tr>
-        <td colspan="">
-          <%= check_box_tag "", 1 , @child.chart_complete ? true : false, :disabled => true %>
-          Chart Complete
-        </td>
-        <td colspan="3">
-          <h3>By marking this box as complete NP student verifies that all screenings and SMP encounters are complete and have been reviewed by the faculty.</h3>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="sig_title">NP signature: </td>
-        <td colspan="3"><%= @child.np_signature %></td>
-      </tr>
-      <tr>
-        <td class="sig_title">Faculty signature: </td>
-        <td colspan="3"><%= @child.faculty_signature %></td>
-      </tr>
-      <tr>
-        <td class="sig_title">Other NP signature: </td>
-        <td colspan="3"><%= @child.other_np_signature %></td>
-      </tr>
+    <% if !@child.np_signature.blank? %>
+    <tr>
+      <td class="sig_title">NP signature: </td>
+      <td colspan="3"><%= @child.np_signature %></td>
+    </tr>
+    <% end %>
+    <% if !@child.faculty_signature.blank? %>
+    <tr>
+      <td class="sig_title">Faculty signature: </td>
+      <td colspan="3"><%= @child.faculty_signature %></td>
+    </tr>
+    <% end %>
+    <% if !@child.other_np_signature.blank? %>
+    <tr>
+      <td class="sig_title">Other NP signature: </td>
+      <td colspan="3"><%= @child.other_np_signature %></td>
+    </tr>
+    <% end %>
     
   </tbody>
 </table>

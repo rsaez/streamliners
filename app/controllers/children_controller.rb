@@ -1,5 +1,5 @@
 class ChildrenController < ApplicationController
-  before_action :set_child, only: [:show, :vitals, :hearing, :vision, :physicali, :physicalii, :assessment,:edit, :editchild, :editvitals, :edithearing, :editvision, :editphysicali, :editphysicalii, :editassessment, :update, :destroy]
+  before_action :set_child, only: [:show, :vitals, :hearing, :vision, :physicali, :physicalii, :assessment, :summary, :edit, :editchild, :editvitals, :edithearing, :editvision, :editphysicali, :editphysicalii, :editassessment, :update, :destroy]
 
   # GET /children
   # GET /children.json
@@ -37,6 +37,16 @@ class ChildrenController < ApplicationController
       redirect_to root_path
     end
 
+    if !@child.height_total_inches.blank?
+      @child.height_total_cm = (@child.height_total_inches * 2.54)
+      @child.height_feet = (@child.height_total_inches / 12)
+      @child.height_inches = (@child.height_total_inches % 12)
+    end
+
+    if !@child.weight_lbs.blank?
+      @child.weight_kg = (@child.weight_lbs * 0.4535)
+    end
+
   end
 
   def hearing
@@ -68,6 +78,13 @@ class ChildrenController < ApplicationController
   end
 
   def assessment
+    if !signed_in?
+      redirect_to root_path
+    end
+
+  end
+
+  def summary
     if !signed_in?
       redirect_to root_path
     end

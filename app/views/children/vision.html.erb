@@ -12,12 +12,13 @@
   <thead>
     <tr>
       <td>
-        <%= link_to 'Update', editvision_path(@child), class: "btn btn-success" %>
+        <%= link_to 'Update Vision', editvision_path(@child), class: "btn btn-success" %>
       </td>
     </tr>
   </thead>
   <tbody>
     
+    <% if !@child.vision_acuity_left_1.blank? %>
     <tr>
       <td class="vision_title" colspan="3">
         <p>Test 1</p>
@@ -47,7 +48,9 @@
         </p>
       </td>
     </tr>
+    <% end %>
 
+    <% if !@child.vision_acuity_left_2.blank? %>
     <tr>
       <td class="vision_title" colspan="3">
         <p>Test 2</p>
@@ -77,7 +80,9 @@
         </p>
       </td>
     </tr>
+    <% end %>
 
+    <% if !@child.vision_acuity_left_3.blank? %>
     <tr>
       <td class="vision_title" colspan="3">
         <p>Test 3</p>
@@ -107,61 +112,73 @@
         </p>
       </td>
     </tr>
+    <% end %>
 
+    <% if !@child.vision_color_blindness.blank? %>
     <tr>
-        <td class=".label.vision_checkbox_label" colspan="">
-          <strong> Color Blindness </strong>
-        </td>
-        <td colspan="2">
-          <%= check_box_tag "", 1 , @child.vision_color_blindness ? true : false, :disabled => true %>
-        </td>
-      </tr>
+      <td class=".label.vision_checkbox_label" colspan="">
+        <strong> Color Blindness </strong>
+      </td>
+      <td colspan="2">
+        <%= check_box_tag "", 1 , @child.vision_color_blindness ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <% end %>
 
-      <tr>
-        <td class=".label.vision_checkbox_label" colspan="">
-          <strong> Cover Test Left </strong>
-        </td>
-        <td colspan="2">
-          <%= check_box_tag "", 1 , @child.cover_test_left ? true : false, :disabled => true %>
-        </td>
-      </tr>
+    <% if !@child.cover_test_left.blank? %>
+    <tr>
+      <td class=".label.vision_checkbox_label" colspan="">
+        <strong> Cover Test Left </strong>
+      </td>
+      <td colspan="2">
+        <%= check_box_tag "", 1 , @child.cover_test_left ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <% end %>
 
-      <tr>
-        <td class=".label.vision_checkbox_label" colspan="">
-          <Strong> Cover Test Right </strong>
-        </td>
-        <td colspan="2">
-          <%= check_box_tag "", 1 , @child.cover_test_right ? true : false, :disabled => true %>
-        </td>
-      </tr>
+    <% if !@child.cover_test_right.blank? %>
+    <tr>
+      <td class=".label.vision_checkbox_label" colspan="">
+        <Strong> Cover Test Right </strong>
+      </td>
+      <td colspan="2">
+        <%= check_box_tag "", 1 , @child.cover_test_right ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <% end %>
 
-      <tr>
-        <td class=".label.vision_checkbox_label" colspan="">
-          <strong> Cover Test Both </strong>
-        </td>
-        <td colspan="2">
-          <%= check_box_tag "", 1 , @child.cover_test_both ? true : false, :disabled => true %>
-        </td>
-      </tr>
+    <% if !@child.cover_test_both.blank? %>
+    <tr>
+      <td class=".label.vision_checkbox_label" colspan="">
+        <strong> Cover Test Both </strong>
+      </td>
+      <td colspan="2">
+        <%= check_box_tag "", 1 , @child.cover_test_both ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <% end %>
 
-      <tr>
-        <td class="vision_title" colspan="">
-          <strong> Wears corrective lenses? </strong>
-        </td>
-        <td colspan="2">
-          <%= check_box_tag "", 1 , @child.wears_corrective_lenses ? true : false, :disabled => true %>
-        </td>
-      </tr>
-      
-      <tr>
-        <td class="vision_title" colspan="">
-          <strong> Vision Comments </strong>
-        </td>
-        <td .class="vision_text_field" colspan="2">
-          <%= @child.vision_comments %>
-        </td>
-      </tr>
-
+    <% if !@child.wears_corrective_lenses.blank? %>
+    <tr>
+      <td class="vision_title" colspan="">
+        <strong> Wears corrective lenses? </strong>
+      </td>
+      <td colspan="2">
+        <%= check_box_tag "", 1 , @child.wears_corrective_lenses ? true : false, :disabled => true %>
+      </td>
+    </tr>
+    <% end %>
+    
+    <% if !@child.vision_comments.blank? %>
+    <tr>
+      <td class="vision_title" colspan="">
+        <strong> Vision Comments </strong>
+      </td>
+      <td .class="vision_text_field" colspan="2">
+        <%= @child.vision_comments %>
+      </td>
+    </tr>
+    <% end %>
     
   </tbody>
 </table>

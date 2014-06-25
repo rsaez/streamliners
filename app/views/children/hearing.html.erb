@@ -12,11 +12,12 @@
  	<thead>
 		<tr>
 			<td>
-				<%= link_to 'Update', edithearing_path(@child), class: "btn btn-success" %>
+				<%= link_to 'Update Hearing', edithearing_path(@child), class: "btn btn-success" %>
 			</td>
 		</tr>
 	</thead>
 	<tbody>
+    <% if !@child.hearing_hz_left_1.blank? %>
     <tr>
       <td class="hearing_title" colspan="4">
         <p>Test 1 </p>
@@ -45,7 +46,9 @@
         </p>
       </td>
     </tr>
+    <% end %>
     
+    <% if !@child.hearing_hz_left_2.blank? %>
     <tr>
       <td class="hearing_title" colspan="4">
         <p>Test 2</p>
@@ -74,7 +77,9 @@
         </p>
       </td>
     </tr>
+    <% end %>
 
+    <% if !@child.hearing_hz_left_3.blank? %>
     <tr>
       <td class="hearing_title" colspan="4">
         <p>Test 3</p>
@@ -103,13 +108,16 @@
         </p>
       </td>
     </tr>
+    <% end %>
     
+    <% if !@child.hearing_comments.blank? %>
     <tr>
       <td colspan="4">
         <strong>Hearing Comments: </strong>
         <%= @child.hearing_comments %>
       </td>
     </tr>
+    <% end %>
     
   </tbody>
 </table>

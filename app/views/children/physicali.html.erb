@@ -11,12 +11,13 @@
  	<thead>
     <tr>
       <td>
-        <%= link_to 'Update', editphysicali_path(@child), class: "btn btn-success" %>
+        <%= link_to 'Update Physical I', editphysicali_path(@child), class: "btn btn-success" %>
       </td>
     </tr>
   </thead>
   <body>
 
+    <% if !@child.general_appearance.blank? %>
 		<tr>
       <td class="physical_title" colspan="">
         General Appearance (Well nourished, hygienge, appears ill, etc): 
@@ -31,7 +32,9 @@
         <%= @child.general_appearance_c %>     
       </td>
     </tr>
+    <% end %>
 
+    <% if !@child.head.blank? %>
     <tr>
       <td class="physical_title" colspan="">
         Head/Hair (Include, 3.1 fontanelle if less than 18 months): 
@@ -46,7 +49,9 @@
         <%= @child.head_c %>     
       </td>
     </tr>
+    <% end %>
 
+    <% if !@child.skin.blank? %>
     <tr>
       <td class="physical_title" colspan="">
         Skin (Rashes, etc): 
@@ -58,10 +63,12 @@
     <tr>
       <td colspan="2">
         Comments:
-        @child.skin_c
+        <%= @child.skin_c %>
       </td>
     </tr>
+    <% end %>
 
+    <% if !@child.eyes.blank? %>
     <tr>
       <td class="physical_title" colspan="">
         Eyes (External, PERR LA, RED reflex, lids, EOM's, cover test, etc): 
@@ -76,7 +83,9 @@
         <% @child.eyes_c %>
       </td>
     </tr>
+    <% end %>
 
+    <% if !@child.ears.blank? %>
     <tr>
       <td class="physical_title" colspan="">
         Ears (External, canal, TM, etc):
@@ -91,7 +100,9 @@
         <%= @child.ears_c %>
       </td>
     </tr>
+    <% end %>
 
+    <% if !@child.nose.blank? %>
     <tr>
       <td class="physical_title" colspan="">
         Nose (Patency, external, turbinates d/L, etc): 
@@ -106,7 +117,9 @@
         <%= @child.nose_c %>
       </td>
     </tr>
+    <% end %>
 
+    <% if !@child.mouth.blank? %>
     <tr>
       <td class="physical_title" colspan="">
         Mouth (Teeth, gums, presence of crowns, caries, pallate, etc): 
@@ -122,7 +135,9 @@
         <%= @child.mouth_c %>
       </td>
     </tr>
+    <% end %>
 
+    <% if !@child.throat.blank? %>
     <tr>
       <td class="physical_title" colspan="">
         Throat (Uvula, tonsil, pharynx, exudate, voice, etc)
@@ -137,7 +152,9 @@
         <%= @child.throat_c %>
       </td>
     </tr>
+    <% end %>
 
+    <% if !@child.thyroid.blank? %>
     <tr>
       <td class="physical_title" colspan="">
         Thyroid (Anterior, posterior, etc): 
@@ -152,6 +169,7 @@
         <%= @child.thyroid_c %>
       </td>
     </tr>
+    <% end %>
     
   </tbody>
 </table>

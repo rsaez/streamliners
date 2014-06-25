@@ -1,4 +1,5 @@
-<h1>Editing child</h1>
+<h1><%= @child.last_name %>, <%= @child.first_name %></h1>
+<h3>Edit Demographics</h3>
 
 <%= form_for(@child, html: {class:"form-horizontal"}) do |f| %>
   
@@ -33,7 +34,7 @@
       </tr>
       <tr>
       	<td class="roster_td" colspan="">
-	      	<%= f.label :"Location: " %>
+	      	<%= f.label :"Site Location: " %>
       	</td>
       	<td>
       		<%= f.text_field :location %>
@@ -65,7 +66,7 @@
       </tr>
       <tr>
         <td class="roster_td" colspan="">
-          <%= f.label "Allergies Information" %>
+          <%= f.label "Reaction Type" %>
         </td>
         <td>
           <%= f.text_area :allergies_information %>
@@ -73,7 +74,7 @@
       </tr>
       <tr>
         <td class="roster_td" colspan="2">
-          Immunizations Needed
+          Immunization History
         </td>
       </tr>
       <tr>
@@ -84,6 +85,8 @@
           <%= f.check_box :immunization_utd %>
         </td>
       </tr>
+
+      
       <tr>
         <td class="roster_td" colspan="">
           <%= f.label :dtap, "DTaP" %>
@@ -142,15 +145,18 @@
       </tr>
       <tr>
         <td class="roster_td" colspan="">
-          <%= f.label :immunization_needed, "Immunization Needed" %>
+          <%= f.label :immunization_needed, "Additional Immunizations" %>
         </td>
         <td>
           <%= f.text_area :immunization_needed %>
         </td>
       </tr>
       <tr>
+      </tr>
+
+      <tr>
         <td class="roster_td" colspan="">
-          <%= f.label :revelant_information, "Relevant Information" %>
+          <%= f.label :revelant_information, "Relevant Information (Past medical history, medications, etc)" %>
         </td>
         <td>
           <%= f.text_area :revelant_information %>
@@ -174,7 +180,7 @@
   <% end %>
   
   <div  class: "btn btn-large btn-primary">
-    <%= f.submit %>
+    <%= f.submit 'Update Demographics' %>
   </div>
 <% end %>
 
