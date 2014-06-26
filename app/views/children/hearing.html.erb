@@ -17,7 +17,7 @@
 		</tr>
 	</thead>
 	<tbody>
-    <% if !@child.hearing_hz_left_1.blank? %>
+    <% if !@child.hearing_db_left_1.blank? %>
     <tr>
       <td class="hearing_title" colspan="4">
         <p>Test 1 </p>
@@ -30,9 +30,8 @@
       </td>
       <td>
         <p>
-          <%= @child.hearing_hz_left_1 %>hz, 
-          <%= @child.hearing_db_left_1 %>db, 
-          <%= @child.ear_left_pass_1 %> pass/fail. 
+          <%= @child.hearing_db_left_1 %>db@ 500 - 5000 hz
+          <%= @child.ear_left_pass_1 %>
         </p>
       </td>
       <td class="td_hearing_ear" colspan="">
@@ -40,15 +39,14 @@
       </td>
       <td>
         <p>
-          <%= @child.hearing_hz_right_1 %>hz, 
-          <%= @child.hearing_db_right_1 %>db, 
-          <%= @child.ear_right_pass_1 %> pass/fail. 
+          <%= @child.hearing_db_right_1 %>db@ 500 - 5000 hz
+          <%= @child.ear_right_pass_1 %>
         </p>
       </td>
     </tr>
     <% end %>
     
-    <% if !@child.hearing_hz_left_2.blank? %>
+    <% if !@child.hearing_db_left_2.blank? %>
     <tr>
       <td class="hearing_title" colspan="4">
         <p>Test 2</p>
@@ -61,9 +59,8 @@
       </td>
       <td>
         <p>
-          <%= @child.hearing_hz_left_2 %>hz, 
-          <%= @child.hearing_db_left_2 %>db, 
-          <%= @child.ear_left_pass_2 %> pass/fail. 
+          <%= @child.hearing_db_left_2 %>db@ 500 - 5000 hz
+          <%= @child.ear_left_pass_2 %>
         </p>
       </td>
       <td class="td_hearing_ear" colspan="">
@@ -71,15 +68,14 @@
       </td>
       <td>
         <p>
-          <%= @child.hearing_hz_right_2 %>hz, 
-          <%= @child.hearing_db_right_2 %>db, 
-          <%= @child.ear_right_pass_2 %> pass/fail. 
+          <%= @child.hearing_db_right_2 %>db@ 500 - 5000 hz
+          <%= @child.ear_right_pass_2 %>
         </p>
       </td>
     </tr>
     <% end %>
 
-    <% if !@child.hearing_hz_left_3.blank? %>
+    <% if !@child.hearing_db_left_3.blank? %>
     <tr>
       <td class="hearing_title" colspan="4">
         <p>Test 3</p>
@@ -92,9 +88,8 @@
       </td>
       <td>
         <p>
-          <%= @child.hearing_hz_left_3 %>hz, 
-          <%= @child.hearing_db_left_3 %>db, 
-          <%= @child.ear_left_pass_3 %> pass/fail. 
+          <%= @child.hearing_db_left_3 %>db@ 500 - 5000 hz
+          <%= @child.ear_left_pass_3 %>
         </p>
       </td>
       <td class="td_hearing_ear" colspan="">
@@ -102,9 +97,8 @@
       </td>
       <td>
         <p>
-          <%= @child.hearing_hz_right_3 %>hz, 
-          <%= @child.hearing_db_right_3 %>db, 
-          <%= @child.ear_right_pass_3 %> pass/fail. 
+          <%= @child.hearing_db_right_3 %>db@ 500 - 5000 hz
+          <%= @child.ear_right_pass_3 %>
         </p>
       </td>
     </tr>

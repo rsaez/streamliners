@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617113154) do
+ActiveRecord::Schema.define(version: 20140625150421) do
 
   create_table "children", force: true do |t|
     t.datetime "created_at"
@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 20140617113154) do
     t.integer  "weight_lbs"
     t.integer  "weight_oz"
     t.integer  "weight_kg"
-    t.integer  "bmi_result"
     t.integer  "bmi_percentile"
     t.integer  "systolic_1"
     t.integer  "diastolic_1"
@@ -156,6 +155,8 @@ ActiveRecord::Schema.define(version: 20140617113154) do
     t.string   "np_signature"
     t.string   "faculty_signature"
     t.string   "other_np_signature"
+    t.float    "bmi_result"
+    t.integer  "form_id_number"
   end
 
   create_table "findings", force: true do |t|

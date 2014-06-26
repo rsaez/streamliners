@@ -112,6 +112,8 @@
         <%= @child.vascular %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.vascular_c.blank? %>
     <tr>
       <td colspan="4">
         Comments: 
@@ -129,10 +131,12 @@
         <%= @child.heart %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.heart_c.blank? %>
     <tr>
       <td colspan="4">
         Comments: 
-        <%= @childheart_c %>
+        <%= @child.heart_c %>
       </td>
     </tr>
     <% end %>
@@ -146,6 +150,8 @@
         <%= @child.lungs %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.lungs_c.blank? %>
     <tr>
       <td colspan="4">
         Comments: 
@@ -163,6 +169,8 @@
         <%= @child.abdomen %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.lungs_c.blank? %>
     <tr>
       <td colspan="4">
         Comments: 
@@ -180,6 +188,8 @@
         <%= @child.musculoskeletal %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.musculoskeletal_c.blank? %>
     <tr>
       <td colspan="4">
         Comments: 
@@ -191,12 +201,14 @@
     <% if !@child.scoliosis.blank? %>
     <tr>
       <td class="physical_title" colspan="3">
-        Scoliosis (Only greater than 9): 
+        Scoliosis Screening (Only for children > 9): 
       </td>
       <td>
         <%= @child.scoliosis %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.scoliosis_c.blank? %>
     <tr>
       <td colspan="4">
         Comments: 
@@ -214,6 +226,8 @@
         <%= @child.neuro %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.neuro_c.blank? %>
     <tr>
       <td colspan="4">
         Comments: 

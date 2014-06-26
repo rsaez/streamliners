@@ -17,11 +17,13 @@
 	</thead>
 	<tbody>
     
-    <% if !@child.neuro.blank? %>
+    <% if !@child.well_child_check.blank? %>
     <tr>
       <td class="physical_title" colspan="3">
-        Well Child Check
+        General statement on child's physical status
       </td>
+    </tr>
+    <tr>
       <td>
         <%= @child.well_child_check %>
       </td>
@@ -31,174 +33,140 @@
     <% if !@child.children_01.blank? %>
     <tr>
       <td class="physical_title" colspan="4">
-          <p>ASSESMENTS</p>
+        <p>Findings, Treatments, and Recommendations</p>
       </td>
     </tr>
     <tr>
-      <td colspan="4">
+      <td class="physical_title" colspan="2">
+        <p>Abnormal findings/diagnosis</p>
+      </td>
+      <td class="physical_title" colspan="2">
+        <p>Treatment plan</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
         1.) 
         <%= @child.children_01 %>     
       </td>
-    </tr>
-    <% end %>
-    <% if !@child.children_02.blank? %>
-    <tr>
-      <td colspan="4">
-        2.) 
-        <%= @child.children_02 %> 
-      </td>
-    </tr>
-    <% end %>
-    <% if !@child.children_03.blank? %>
-    <tr>
-      <td colspan="4">
-        3.) 
-        <%= @child.children_03 %> 
-      </td>
-    </tr>
-    <% end %>
-    <% if !@child.children_04.blank? %>
-    <tr>
-      <td colspan="4">
-        4.) 
-        <%= @child.children_04 %> 
-      </td>
-    </tr>
-    <% end %>
-    <% if !@child.children_05.blank? %>
-    <tr>
-      <td colspan="4">
-        5.) 
-        <%= @child.children_05 %>
-      </td>
-    </tr>
-    <% end %>
-    <% if !@child.children_06.blank? %>
-    <tr>
-      <td colspan="4">
-        6.) 
-        <%= @child.children_06 %>
-      </td>
-    </tr>
-    <% end %>
-    <% if !@child.children_07.blank? %>
-    <tr>
-      <td colspan="4">
-        7.) 
-        <%= @child.children_07 %>
-      </td>
-    </tr>
-    <% end %>
-    <% if !@child.children_08.blank? %>
-    <tr>
-      <td colspan="4">
-        8.) 
-        <%= @child.children_08 %>
-      </td>
-    </tr>
-    <% end %>
-    <% if !@child.children_09.blank? %>
-    <tr>
-      <td colspan="4">
-        9.) 
-        <%= @child.children_09 %>
-      </td>
-    </tr>
-    <% end %>
-    <% if !@child.children_10.blank? %>
-    <tr>
-      <td colspan="4">
-        10.) 
-        <%= @child.children_10 %>
-      </td>
-    </tr>
-    <% end %>
-
-    <% if !@child.follow_up_01.blank? %>
-    <tr>
-      <td class="physical_title" colspan="4">
-        Follow Up
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4">
+      <td colspan="2">
         1.) 
         <%= @child.follow_up_01 %>
       </td>
     </tr>
     <% end %>
-    <% if !@child.follow_up_02.blank? %>
+
+    <% if !@child.children_02.blank? %>
     <tr>
-      <td colspan="4">
+      <td colspan="2">
+        2.) 
+        <%= @child.children_02 %> 
+      </td>
+      <td colspan="2">
         2.) 
         <%= @child.follow_up_02 %>
       </td>
     </tr>
     <% end %>
-    <% if !@child.follow_up_03.blank? %>
+    <% if !@child.children_03.blank? %>
     <tr>
-      <td colspan="4">
+      <td colspan="2">
+        3.) 
+        <%= @child.children_03 %> 
+      </td>
+      <td colspan="2">
         3.) 
         <%= @child.follow_up_03 %>
       </td>
     </tr>
     <% end %>
-    <% if !@child.follow_up_04.blank? %>
+    <% if !@child.children_04.blank? %>
     <tr>
-      <td colspan="4">
+      <td colspan="2">
+        4.) 
+        <%= @child.children_04 %> 
+      </td>
+      <td colspan="2">
         4.) 
         <%= @child.follow_up_04 %>
       </td>
     </tr>
     <% end %>
-    <% if !@child.follow_up_05.blank? %>
+    <% if !@child.children_05.blank? %>
     <tr>
-      <td colspan="4">
+      <td colspan="2">
+        5.) 
+        <%= @child.children_05 %>
+      </td>
+      <td colspan="2">
         5.) 
         <%= @child.follow_up_05 %>
       </td>
     </tr>
     <% end %>
-    <% if !@child.follow_up_06.blank? %>
+    <% if !@child.children_06.blank? %>
     <tr>
-      <td colspan="4">
+      <td colspan="2">
+        6.) 
+        <%= @child.children_06 %>
+      </td>
+      <td colspan="2">
         6.) 
         <%= @child.follow_up_06 %>
       </td>
     </tr>
     <% end %>
-    <% if !@child.follow_up_07.blank? %>
+    <% if !@child.children_07.blank? %>
     <tr>
-      <td colspan="4">
+      <td colspan="2">
+        7.) 
+        <%= @child.children_07 %>
+      </td>
+      <td colspan="2">
         7.) 
         <%= @child.follow_up_07 %>
       </td>
     </tr>
     <% end %>
-    <% if !@child.follow_up_08.blank? %>
+    <% if !@child.children_08.blank? %>
     <tr>
-      <td colspan="4">
+      <td colspan="2">
+        8.) 
+        <%= @child.children_08 %>
+      </td>
+      <td colspan="2">
         8.) 
         <%= @child.follow_up_08 %>
       </td>
     </tr>
     <% end %>
-    <% if !@child.follow_up_09.blank? %>
+    <% if !@child.children_09.blank? %>
     <tr>
-      <td colspan="4">
+      <td colspan="2">
+        9.) 
+        <%= @child.children_09 %>
+      </td>
+      <td colspan="2">
         9.) 
         <%= @child.follow_up_09 %>
       </td>
     </tr>
     <% end %>
-    <% if !@child.follow_up_10.blank? %>
+    <% if !@child.children_10.blank? %>
     <tr>
-      <td colspan="4">
+      <td colspan="2">
+        10.) 
+        <%= @child.children_10 %>
+      </td>
+      <td colspan="2">
         10.) 
         <%= @child.follow_up_10 %>
       </td>
     </tr>
     <% end %>
+
+    
 
     <% if !@child.guidance.blank? %>
     <tr>
@@ -213,7 +181,7 @@
     </tr>
     <% end %>
 
-    <% if !@child.child_chart_complete.blank? %>
+    <% if !@child.chart_complete.blank? %>
     <tr>
       <td colspan="">
         <%= check_box_tag "", 1 , @child.chart_complete ? true : false, :disabled => true %>

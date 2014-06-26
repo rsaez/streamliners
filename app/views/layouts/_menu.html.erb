@@ -1,6 +1,6 @@
 <tr>
 	<td class="td_menu" >
-		<% if @child.gender.blank? && @child.dob.blank? && @child.age_years.blank? && (@child.age_total_months.blank? && (@child.age_total_months < 24)) && @child.location.blank? && @child.no_parent_present.blank? && @child.parental_permission_given.blank? && @child.allergies.blank? && @child.allergies_information.blank? && (@child.immunization_utd.blank? || @child.dtap.blank? || @child.hib.blank? || @child.pneumovax.blank? || @child.hepa.blank? || @child.hepb.blank?  || @child.influenza.blank? || @child.dtap.blank?  || @child.mmr.blank? || @child.immunization_needed.blank?) && @child.immunization_utd.blank? && @child.dtap.blank? && @child.hib.blank? && @child.pneumovax.blank? && @child.hepa.blank? && @child.hepb.blank? && @child.influenza.blank? && @child.mmr.blank? && @child.immunization_needed.blank? && @child.revelant_information.blank? && @child.absences.blank? %>
+		<% if @child.gender.blank? && @child.dob.blank? && @child.age_years.blank? && @child.age_total_months.blank? && @child.location.blank? && @child.no_parent_present.blank? && @child.parental_permission_given.blank? && @child.allergies.blank? && @child.allergies_information.blank? && (@child.immunization_utd.blank? || @child.dtap.blank? || @child.hib.blank? || @child.pneumovax.blank? || @child.hepa.blank? || @child.hepb.blank?  || @child.influenza.blank? || @child.dtap.blank?  || @child.mmr.blank? || @child.immunization_needed.blank?) && @child.immunization_utd.blank? && @child.dtap.blank? && @child.hib.blank? && @child.pneumovax.blank? && @child.hepa.blank? && @child.hepb.blank? && @child.influenza.blank? && @child.mmr.blank? && @child.immunization_needed.blank? && @child.revelant_information.blank? && @child.absences.blank? %>
 			<%= link_to 'Update Demographics', editchild_path(@child), class: "btn btn-success" %>
 		<% else %>
 			<%= link_to 'Demographics', child_path, class: "btn btn-success" %>
@@ -25,6 +25,12 @@
 		<% end %>
 
 		<% if @child.general_appearance.blank? && @child.head.blank? && @child.skin.blank? && (@child.eyes.blank? && @child.ears.blank? && @child.nose.blank? && @child.mouth.blank? && @child.throat.blank? && @child.thyroid.blank?) && @child.lymph_all_normal.blank? && @child.lymph_pre_auricular.blank? && @child.lymph_post_auricular.blank? && @child.lymph_anterior_cervical.blank? && @child.lymph_posterior_cervical.blank? && @child.lymph_axillary.blank? && @child.vascular.blank? && @child.heart.blank? && @child.lungs.blank? && @child.abdomen.blank? && @child.musculoskeletal.blank? && @child.scoliosis.blank? && @child.neuro.blank? %>
+			<%= link_to 'Update Physical I', editphysicali_path(@child), class: "btn btn-success" %>
+		<% else %>
+			<%= link_to 'Physical I', physicali_path, class: "btn btn-success" %>
+		<% end %>
+
+		<% if @child.lymph_all_normal.blank? && @child.lymph_pre_auricular.blank? && @child.lymph_post_auricular.blank? && @child.lymph_anterior_cervical.blank? && @child.lymph_posterior_cervical.blank? && @child.lymph_occipital.blank? && @child.lymph_axillary.blank? && @child.lymph_c.blank? && @child.vascular.blank? && @child.heart.blank? && @child.lungs.blank? && @child.abdomen.blank? && @child.musculoskeletal.blank? && @child.scoliosis.blank? && @child.neuro.blank? %>
 			<%= link_to 'Update Physical II', editphysicalii_path(@child), class: "btn btn-success" %>
 		<% else %>
 			<%= link_to 'Physical II', physicalii_path, class: "btn btn-success" %>

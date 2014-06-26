@@ -26,6 +26,8 @@
         <%= @child.general_appearance %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.general_appearance_c.blank? %>
     <tr>
       <td colspan="2">
         Comments: 
@@ -43,6 +45,8 @@
         <%= @child.head %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.head_c.blank? %>
     <tr>
       <td colspan="2">
         Comments: 
@@ -60,6 +64,8 @@
         <%= @child.skin %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.skin_c.blank? %>
     <tr>
       <td colspan="2">
         Comments:
@@ -77,6 +83,8 @@
         <%= @child.eyes %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.eyes_c.blank? %>
     <tr>
       <td colspan="2">
         Comments: 
@@ -94,6 +102,8 @@
         <%= @child.ears %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.ears_c.blank? %>
     <tr>
       <td colspan="2">
         Comments: 
@@ -111,6 +121,8 @@
         <%= @child.nose %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.nose_c.blank? %>
     <tr>
       <td colspan="2">
         Comments: 
@@ -128,7 +140,8 @@
         <%= @child.mouth %>
       </td>
     </tr>
-    </tr>
+    <% end %>
+    <% if !@child.mouth_c.blank? %>
     <tr>
       <td colspan="2">
         Comments: 
@@ -146,6 +159,8 @@
         <%= @child.throat %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.throat_c.blank? %>
     <tr>
       <td colspan="2">
         Comments: 
@@ -163,6 +178,8 @@
         <%= @child.thyroid %>
       </td>
     </tr>
+    <% end %>
+    <% if !@child.thyroid_c.blank? %>
     <tr>
       <td colspan="2">
         Comments: 

@@ -52,9 +52,9 @@
       </td>
       <td colspan="3">
         <%= f.text_field :systolic_1, :class => "number_field" %>
-         Systolic / 
+        /
         <%= f.text_field :diastolic_1, :class => "number_field" %>
-        Diastolic mm Hg
+         mm Hg
       </td>
     </tr>
     <tr>
@@ -63,9 +63,9 @@
       </td>
       <td>
         <%= f.text_field :systolic_2, :class => "number_field" %>
-         Systolic / 
+        /
         <%= f.text_field :diastolic_2, :class => "number_field" %>
-        Diastolic mm Hg
+         mm Hg
       </td>
     </tr>
     <tr>
@@ -74,9 +74,9 @@
       </td>
       <td>
         <%= f.text_field :systolic_3, :class => "number_field" %>
-         Systolic / 
+        /
         <%= f.text_field :diastolic_3, :class => "number_field" %>
-        Diastolic mm Hg
+         mm Hg
       </td>
     </tr>
     <tr>
@@ -105,6 +105,8 @@
   <% else %>
     <%= f.hidden_field :child_id, value: @child_id%>
   <% end %>
+
+  <% @child.form_id_number = 2 %>
   
   <div  class: "btn btn-large btn-primary">
     <%= f.submit %>

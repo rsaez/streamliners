@@ -36,14 +36,13 @@ Streamliners::Application.routes.draw do
   get '/children/:id/summary', to: 'children#summary', as:'summary'
 
   # Update links
-  patch '/children/:id/vitals', to: 'children#vitals', as:'patch_vitals'
+  patch '/children/:id/vitals', to: 'children#show', as:'patch_vitals'
   patch '/children/:id/hearing', to: 'children#hearing', as:'patch_hearing'
   patch '/children/:id/vision', to: 'children#vision', as:'patch_vision'
   patch '/children/:id/physicali', to: 'children#physicali', as:'patch_physicali'
   patch '/children/:id/physicalii', to: 'children#physicalii', as:'patch_physicalii'
   patch '/children/:id/assessment', to: 'children#assessment', as:'patch_assessment'
 
-  match '/signin',  to: 'sessions#new',         via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

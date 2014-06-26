@@ -116,7 +116,7 @@
     
     <% if !@child.immunization_utd.blank? || !@child.dtap.blank? || !@child.hib.blank? || !@child.pneumovax.blank? || !@child.hepa.blank? || !@child.hepb.blank?  || !@child.influenza.blank? || !@child.dtap.blank?  || !@child.mmr.blank? || !@child.immunization_needed.blank? %>
     <tr>
-      <td>
+      <td colspan="2">
         Immunization History
       </td>
     </tr>
@@ -213,7 +213,7 @@
     <% if !@child.immunization_needed.blank? %>
     <tr>
       <td class="show_child_td" colspan="">
-        <strong> Immunizations Needed: </strong>
+        <strong> Additional Immunizations: </strong>
       </td>
       <td>
         <%= @child.immunization_needed %>

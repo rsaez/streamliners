@@ -23,9 +23,9 @@
         Height: 
       </td>
       <td colspan="3">
-        <%= @child.height_feet %> ft 
-        <%= @child.height_inches %> in; 
         <%= @child.height_total_inches %> in total; 
+        <%= @child.height_feet %> ft 
+        <%= @child.height_inches %> in;
         <%= @child.height_total_cm %> cm total;
       </td>
     </tr>
@@ -70,10 +70,7 @@
         Test 1: 
       </td>
       <td colspan="3">
-        <%= @child.systolic_1 %>
-         Systolic / 
-        <%= @child.diastolic_1 %>
-        Diastolic mm Hg
+        <%= @child.systolic_1 %>/<%= @child.diastolic_1 %> mm Hg
       </td>
     </tr>
     <% end %>
@@ -84,10 +81,7 @@
         Test 2: 
       </td>
       <td colspan="3">
-        <%= @child.systolic_2 %>
-         Systolic / 
-        <%= @child.diastolic_2 %>
-        Diastolic mm Hg
+        <%= @child.systolic_2 %>/<%= @child.diastolic_2 %> mm Hg
       </td>
     </tr>
     <% end %>
@@ -98,10 +92,7 @@
         Test 3: 
       </td>
       <td colspan="3">
-        <%= @child.systolic_3 %>
-         Systolic / 
-        <%= @child.diastolic_3 %>
-        Diastolic mm Hg
+        <%= @child.systolic_3 %>/<%= @child.diastolic_3 %> mm Hg
       </td>
     </tr>
     <% end %>
