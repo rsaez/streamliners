@@ -10,6 +10,9 @@ This program sends volunteers to set up a field clinic to South Georgia to treat
 This project is a part of the Computing for Good class led by [Ellen Zegura](http://www.cc.gatech.edu/~ewz/Welcome.html) at the [Georgia Institute of Technology](http://www.gatech.edu).
 
 ## Setting up Ruby on Rails on Windows
+
+For a complete, updated guide go to: http://rolo928.wordpress.com/2014/08/17/2014-complete-guide-to-installing-ruby-2-0-and-rails-4-1-on-windows/
+
 By Ganesh Parameswaran on Saturday, October 19, 2013 at 3:06pm
 This is assuming you have no version of ruby or rails installed in your system. If you need multiple versions you need to use RVM. This is for a single version of Ruby.
  
