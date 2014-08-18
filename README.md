@@ -9,6 +9,11 @@ This program sends volunteers to set up a field clinic to South Georgia to treat
 ## Background
 This project is a part of the Computing for Good class led by [Ellen Zegura](http://www.cc.gatech.edu/~ewz/Welcome.html) at the [Georgia Institute of Technology](http://www.gatech.edu).
 
+## Using Nitrous.io to virtualize ROR on a web browser
+
+This is a great solution for using ROR anywhere and its free.
+http://railsapps.github.io/rubyonrails-nitrous-io.html
+
 ## Setting up Ruby on Rails on Windows
 
 For a complete, updated guide go to: http://rolo928.wordpress.com/2014/08/17/2014-complete-guide-to-installing-ruby-2-0-and-rails-4-1-on-windows/
