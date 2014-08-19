@@ -13,6 +13,7 @@ This project is a part of the Computing for Good class led by [Ellen Zegura](htt
 
 This is a great solution for using ROR anywhere and its free.
 http://railsapps.github.io/rubyonrails-nitrous-io.html
+This change was done from nitrous console
 
 ## Setting up Ruby on Rails on Windows
 
